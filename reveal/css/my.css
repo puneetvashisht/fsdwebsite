@@ -1,0 +1,20 @@
+.request {
+	background: #bdf0bd;
+	padding: 10px;
+	border: 1px solid green;
+	position: absolute;
+}
+#title2 {
+	font-size: 1.5em;
+	margin: auto;
+}
+#title1 {
+	font-size: 2em;
+	margin: auto;
+}
+#center {
+	margin-left: 50px;
+}
+pre {
+	background: #b9b2de;
+}

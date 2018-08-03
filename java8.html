@@ -1,0 +1,1054 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Java 8</title>
+
+	<meta name="description" content="A dummy presentation for CodeAngelsJs Course">
+	<meta name="author" content="sudodoki / Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/beige.css">
+	<link rel="stylesheet" href="reveal/css/my.css">
+	<link rel="stylesheet" href="reveal/css/bootstrap.min.css">
+	<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Java 8</h2>
+				<p>Java 8 is by any means a major release since Java 5 (released in 2004).</p>
+				<ul>
+					<li>It brings tons of new features to the Java as 
+						<ul>
+							<li>A Language</li>
+							<li>Its compiler</li>
+							<li>Tools</li>
+							<li>JVM</li>
+							<li>And more...</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>@FunctionalInterface</h2>
+				<ul>
+
+				<li>Heart of Lambdas.</li>
+				<li>An interface with just one Single Abstract Method - SAM.</li>
+				<li>May contain N-number of non-abstract methods.</li>
+				<li>Allows Abstract methods from <kbd>java.lang.Object</kbd> class. 
+<pre>
+	<kbd>public String toString();</kbd>
+	<kbd>public boolean equals(Object obj) {};</kbd>
+</pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Interface’s Default</h2>
+				<ul>
+					<li>Each interface must provide so called default implementation.</li>
+					<li>Java 8 reduces the need of adaptor class.</li>
+				</ul>
+					<img src="images/java8/interface_1.png" alt="">
+			</section>
+			
+			<section>
+				<h2>Interface’s Default</h2>
+				<img style="width: 80%;" src="images/java8/interface_2.png" alt="">
+			</section>
+			
+			<section>
+				<h2>Interface’s Default</h2>
+				<ul>
+					<li>Default methods added to java.util.Collection interface : 
+						<ul>
+							<li>stream()</li>
+							<li>parallelStream()</li>
+							<li>filter()</li>
+							<li>forEach()</li>
+							<li>removeIf()</li>
+							<li>&amp; more...</li>
+						</ul>
+					</li>					
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Lambdas</h2>
+				<p>
+					Language designers put a lot of thought on how to make already existing functionality lambda-friendly. 
+				</p>
+				<p>
+					Lambdas are also known as closures.
+				</p>
+				<p>
+					Equivalent to JavaScript Arrow Functions.
+				</p>
+			</section>
+
+			<section>
+				<h2>Lambdas</h2>
+				<pre>
+	String[] names = {
+			"Green Anaconda", 
+			"Elephant"
+		};
+	List<String> animals = new ArrayList<>(Arrays.asList(names));
+
+	<kbd>animals.forEach(animal -> System.out.println(animal));</kbd>
+
+	<kbd>animals.forEach(System.out::println);</kbd>
+
+	<kbd>animals.stream().forEach(System.out::println);</kbd>
+
+	<kbd>animals.stream()</kbd>
+		<kbd>.filter(animal -> animal.startsWith("G"))</kbd>
+		<kbd>.forEach(System.out::println);</kbd>
+
+	<kbd>animals.stream()</kbd>
+		<kbd>.filter(animal -> animal.length() > 8)</kbd>
+		<kbd>.map(animal -> animal.toUpperCase())</kbd>
+		<kbd>.forEach(System.out::println);</kbd>
+				</pre>
+			</section>
+
+			<section>
+				<h2>Java8 Stream</h2>
+				<ul>
+					<li>
+						Once you have a Stream object, you can use a variety of methods to transform it into another Stream object.
+						<ul>
+							<li><kbd>List<Integer> list = Arrays.asList(1, 2, 3, 4);</kbd></li>
+							<li><kbd>list.stream(). ... </kbd></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section style="font-size:0.90em;">
+				<h2>Filter</h2>
+				<ul>
+					<li>We have seen that the map method processes every single element in a Stream object.</li>
+					<li>You might not always want that.</li>
+					<li>Sometimes, you might want to work with only a subset of the elements.</li>
+					<li>Just like the map method, the filter method expects a lambda expression as its argument.</li>
+					<li>However, the lambda expression passed to it must always return a boolean value
+						<ul><li>Which determines whether or not the processed element should belong to the resulting Stream object.</li></ul> </li>
+				</ul>
+			</section>
+
+			<!--<section>
+				<h2>Java8 forEach</h2>
+				<ul>
+					<li>forEach() on parallel stream 
+						<ol>
+							<li>By default, The order of iteration is not guaranteed</li>
+							<li>But you can ensure ordering by calling forEachOrdered() method.</li>
+						</ol>
+					</li>
+				</ul>
+			</section>-->
+
+			<section>
+				<h2>Java8 forEach</h2>
+				<ul>
+				<li>Iterate over a List or any Collection without using any loop in Java.</li>
+				<li>forEach() method provides several advantage over traditional for loop.</li>
+				<li>Execute it in parallel by just using a parallel Stream instead of regular stream.</li>
+				</ul>
+			</section>
+
+			<section style="font-size: 0.80em;">
+				<h2>Java8 forEach</h2>
+				<ul>
+					<li>Important things to remember:
+						<ol>
+							<li>There are two forEach() method in Java 8</li>
+							<li>One defined inside Iterable and other inside java.util.stream.Stream class.</li>
+							<li>If purpose of forEach() is just iteration then you can directly call it</li>
+							<li>If you want to perform some operations e.g. filter or map then better first get the stream and then perform that operation and finally call forEach() method.</li>
+							<li>forEach mehtod does not work with Arrays</li>
+							<li>
+								<pre>
+String[] names = {"Blue Whale", "Green Anaconda", "The Ostrich"}; 
+names.forEach((name)->{System.out.println(name);}); 
+</pre>
+								<kbd>Above code will produce compile time error.</kbd>
+							</li>
+						</ol>
+					</li>
+				</ul>
+			</section>
+
+			<section style="font-size: 0.90em;">
+				<h2>Map vs Reduce vs MapToInt</h2>
+				<ul>
+					<li>
+						Map
+						<ul>
+							<li>It takes a lambda expression as its only argument
+								<ul>
+									<li>Uses it to change every individual element in the stream.</li>
+									<li>Its return value is a new Stream object containing the changed elements.</li>
+								</ul>
+							</li>
+							<li>
+				<pre>
+Stream<Integer> myListStream = list.stream(); 
+Stream<Integer> myNewListStream = myListStream<kbd>.map(num->num*num);</kbd>
+Integer[] squareList = myNewListStream.toArray(Integer[]::new); 
+for(int square: squareList){ 
+	System.out.println(square); 
+} 
+</pre>
+<kbd>Output: 1, 4, 9, 16 </kbd>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Map vs Reduce vs MapToInt</h2>
+				<ul>
+					<li>Reduction Operations
+						<ul>
+							<li>Also called terminal operations 
+								<ul><li>Always present at the end of a chain of Stream methods.</li></ul></li>
+							<!--<li>Allows you to compute a result using all the elements present in a stream.</li>-->
+							<li>Perform arithmetic operations on Stream objects and get numbers as results.</li>
+							<li>Java 8 includes several reduction methods, such as <kbd>sum, average and count</kbd></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section style="font-size: 0.85em;">
+				<h2>Map vs Reduce vs MapToInt</h2>
+				<ul>
+					<li>
+						Reduce
+						<ul>
+							<li>If you want to perform more complex reduction operations, you must use the reduce method.
+							<li>
+								<pre>
+int startsWith = 0;
+//By default start value is 0. Result will be sum of squares of array.
+<kbd>Integer</kbd> sumOfSquares = list.stream()
+	<kbd>.reduce</kbd>(startsWith, (accumulator, element) ->  
+		accumulator+element*element
+	); 
+</pre></li>
+							<li>The reduction function is a BinaryOperator<Integer></li>
+							<li>It gets passed two Integer values, unboxes them, adds them, and then re-boxes the result. </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Map vs Reduce vs MapToInt</h2>
+					<ul>
+						<li>MapToInt
+							<ul>
+								<li>
+<pre>
+<kbd>int</kbd> sumOfSquare = list.stream()
+	.mapToInt(element -> element*element)
+	<kbd>.sum()</kbd>;
+</pre>
+							</li>
+						</ul>
+					</li>
+					<li>Unboxes the Integer elements from the list once and then works with primitive int values from that point on as an IntStream</li>
+				</ul>
+			</section>
+
+			
+			<section>
+				<h2>Parallel stream processing</h2>
+				<ul>
+					<li>List<Integer> list = Arrays.asList(1, 2, 3, 4, …..., 500000);</li>
+					<li>Let’s say myList is a List of Integers, containing 500000 Integer values.</li>
+					<li>The way to sum-up this integer values in the pre-java 8 era was done using a for each loop.</li>
+					<li>
+						<pre>
+long sum = 0; 
+for (int element :myList) 
+	sum+=element; 
+						</pre>
+					</li>
+					<li>Since java 8 we can do the same thing using streams.
+						<pre>
+myList<kbd>.stream()</kbd>.sum();			// serialize
+myList<kbd>.parallelStream()</kbd>.sum();		// Parallelize
+</pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Parallel stream processing</h2>
+				<img src="images/java8/parallelStream.png" alt="">
+			</section>
+
+			<section>
+				<h2>Parallel stream processing</h2>
+				<strong>Question</strong>: When to use parallel-streams and when a serial stream?
+				<ul>
+					<li>The parallel stream uses the Fork/Join Framework for processing.
+						<ul>
+							<li>The stream-source is getting forked (splitted)</li>
+							<li>And hands over to the fork/join-pool workers for execution.</li>
+						</ul>
+					</li>
+					<li>But all stream-sources can not be splitted as good as others. 
+				</ul>
+			</section>
+			<section>
+				<h2>Parallel stream processing</h2>
+					<ul>
+						<li>Think about an ArrayList which internal data representation based upon an array.
+							<ul>
+								<li>Splitting such a source is pretty easy</li>
+								<li>It is possible to calculate the index of the middle element and split-up the array.</li>
+							</ul>
+						</li>
+					</ul>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Parallel stream processing</h2>
+				<ul>
+					<li>If we have a LinkedList it’s more complicated to split the data elements.
+						<ul>
+							<li>The implementation has to go through all elements.
+								<ul>
+									<li>From the first entry to find the element where the split can be done.</li>
+								</ul>
+							</li>
+							<li>So LinkedLists performs badly for parallel streams.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Parallel stream processing</h2>
+				<img src="images/java8/parallelStream_2.png" alt="">
+			</section>
+
+			<section style="font-size:0.75em;">
+				<h2>Parallel stream processing</h2>
+				<ul>
+					<li>Source collection must be efficiently splittable.
+						<ul>
+							<li>Splitting a collection, managing the fork and join tasks, object creation and garbage collecting is an algorithmic overhead as well. </li>
+							<li>
+								One bad example would be the calculation of the max value of 5 integer values.
+								<pre>IntStream.rangeClosed(1, 5).reduce(Math::max).getAsInt();</pre>
+							</li>
+							<li>The overhead of preparing and processing the data for fork/join is so huge that a serial stream is much faster here.</li>
+							<li>The Math.max function is not very CPU cost intensive here and we have less data elements as well. </li>
+						</ul>
+					</li>
+					<li>But Parallel stream processing is getting more and more worthwhile when the function which is executed per element is more complex. </li>
+				</ul>
+			</section>
+
+			<!--<section style="font-size:0.60em;">-->
+				<section>
+				<h2>Parallel stream processing</h2>
+				<ul>
+					<li>Think about TicTacToe-game
+						<ul>
+							<li>The evaluation of every move is also such an example.</li>
+							<li>Many evaluations can be done in parallel.</li>
+							<li>And result would be a large number of possible next moves in lesser time.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Method References</h2>
+				<ul>
+					<li>Help to point to methods by their names.</li>
+					<li>Described using <kbd><b>:: </b></kbd> (double colon) symbol.</li>
+					<li>can be used to point the following types of methods -
+						<ul>
+							<li>Static methods </li>
+							<li>Instance methods </li>
+							<li>Constructors using new operator</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Static method reference</h2> 
+				<ul>
+					<li>lambda expression:
+						<ul>
+							<li><kbd>(args) -> Class.staticMethod(args)</kbd> </li>
+						</ul>
+					</li>
+					<li>method reference: 
+						<ul>
+							<li><kbd>Class::staticMethod</kbd></li>
+						</ul>
+					</li>
+				</ul>
+ 			</section>
+			
+			<section>
+				<h2>Instance method reference</h2> 
+				<ul>
+					<li>lambda expression:
+						<ul>
+							<li><kbd>(obj, args) -> obj.instanceMethod(args)</kbd> </li>
+						</ul>
+					</li>
+					<li>method reference: 
+						<ul>
+							<li><kbd>ObjectType::instanceMethod</kbd></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Constructor method reference</h2> 
+				<ul>
+					<li>lambda expression:
+						<ul>
+							<li><kbd>(args) -> new ClassName(args)</kbd> </li>
+						</ul>
+					</li>
+					<li>method reference: 
+						<ul>
+							<li><kbd>ClassName::new </kbd></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Collectors</h2>
+				<ul>
+				<li>Stream.collect() is one of the Java 8’s Stream API's terminal methods. </li>
+				<li>It allows to perform mutable fold operations 
+					<ul>
+						<li>Repackaging elements to some data structures and applying some additional logic</li>
+					</ul>
+				</li>
+				<li>The strategy for this operation is provided via Collector interface implementation.</li>
+				<li>All predefined implementations can be found in the Collectors class.</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Collectors</h2>
+				<ul>
+					<li>
+<pre>
+import static java.util.stream.Collectors.*;
+
+</pre>
+					</li>
+					<li>
+						Single import collectors of your choice:
+<pre>
+
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toMap;
+import static java.util.stream.Collectors.toSet;
+
+</pre>
+						
+					</li>
+				</ul>
+
+				</ul>
+			</section>
+
+			<section>
+				<h3>Collectors.toList() / Collectors.toSet()</h3>
+				<ul>
+				<li>ToList collector can be used for collecting all Stream elements into a List instance.</li>
+				<li>The important thing to remember 
+					<ul>
+						<li>Can’t assume any particular List implementation with this method.</li>
+					</ul>
+				</li>
+				<li>Use toCollection, If you want to have more control over this.</li>
+				</ul>
+				<pre>
+List&lt;Integer&gt; result = list.stream()
+	.collect(toList());</pre>
+				<pre>
+Set&lt;Integer&gt; result = list.stream()
+	.collect(toSet());</pre>
+			</section>
+						
+			<section>
+				<h2>Collectors.toCollection()</h2>
+				<ul>
+					<li>Use the toCollection collector with a provided collection of your choice.</li>
+					<li>
+				<pre>
+List&lt;Integer&gt; result = list.stream()
+	.collect(toCollection(LinkedList::new));</pre>
+					</li>
+					<li>This will not work with any immutable collections.</li>
+					<li>In such case
+						<ul>
+							<li>Write a custom Collector implementation.</li>
+							<li>Or use collectingAndThen.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Collectors.toMap()</h2>
+				<ul>
+					<li>ToMap collector can be used to collect Stream elements into a Map instance.</li>
+					<li>In order to do this, you need to provide two functions:
+						<ul>
+							<li>keyMapper
+								<ul>
+									<li>Used for extracting a Map key from a Stream element.</li>
+								</ul>
+							</li>
+							<li>valueMapper
+								<ul>
+									<li>Used for extracting a value associated with a given key.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Collectors.toMap()</h2>
+				<ul>
+					<!--<li>
+<pre>
+class Employee{
+	private int id;
+	private String name;
+	private Date joiningDate;
+	public Employee(int id, String name, Date joiningDate) {
+		this.id = id;
+		this.name = name;
+		this.joiningDate = joiningDate;
+	}
+	public int getId() { ... }
+	public void setId(int id) { ... }
+	public String getName() { ... }
+	public void setName(String name) { ... }
+	public Date getJoiningDate() { ... }
+	public void setJoiningDate(Date joiningDate) { ... }
+}
+</pre>
+					</li>-->
+					<li>
+<pre>
+List<Employee> list = new ArrayList<>();
+list.add(new Employee(1, "Mark", new Date()));
+list.add(new Employee(2, "Miley", new Date()));
+list.add(new Employee(3, "Smith", new Date()));
+
+Map&lt;Integer, String> map1 = list.stream().collect(
+Collectors.toMap(Employee::getId, Employee::getName));
+
+System.out.println("Result : " + map1);
+
+Map&lt;Integer, String> map2 = list.stream().collect(
+Collectors.toMap(x -> x.getId(), x -> x.getName()));
+
+System.out.println("Result : " + map2);
+</pre>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Collectors.collectingAndThen()</h2>
+				<ul>
+					<li>Allows performing another action on a result straight after collecting ends.</li>
+					<li>Collect Stream elements to a List instance and then convert the result into an ImmutableList instance.</li>
+					<li>
+<pre>
+List&lt;Integer> result = list.stream()
+	.collect(collectingAndThen(toList(), ImmutableList::copyOf))
+</pre>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Collectors.joining()</h2>
+				<ul>
+					<li>Joining collector can be used for joining Stream<String> elements.</li>
+					<li>
+<pre>
+String[] names = {
+		"Blue Whale", 
+		"Elephant", 
+		"The Ostrich"
+	};
+
+List<String> list = Arrays.asList(names);
+String 	result = list.stream().collect(joining());
+	result = list.stream().collect(joining("\n"));
+	result = list.stream().collect(joining("\t", "Starting-", "-Ending"));
+
+System.out.println(result);
+</pre>
+					</li>
+				</ul>
+			</section>
+
+			<section style="font-size: 0.95em;">
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>There have been several problems with the existing date and time related classes in java, some of them are: 
+						<ol>
+							<li>Java Date Time classes are not defined consistently </li>
+							<li>java.util.Date contains both date and time, whereas java.sql.Date contains only date.</li>
+							<li>There are no clearly defined classes for time, timestamp, formatting and parsing.</li>
+							<li>All the Date classes are mutable.</li>
+							<li>Date class doesn’t provide internationalization, there is no timezone support.</li>
+						</ol>
+					</li>
+					</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>Java Date Time classes are not defined consistently 
+						<ul>
+							<li>We have Date Class in both java.util as well as java.sql packages.</li>
+							<li>Formatting and parsing classes are defined in java.text package. </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>java.util.Date contains both date and time, whereas java.sql.Date contains only date.
+						<ul>
+							<li>java.sql.Date class doesn’t make sense.</li>
+							<li>Also both the classes have same name, that is a very bad design itself.</li>
+						</ul>
+					</li>
+				</ul>
+  
+  
+ 
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>There are no clearly defined classes for time, timestamp, formatting and parsing.
+						<ul>
+							<li>We have java.text.DateFormat abstract class for parsing and formatting need.</li>
+							<li>Usually SimpleDateFormat class is used for parsing and formatting.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>All the Date classes are mutable
+						<ul>
+							<li>So they are not thread safe.</li>
+							<li>It’s one of the biggest problem with Java Date and Calendar classes.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>Date class doesn’t provide internationalization, there is no timezone support.
+						<ul>
+							<li>So java.util.Calendar and java.util.TimeZone classes were introduced </li>
+							<li>But they also have all the problems listed above. </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>Java8 Date is designed to overcome all the flaws in the legacy date time implementations. Some of the design principles of new Date Time API are:
+						<ul>
+							<li>Immutability</li>
+							<li>Separation of Concerns </li>
+							<li>Clarity</li>
+							<li>Utility operations</li>
+							<li>Extendable</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>Immutability
+						<ul>
+							<li>All the classes in the new Date Time API are immutable </li>
+							<li>Thus good for multithreaded environments.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>Separation of Concerns
+						<ul>
+							<li>The new API separates clearly between human readable date time and machine time (unix timestamp). </li>
+							<li>It defines separate classes for Date, Time, DateTime, Timestamp, Timezone etc.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section style="font-size: 0.9em;">
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>Clarity
+						<ul>
+							<li>The methods are clearly defined and perform the same action in all the classes.</li>
+							<li>For example 
+								<ol>
+									<li>To get the current instance we have now() method.</li>
+									<li>There are format() and parse() methods defined in all these classes rather than having a separate class for them.</li>
+								</ol>
+							</li>
+							<li>All the classes use Factory Pattern and Strategy Pattern for better handling. Once you have used the method of the class, working with other classes won’t be hard. </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>Utility operations
+						<ul>
+							<li>All the new Date Time API classes comes with methods to perform common tasks.</li>
+							<li>Plus, minus, format, parsing, getting separate part in date/time etc.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 DateTime API</h2>
+				<ul>
+					<li>Extendable
+						<ul>
+							<li>The new Date Time API works on ISO-8601 calendar system but we can use it with other non ISO calendars as well.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 Date Time API packages</h2>
+				<ul>
+					<li>java.time Package
+						<ul>
+							<li>This is the base package of new Java Date Time API. All the major base classes are part of this package, such as LocalDate, LocalTime, LocalDateTime, Instant, Period, Duration etc.</li>
+							<li>All of these classes are immutable and thread safe. Most of the times, these classes will be sufficient for handling common requirements.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 Date Time API packages</h2>
+				<ul>
+					<li>java.time.chrono Package
+						<ul>
+							<li>This package defines generic APIs for non ISO calendar systems.</li>
+							<li>Extend AbstractChronology class to create your own calendar system. </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 Date Time API packages</h2>
+				<ul>
+					<li>java.time.format Package 
+						<ul>
+							<li>This package contains classes used for formatting and parsing date time objects. </li>
+							<li>Most of the times, we would not be directly using them because principle classes in java.time package provide formatting and parsing methods. </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 Date Time API packages</h2>
+				<ul>
+					<li>java.time.temporal Package
+						<ul>
+							<li>This package contains temporal objects and we can use it for find out specific date or time related to date/time object</li>
+							<li>For example, we can use these to find out the first or last day of the month. </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Java8 Date Time API packages</h2>
+				<ul>
+					<li>java.time.zone Package 
+						<ul>
+							<li>This package contains classes for supporting different time zones and their rules.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section style="font-size: 0.95em;">
+				<h2>LocalDate</h2>
+						<ul>
+							<li>Immutable class that represents Date with default format of yyyy-MM-dd.</li>
+							<li>We can use now() method to get the current date. </li>
+								<li>We can also provide input arguments for year, month and date to create LocalDate instance. </li>
+								<li>This class provides overloaded method for now() where we can pass ZoneId for getting date in specific time zone. </li>
+								<li>This class provides the same functionality as java.sql.Date. Let’s look at a simple example for it’s usage.</li>
+						</ul>
+			</section>
+
+			<section>
+				<h2>LocalTime</h2>
+						<ul>
+							<li>Immutable class whose instance represents a time in the human readable format.</li>
+							<li>Default format is hh:mm:ss.zzz.</li>
+							<li>Just like LocalDate, this class provides time zone support and creating instance by passing hour, minute and second as input arguments. </li>
+						</ul>
+			</section>
+
+			<section>
+				<h2>LocalDateTime</h2>
+						<ul>
+							<li>Immutable date-time object that represents a date-time, with default format as yyyy-MM-dd-HH-mm-ss.zzz.</li>
+							<li>It provides a factory method that takes LocalDate and LocalTime input arguments to create LocalDateTime instance. </li>
+						</ul>
+			</section>
+
+			<section>
+				<h2>Instant</h2>
+						<ul>
+							<li>Instant class is used to work with machine readable time format, it stores date time in unix timestamp.</li>
+							<li><kbd>If you live in Germany and create a LocalDateTime instance and someone else lives in USA and creates another instance at the very same moment (provided the clocks are properly set) - the value of those objects would actually be different. This does not apply to Instant, which is calculated independently from time zone.</kbd></li>
+						</ul>
+			</section>
+
+			<section>
+				<h2>Better Type Inference</h2>
+<pre>
+package com.domshom.java8;
+
+public class DriverAge< T > {
+    public static< T > T defaultAge() { 
+        return null; 
+    }
+    
+    public T getOrDefault( T age, T defaultAge ) {
+        return ( age != null ) ? age : defaultAge;
+    }
+}
+</pre>
+<pre>
+public static void main(String[] args) {
+	final DriverAge< Integer > age = new DriverAge<>();
+	value.getOrDefault( 22, DriverAge.defaultAge() );
+}
+</pre>
+	<p>In Java 7, the same example will not compile.</p><p>DriverAge.< Integer >defaultAge()</p>
+			</section>
+			
+			<section>
+				<h2>Optional</h2>
+				<ul>
+					<li><i>The famous <u>NullPointerException</u> is by far the most popular cause of Java application failures.</i></li>
+					<li>Developers are encouraged to write cleaner code.</li>
+					<li><strong>Optional</strong> is just a container: 
+						<ul>
+							<li>It can hold a value of some type T or just be null.</li>
+							<li>It provides a lot of useful methods so the explicit null checks have no excuse anymore.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Optional</h2>
+				<pre>
+Optional< String > empName = Optional.ofNullable( null ); 
+System.out.println( "Full Name is set? " + empName.isPresent() );         
+System.out.println( "Full Name: " + empName.orElseGet( 
+		() -> "[unknown]" ) 
+	);  
+System.out.println( empName
+		.map( name -> "Hello " + name + "!" )
+		.orElse( "Hello Friend !" ) 
+	);
+</pre>
+	<ul>
+		<li>The orElse() method accepts Lambda function.</li>
+		<li>The orElseGet() method accepts the default value.</li>
+		<li>Output:
+			<pre>
+Employee Name is set? false 
+Employee Name: [unknown] 
+Hello Friend ! 
+</pre>
+		</li>
+	</ul>
+			</section>
+
+			<section>
+				<h2>Optional</h2>
+				<pre>
+Optional< String > empName = Optional.of( "Mark" ); 
+System.out.println( "Employee Name is set? " + empName.isPresent() );         
+System.out.println( "Employee Name: " + empName.orElseGet( () -> "[unknown]" ) );  
+System.out.println( empName.map( name -> "Hello " + name + "!" ).orElse( "Hello Friend !" ) ); 
+System.out.println(); 
+ 
+</pre>
+		<p>Output:</p>
+<pre>
+Full Name is set? True 
+Full Name: Mark
+Hello Mark ! 
+</pre>
+			</section>
+
+			<section>
+				<h2>Base64</h2>
+				<ul>
+					<li>Finally, Java standard library supports Base64 encoding.</li>
+				</ul>
+<pre>
+import java.nio.charset.StandardCharsets; 
+import java.util.Base64; 
+
+public class Base64sDemo { 
+	public static void main(String[] args) { 
+		final String someText = "Java8 is Gr8!"; 
+		final String encodedText = Base64.getEncoder().encodeToString( someText.getBytes( StandardCharsets.UTF_8 ) );
+		System.out.println( encodedText ); 
+ 
+		final String decodedText = new String( Base64.getDecoder().decode( encodedText ), StandardCharsets.UTF_8 );
+        System.out.println( decodedText ); 
+	} 
+} 
+</pre>
+			</section>
+
+			<section>
+				<h2>Concurrency</h2>
+				<ul>
+					<li>New methods have been added to the <strong>java.util.concurrent.ConcurrentHashMap</strong> class to support aggregate operations based on the newly added streams facility and lambda expressions. </li>
+					<li>Also, new methods have been added to the <strong>java.util.concurrent.ForkJoinPool</strong> class to support a common pool. </li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Concurrency</h2>
+				<ul>
+					<li>The new <strong>java.util.concurrent.locks.StampedLock</strong> class has been added to provide a capability-based lock with three modes for controlling read/write access.</li>
+					<li>New classes added in <strong>java.util.concurrent.atomic</strong> package: 
+						<ul>
+							<li>DoubleAccumulator </li>
+							<li>DoubleAdder </li>
+							<li>LongAccumulator </li>
+							<li>LongAdder </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Class dependency analyzer: <u>jdeps</u></h2>
+				<ul>
+					<li>jdeps: a great command line tool.
+						<ul>
+							<li>Prints the package-level or class-level dependencies of Java class files. </li>
+							<li>Can accept .class file, a directory, or JAR file as an input. </li>
+							<!--<li>By default, jdeps outputs the dependencies to the system output (console).</li>-->
+						</ul>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Class dependency analyzer: <u>jdeps</u></h2>
+				<img src="images/java8/jdeps.png" alt="jdeps">
+			</section>
+			
+			<section>
+				<h2>Changes in JVM</h2>
+				<ul>
+					<li>The PermGen space is gone and has been replaced with Metaspace (JEP 122). </li>
+					<li>The JVM option -XX:PermSize has been replaced by -XX:MetaSpaceSize.</li>
+					<li>The JVM option –XX:MaxPermSize has been replaced by -XX:MaxMetaspaceSize.</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Nashorn</h2>
+				<ul>
+					<li>A Next-Generation JavaScript Engine for the JVM.<br/>
+						<img src="images/java8/nashorn.png" alt="Nashorn">
+						</li>
+					<li>Read <strong>hello.js</strong> file <br/><code>$ jjs hello.js</code></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.js"></script>
+	<script src="reveal/js/ds-reveal-conf.js"></script>
+</body>
+
+</html>

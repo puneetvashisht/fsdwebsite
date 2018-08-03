@@ -1,0 +1,733 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>HTML5</title>
+
+	<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/beige.css">
+	<link rel="stylesheet" href="reveal/css/my.css">
+	<link rel="stylesheet" href="reveal/css/bootstrap.min.css">
+	<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+		<section>
+				<span id="title1">Introduction</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Markup Language not Programming Language
+						<ul style="font-size:0.7em;">
+							<li>Structuring and presenting content on www</li>
+						</ul></li>
+					<li class="fragment" data-fragment-index="2">Incorporated features like video playback, drag drop dependent on third party plug-ins
+					<ul style="font-size:0.7em;">
+						<li>Flash Player</li>
+						<li>Microsoft Silverlight</li>
+						<li>Google Gears</li>
+					</ul></li>
+					<li class="fragment" data-fragment-index="3">Latest browsers support >95% features
+					<ul style="font-size:0.7em;">
+						<li>www.html5test.comm</li>
+					</ul></li>
+					<li class="fragment" data-fragment-index="4">HTML5 is cross-platform</li>
+					<li class="fragment" data-fragment-index="5">Flexible Syntax</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Features</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Canvas & SVG– for 2D Graphics</li>
+						<ul class="fragment" data-fragment-index="2">
+							<li>Caching – for offline work</li>
+							<li>Form 2.0 – for new form components</li>
+							<li>Geolocation – for physical location identification</li>
+							<li>Webworker – for background scripts</li>
+							<li>Drag and Drop suppor</li>
+							<li>Multimedia features</li>
+							<li>Server Side Notifications</li>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Get Started</span><br><br>
+<pre style="padding:10px;border:3px solid black;">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;meta charset="UTF-8">
+&lt;title>Title of the document&lt;/title>
+&lt;/head>
+&lt;body>
+Content of the document......
+&lt;/body>
+&lt;/html>
+</pre>
+			</section>
+			<section>
+				<span id="title1">Coverage</span><br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">HTML 5 Semantics Elements</li>
+					<li class="fragment" data-fragment-index="2">Form Element
+						<ul style="font-size:0.7em;">
+							<li>New Input Types</li>
+							<li>New Form Elements</li>
+							<li>New Attributes to Input Types and Form Elements</li>
+							<li>Removed Elements</li>
+						</ul></li>
+					<li class="fragment" data-fragment-index="3">HTML 5 Graphics
+					<ul style="font-size:0.7em;" style="font-size:0.7em;">
+						<li>Canvas and SVG</li>
+					</ul></li>
+					<li class="fragment" data-fragment-index="4">HTML Multimedia
+					<ul style="font-size:0.7em;">
+						<li>audio and video tags</li>
+					</ul></li>
+					<li class="fragment" data-fragment-index="5">HTML Applications
+						<ul style="font-size:0.7em;">
+						<li>Geolocation</li>
+						<li>Web Storage</li>
+						<li>Application Cache</li>
+						<li>Web Worker</li>
+						<li>Web Socket</li>
+					</ul></li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;">Semantic/Structural Elements</span><br><br>
+					<p style="font-size:1em;text-align:center;"  class="fragment" data-fragment-index="1"><b>Semantic elements = Elements with meaning</b></p>
+					<p style="font-size:1em;text-align:center;" class="fragment" data-fragment-index="2">Convey meaning to developer and browser and hence increases readability.</p>
+				<ul>
+					<li class="fragment" data-fragment-index="3">Non-Semantic elements: &lt;div> and &lt;span>
+					<ul>
+						<li>Tells nothing about its content</li>
+					</ul></li>
+					<li class="fragment" data-fragment-index="4">Semantic elements: &lt;form>, &lt;table>, and 
+						<ul>
+						<li>&lt;img> - Clearly defines its content</li>
+					</ul></li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Semantic Elements</span><br><br>
+					<img src="images/html5/difference-between-html-and-html5.png" alt="">
+					<div style="width:600px;border:3px solid black;font-size:0.75em;margin:auto;">HTML5 offers new semantic elements to clearly define different parts of a web page:</div>
+			</section>
+			<section>
+                <span id="title1" class="center-block">New Tags</span><br>
+                    <aside class="fragment" data-fragment-index="1" style="color: #fff; width: 250px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;font-size:0.7em;">article</aside>
+				<aside class="fragment" data-fragment-index="2" style="color: #fff; width: 700px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.7em;text-align:center;">Defines an article</aside><br>
+			<aside class="fragment" data-fragment-index="1" style="width: 250px; margin: auto;background: #dddddd; border: 2px solid #727272;float:left;font-size:0.7em;">
+			<ul style="font-size:0.8em;">
+				<li class="fragment" data-fragment-index="1">article</li>
+				<li class="fragment" data-fragment-index="1">aside</li>
+				<li class="fragment" data-fragment-index="1">bdi</li><br>
+				<li class="fragment" data-fragment-index="1">command</li>
+				<li class="fragment" data-fragment-index="1">details</li>
+				<li class="fragment" data-fragment-index="1">dialog</li>
+				<li class="fragment" data-fragment-index="1">figcaption</li>
+				<li class="fragment" data-fragment-index="1">figure</li>
+				<li class="fragment" data-fragment-index="1">footer</li>
+				<li class="fragment" data-fragment-index="1">header</li>
+				<li class="fragment" data-fragment-index="1">mark</li>
+			</ul>
+			</aside>
+			<aside class="fragment" data-fragment-index="2" style="width: 700px; margin: auto;background: #dddddd; border: 2px solid #727272;float:right;font-size:0.7em;text-align:center;">
+			<ul style="font-size:0.8em;">
+				<li class="fragment" data-fragment-index="1">Defines an article</li>
+				<li class="fragment" data-fragment-index="1">Defines content aside from the page content</li>
+				<li class="fragment" data-fragment-index="1">Isolates a part of text that might be formatted in a defferent direction from other text outside it</li>
+				<li class="fragment" data-fragment-index="1">Defines a command button that a user can invoke</li>
+				<li class="fragment" data-fragment-index="1">Defines additional details that user can view or hide</li>
+				<li class="fragment" data-fragment-index="1">Defines a dealog box or window</li>
+				<li class="fragment" data-fragment-index="1">Defines a caption for a &lt;figure> element</li>
+				<li class="fragment" data-fragment-index="1">Specifies self-contained content</li>
+				<li class="fragment" data-fragment-index="1">Defines a footer for a document or section</li>
+				<li class="fragment" data-fragment-index="1">Defines a header for a document or section</li>
+				<li class="fragment" data-fragment-index="1">Defines marked/highlighted text</li>
+			</ul>
+			</aside>
+            </section>
+            <section>
+                <span id="title1" class="center-block">New Tags</span><br>
+                    <aside class="fragment" data-fragment-index="1" style="color: #fff; width: 250px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;font-size:0.7em;">article</aside>
+				<aside class="fragment" data-fragment-index="2" style="color: #fff; width: 700px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.7em;text-align:center;">Defines an article</aside><br>
+			<aside class="fragment" data-fragment-index="1" style="width: 250px; margin: auto;background: #dddddd; border: 2px solid #727272;float:left;font-size:0.7em;">
+			<ul style="font-size:0.8em;">
+				<li class="fragment" data-fragment-index="1">meter</li>
+				<li class="fragment" data-fragment-index="1">man</li>
+				<li class="fragment" data-fragment-index="1">progress</li>
+				<li class="fragment" data-fragment-index="1">rp</li><br>
+				<li class="fragment" data-fragment-index="1">rt</li><br>
+				<li class="fragment" data-fragment-index="1">ruby</li>
+				<li class="fragment" data-fragment-index="1">section</li>
+				<li class="fragment" data-fragment-index="1">summary</li>
+				<li class="fragment" data-fragment-index="1">time</li>
+				<li class="fragment" data-fragment-index="1">wbr</li>
+			</ul>
+			</aside>
+			<aside class="fragment" data-fragment-index="2" style="width: 700px; margin: auto;background: #dddddd; border: 2px solid #727272;float:right;font-size:0.7em;text-align:center;">
+			<ul style="font-size:0.8em;">
+				<li class="fragment" data-fragment-index="1">Defines a scalar measurement within a known range</li>
+				<li class="fragment" data-fragment-index="1">Defines navigation links</li>
+				<li class="fragment" data-fragment-index="1">Represents the progress of a task</li>
+				<li class="fragment" data-fragment-index="1">Defines what to show in browsers that do not support ruby annotations</li>
+				<li class="fragment" data-fragment-index="1">Defines an explanation/pronunciation of characters (for East Asian typography)</li>
+				<li class="fragment" data-fragment-index="1">Defines a ruby annotation (for East Asian typography)</li>
+				<li class="fragment" data-fragment-index="1">Defines a section in a document</li>
+				<li class="fragment" data-fragment-index="1">Defines a visible heading for a &lt;details> element</li>
+				<li class="fragment" data-fragment-index="1">Defines a date/time</li>
+				<li class="fragment" data-fragment-index="1">Defines a possible line-break</li>
+			</ul>
+			</aside>
+            </section>
+            <section>
+                <span id="title1" class="center-block">New Input Types</span>
+			<ul style="font-size:0.8em;">
+				<li class="fragment" data-fragment-index="1">Color</li>
+				<li class="fragment" data-fragment-index="2">Date</li>
+				<li class="fragment" data-fragment-index="3">Datetime</li>
+				<li class="fragment" data-fragment-index="4">Datetime-local</li>
+				<li class="fragment" data-fragment-index="5">Eamail</li>
+				<li class="fragment" data-fragment-index="6">Month</li>
+				<li class="fragment" data-fragment-index="7">Week</li>
+				<li class="fragment" data-fragment-index="8">Number</li>
+				<li class="fragment" data-fragment-index="9">Range</li>
+				<li class="fragment" data-fragment-index="10">Search</li>
+				<li class="fragment" data-fragment-index="11">Tel</li>
+				<li class="fragment" data-fragment-index="12">Time</li>
+				<p style="text-align:center;" class="fragment" data-fragment-index="13">VALIDATIONS</p>
+			</ul>
+            </section>
+             <section>
+                <span style="font-size:1.6em;" class="center-block">New Form Elements:&lt;datalist></span><br><br>
+				<ul style="font-size:0.8em;">
+				<li class="fragment" data-fragment-index="1"><b>&lt;datalist</b></li>
+				<ul>
+				<li class="fragment" data-fragment-index="2"><b>Auto-Complete</b> feature on &lt;input> elements</li>
+				<ul>
+				<li class="fragment" data-fragment-index="3">A drop-down list of pre-defined options</li>
+				</ul>
+				<li class="fragment" data-fragment-index="4">&lt;input> element's list attirbute bound to &lt;datalist> element</li>
+				</ul>
+			</ul>
+            </section>
+            <section>
+                <span id="title1" class="center-block">New Form Elements:&lt;datalist></span>
+<pre style="padding:10px;border:3px solid black;"  class="fragment" data-fragment-index="1">
+&lt;input list="tkhts" name="topics">
+	&lt;datalist id="tkhts">
+		&lt;option value="Hibernate">
+		&lt;option value="Struts2">
+		&lt;option value="Interview Questions">
+		&lt;option value="Ibatis">
+	&lt;/datalist>
+</pre>
+           <img style="float:left;margin-left:50px;" src="images/html5/datalist.png" alt=""  class="fragment" data-fragment-index="2">
+           <aside style="float:right;width:400px;font-size:0.6em;border:3px solid black;margin-top:40px;margin-right:100px;"  class="fragment" data-fragment-index="3">By default, autocomplete is turned on. To turn if off use attribute (autocomplete="off")</aside>
+            </section>
+            <section>
+                <span style="font-size:1.6em;" class="center-block">New Form Elements:&lt;output></span>
+                <ul  class="fragment" data-fragment-index="1">
+                	<li><b>&lt;output></b></li>
+                	<ul>
+                	<li>The &lt;output> element represents the result of a calculation (like one performed by a script)</li>
+                	</ul>
+                </ul>
+<pre style="padding:10px;border:3px solid black;"  class="fragment" data-fragment-index="2">
+&lt;form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+	0&lt;input type="range" id="a" value="50">100
+	&lt;br>
+	0&lt;input type="range" id="b" value="50">100
+	&lt;br> &lt;br>Sum of these two range values is =
+	&lt;output name="x" for="a b">&lt;/output>
+&lt;/form>
+</pre>
+           <img style="float:left;margin-left:50px;" src="images/html5/output.png" alt=""  class="fragment" data-fragment-index="3">
+           <aside style="float:right;width:400px;font-size:0.6em;border:3px solid black;margin-top:40px;margin-right:100px;" class="fragment" data-fragment-index="4">Addition of values of two range meters is shown by the &lt;output> element</aside>
+            </section>
+            <section>
+            	<span style="font-size:1.6em;" class="center-block">New Attributes</span><br>
+            	<aside style="float:left;width:450px;">
+            	<ul style="font-size:0.75em;">
+            		<li>New attributes for &lt;input>:</li>
+            		<ul style="font-size:0.7em;">
+            			<li>Autocomplete</li>
+            			<li>Autofocus</li>
+            			<li>Form</li>
+            			<li>Formaction</li>
+            			<li>Formenctype</li>
+            			<li>Formmethod</li>
+            			<li>Formnovalidate</li>
+            			<li>Formtarget</li>
+            			<li>height and width</li>
+            			<li>List</li>
+            			<li>min and max</li>
+            			<li>Multiple</li>
+            			<li>pattern (regexp)</li>
+            			<li>Placeholder</li>
+            			<li>Required</li>
+            			<li>Step</li>
+            		</ul>	
+            	</ul>
+            	</aside>
+            	<aside style="float:right;width:450px;">
+            	<ul style="font-size:0.75em;">
+            		<li>New attributes for &lt;form>:</li>
+            		<ul style="font-size:0.7em;">
+            			<li>Autocomplete</li>
+            			<li>Novalidate</li>
+            		</ul>
+            	</ul>
+            	</aside>
+            </section>
+            <section>
+            	<span style="font-size:1.6em;" class="center-block">Removed Elements</span><br>
+            	<ul style="font-size:1em;">
+            		<li>HTML 4.01 removed elements from HTML5</li>
+            		<ul style="font-size:0.8em;">
+            			<li>&lt;acronym></li>
+            			<li>&lt;applet></li>
+            			<li>&lt;basefont></li>
+            			<li>&lt;big></li>
+            			<li>&lt;center></li>
+            			<li>&lt;dir></li>
+            			<li>&lt;font></li>
+            			<li>&lt;frame></li>
+            			<li>&lt;frameset></li>
+            			<li>&lt;noframes></li>
+            			<li>&lt;strike></li>
+            			<li>&lt;tt></li>
+            		</ul>	
+            	</ul>
+            </section>
+			<section>
+				<span id="title1">Graphics</span><br><br>
+					<p>With HTML5, drawing graphics is easier than ever:</p>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Using the &lt;canvas> element</li>
+					<li class="fragment" data-fragment-index="2">Using inline SVG</li>
+					<li class="fragment" data-fragment-index="3">Using CSS3 2D/3D</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">What is Canvas ?</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">&lt;canvas> element is used to draw graphics</li>
+					<li class="fragment" data-fragment-index="2">Rectangular area, Arc, Curve on an HTML page</li>
+					<li class="fragment" data-fragment-index="3">By default, the &lt;canvas> element has no border and no content</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;"  class="fragment" data-fragment-index="4">
+&lt;canvas id="myCanvas" width="100" height="100"
+		style="border:3px solid red;">&lt;/canvas>
+</pre>
+			<img style="margin:auto;" src="images/html5/canvas.png" alt="" class="fragment" data-fragment-index="5">
+			</section>
+			<section>
+				<span id="title1">What is Canvas ?</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">&lt;canvas> element is used to draw graphics on a web page via scripting (usually JavaScript)</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;float:left;width:700px;"  class="fragment" data-fragment-index="4">
+&lt;body>
+  &lt;canvas id="myCanvas" width="200" height="100“
+		         style="border:1px solid blue;">
+Your browser does not support the HTML5 canvas tag.
+  &lt;/canvas>
+  &lt;script>
+      var c=document.getElementById("myCanvas");
+      var ctx=c.getContext("2d");
+      ctx.fillStyle="red";
+      ctx.fillRect(20,20,70,60);
+      ctx.fillStyle="green";
+      ctx.fillRect(110,20,70,60);
+  &lt;/script>
+&lt;/body>
+</pre>
+			<img style="float:right;margin-top:100px;" src="images/html5/canvas2.png" alt="" class="fragment" data-fragment-index="5">
+			</section>
+			<section>
+				<span id="title1">What is SVG ?</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">&lt;canvas>Scalable <b>Vector</b> Graphics</li>
+					<li class="fragment" data-fragment-index="2">&lt;canvas>SVG defines the graphics <b>in XML format</b></li>
+					<li class="fragment" data-fragment-index="3">&lt;canvas>SVG graphics <b>do NOT lose quality</b> if they are zoomed or resized</li>
+					<li class="fragment" data-fragment-index="4">&lt;canvas>SVG elements <b>can be animated</b></li>
+					<li class="fragment" data-fragment-index="5">&lt;canvas>SVG is a <b>W3C recommendation</b></li>
+				</ul>
+			</section>
+			<section>
+            	<span style="font-size:1.6em;" class="center-block">SVG Advantages</span><br><br>
+            	<ul>
+            		<li  class="fragment" data-fragment-index="1">SVG images</li>
+            		<ul style="font-size:0.8em;">
+            			<li  class="fragment" data-fragment-index="2">can be created and edited with any text editor</li>
+            			<li  class="fragment" data-fragment-index="3">can be searched, indexed, scripted, and compressed</li>
+            			<li  class="fragment" data-fragment-index="4">are scalable</li>
+            			<li class="fragment" data-fragment-index="5">can be printed in high quality at any resolution</li>
+            			<li class="fragment" data-fragment-index="6">are zoom-able (image can be zoomed without degradation)</li>
+            		</ul>	
+            	</ul>
+            </section>
+            <section>
+                <span id="title1" class="center-block">Canvas Vs SVG</span>
+                    <aside class="fragment" data-fragment-index="1" style="color: #fff; width: 200px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;font-size:0.7em;">Canvas</aside>
+				<aside class="fragment" data-fragment-index="2" style="color: #fff; width: 200px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.7em;">SVG</aside><br>
+<aside style="border: 3px solid black; padding:10px;width:470px;float:left;margin-top:-11px;" class="fragment" data-fragment-index="1">
+	<ul style=font-size:0.8em;>
+		<li>Resolution dependent</li>
+		<li>No support for event handlers</li>
+		<li>Poor text rendering capabilities</li>
+		<li>You can save the resulting image as .png or .jpg</li><br>
+		<li>Well suited for graphic-intensive games</li>
+	</ul>
+</aside>
+<aside style="border: 3px solid black; padding:10px;width:480px;float:right;margin-top:-11px;" class="fragment" data-fragment-index="2">
+	<ul style=font-size:0.8em;>
+		<li>Resolution dependent</li>
+		<li>Support for event handlers</li><br>
+		<li>Best suited for applications with large rendering areas</li>
+		<li>Slow rendering if complex (use of DOM a lot will make it slow)</li>
+		<li>Not suited for game applications</li>
+	</ul>
+</aside>
+            </section>
+            <section>
+				<span id="title1">Multimedia</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">No standard prior to HTML5</li>
+					<li class="fragment" data-fragment-index="2">HTML5 defines a new element which specifies a standard way to embed a video/movie on a web page
+					<ul>
+						<li>&lt;video></li>
+						<li>&lt;audio></li>
+					</ul></li>
+					<li class="fragment" data-fragment-index="3">Playing video and audio is easier than ever</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Geolocation</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">The HTML5 Geolocation API is used to get the geographical position of a user</li>
+					<li class="fragment" data-fragment-index="2">Requires Users Approval</li>
+					<li class="fragment" data-fragment-index="3">Geolocation is much more accurate for devices with GPS receiver inbuilt- like iPhone</li>
+					<img class="fragment" data-fragment-index="4" width="60%" src="./images/html5/geolocation.png" alt="">
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Web Storage</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Data can be stored locally within the user’s browser using local data storage</li>
+					<li class="fragment" data-fragment-index="2">Earlier, cookies were to be used for this</li>
+					<li class="fragment" data-fragment-index="3">Web Storage is more secure and faster</li>
+					<li class="fragment" data-fragment-index="4">The data is included ONLY when asked for</li>
+					<li class="fragment" data-fragment-index="5">It is also possible to store large amounts of data, without affecting the website performance</li>
+					<li class="fragment" data-fragment-index="6">Data is stored in key/value pairs</li>
+					<li class="fragment" data-fragment-index="7">A web page can only access data stored by itself</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Web Storage</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">There are two new objects for storing data on the client:</li>
+					<ul>
+						<li class="fragment" data-fragment-index="2">localStorage</li>
+						<ul>
+							<li class="fragment" data-fragment-index="3">Stores data with no expiration</li>
+							<li class="fragment" data-fragment-index="4">Data will not be deleted with the closing of browser</li>
+						</ul>
+						<li class="fragment" data-fragment-index="5">sessionStorage</li>
+						<ul>
+							<li class="fragment" data-fragment-index="6">Same as localStorage</li>
+							<li class="fragment" data-fragment-index="7">Stores data for one session</li>
+							<li class="fragment" data-fragment-index="8">Data will be deleted with the closing of browser</li>
+						</ul>
+				</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Web Storage</span><br>
+<pre style="padding:10px;border:3px solid black;">
+&lt;div id="show">&lt;/div>
+&lt;script>
+	if(typeof(Storage)!="undefined") {
+		localStorage.name="TKHTS";
+	document.getElementById("show").innerHTML=
+				"Name: " + localStorage.name;
+	}
+	else {
+		document.getElementById("show").innerHTML=
+				"Sorry, no support for web storage";
+	}
+&lt;/script>
+</pre>
+			</section>
+			<section>
+				<span id="title1">Application Cache</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Application cache means that a web application is accessible offline</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="2">Browsers may have different size limits for cached data</li>
+					</ul>
+					<li class="fragment" data-fragment-index="3">Application cache gives three advantages to the application:</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="4">Offline browsing</li>
+						<li class="fragment" data-fragment-index="5">Speed</li>
+						<li class="fragment" data-fragment-index="6">Reduced server load</li>
+					</ul>
+					<li class="fragment" data-fragment-index="7">Note</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="8">Be careful when you cache</li>
+						<li class="fragment" data-fragment-index="9">Browser will show the cached version</li>
+						<ul style="font-size:0.65em">
+							<li class="fragment" data-fragment-index="10">Even after changes in the server file</li>
+							<li class="fragment" data-fragment-index="11">To know the browser updates, change the manifest file</li>
+						</ul>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;">Application Cache - Manifest File</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">For the offline applications to work, a cache manifest file must be created by the web developer</li>
+					<li class="fragment" data-fragment-index="2">Each page must have a manifest attribute that points to the cache manifest</li>
+					<li class="fragment" data-fragment-index="3">The cache manifest file is a text file located in another part of the server</li>
+					<li class="fragment" data-fragment-index="4">It must be served with the following content type:</li>
+				</ul>
+				<span style="padding:10px;border:3px solid black;background:#eaeaea;margin:auto;" class="fragment" data-fragment-index="5">text/cache-manifest</span>
+			</section>
+			<section>
+				<span id="title1">Web Storage</span><br>
+<pre style="padding:10px;border:3px solid black;width:650px;float:left;">
+&lt;!DOCTYPE  HTML>
+&lt;html manifest="cache.appcache">
+&lt;head>
+&lt;title>Menifest&lt;/title>
+&lt;script src="tkhts.js">&lt;/script>
+&lt;link rel="stylesheet" href="tkhts.css">
+&lt;/head>
+&lt;body>
+	Techknow Heights
+&lt;/body>
+&lt;/html>
+</pre>
+			<div style="padding:10px;border:3px solid black;float:right;margin-right:50px;background:#cce8eb;width:250px;font-size:0.5em;margin-top:100px;">CACHE MANIFEST<br>/tkhts.js<br>/tkhts.css</div>
+			</section>
+			<section>
+				<span style="font-size:1.6em;">Application Cache - Manifest File</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Manifest file has three sections:</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="2">Cache manifest
+						<ul>
+							<li  class="fragment" data-fragment-index="3">Listed files will be cached after they are downloaded for the first time</li>
+						</ul>
+						</li>
+					</ul>
+					<li class="fragment" data-fragment-index="4">Network</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="5">Listed files will never be cached</li>
+					</ul>
+					<li class="fragment" data-fragment-index="6">Fallback</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="7">Specified page in this header will be served in case of no internet connection</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;">Application Cache - Manifest File</span><br>
+				<ul>
+					<li>Complete cache manifest file</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;width:500px;float:left;">
+CACHE MANIFEST
+# 2013-07-31 v1.2.1
+/tkhts.js 
+/tkhts.css
+/tkhts.png
+
+NETWORK:
+login.jsp
+
+FALLBACK:
+/error.html
+</pre>
+			<div style="padding:10px;border:3px solid black;float:right;margin-right:50px;background:#cce8eb;width:250px;font-size:0.5em;" class="fragment" data-fragment-index="1">These files are always ready to be cached</div>
+			<div style="padding:10px;border:3px solid black;float:right;margin-right:50px;background:#cce8eb;width:250px;font-size:0.5em;margin-top:50px;" class="fragment" data-fragment-index="2">This page will never be cached</div>
+			<div style="padding:10px;border:3px solid black;float:right;margin-right:50px;background:#cce8eb;width:250px;font-size:0.5em;margin-top:50px;" class="fragment" data-fragment-index="3">This page will be served in case of error or no connection</div>
+			</section>
+			<section>
+				<span style="font-size:1.6em;">Application Cache - Manifest File</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Updating the Cache</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="2">A cached application remains cached until
+						<ul>
+							<li  class="fragment" data-fragment-index="3">Browser's cache is cleared</li>
+							<li  class="fragment" data-fragment-index="4">Manifest file is modified</li>
+							<li  class="fragment" data-fragment-index="5">Application cache is programmatically updated</li>
+						</ul>
+						</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;">Web Worker</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">When executing scripts in an HTML page, the page becomes unresponsive until the script is finished</li>
+					<li class="fragment" data-fragment-index="2">A web worker is a JavaScript that</li>
+						<ul style="font-size:0.7em">
+							<li class="fragment" data-fragment-index="3">runs in the background</li>
+							<li class="fragment" data-fragment-index="4">independent of other scripts</li>
+							<li class="fragment" data-fragment-index="5">without affecting the performance of the page</li>
+							<li class="fragment" data-fragment-index="6">continue to do</li>
+							<ul style="font-size:0.65em">
+								<li class="fragment" data-fragment-index="7">Clicking</li>
+								<li class="fragment" data-fragment-index="8">Selecting things</li>
+								<li class="fragment" data-fragment-index="9">Etc</li>
+							</ul>
+						</ul>
+					<li class="fragment" data-fragment-index="10">Being in external files, Web Workers do not have access to:</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="11">Window object</li>
+						<li class="fragment" data-fragment-index="12">Document object</li>
+						<li class="fragment" data-fragment-index="13">Parent object</li>
+					</ul>
+					</ul>
+			</section>
+			<section>
+                <span id="title1" class="center-block">Web Worker</span>
+				<aside class="fragment" data-fragment-index="2" style="color: #fff; width: 200px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.7em;">counter.js</aside><br>
+<pre style="border: 3px solid black; padding:10px;width:550px;height:500px;float:left;margin-top:-11px;" class="fragment" data-fragment-index="1">
+&lt;p>Count numbers:
+		&lt;output id="show ">&lt;/output>
+	&lt;/p>
+	&lt;button onclick="startWorker() ">Start Worker&lt;/button>
+	&lt;button onclick="stopWorker() ">Stop Worker&lt;/button>
+	&lt;script>
+		var webW;
+
+		function startWorker() {
+			if (typeof(Worker) !== "undefined ") {
+				if (typeof(webW) == "undefined ") {
+					webW = new Worker(“counter.js "); } webW.onmessage=f unction (event) { document.getElementById(“show ").innerHTML = event.data;
+				};
+			} else {
+				document.getElementById(“show ").innerHTML=“Browser is not supporting Web Workers. ";
+				}
+			}
+
+			function stopWorker() { 
+				webW.terminate();
+			}
+	&lt;/script>
+</pre>
+<pre style="border: 3px solid black; padding:10px;width:400px;float:right;margin-top:-11px;" class="fragment" data-fragment-index="2">
+var   i=0;
+  function timeCount()
+	{
+	   i=i+1;
+	   postMessage(i);
+	   setTimeout("timedCount()",500);
+	 }
+timeCount();
+</pre>
+            </section>
+            <section>
+				<span style="font-size:1.6em;">SSE – ServerSent Events</span><br>
+				<ul style="font-size:0.75em">
+					<li class="fragment" data-fragment-index="1">SSE - Server-Sent Events</li>
+						<ul style="font-size:0.7em">
+							<li class="fragment" data-fragment-index="2">One Way Messaging</li>
+						</ul>
+					<li class="fragment" data-fragment-index="3">The SSE are the new APIs for opening an HTTP connection for receiving push notifications from a server in the form of DOM events</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="4">Web pages automatically gets updates from a server</li>
+					</ul>
+					<li class="fragment" data-fragment-index="5">This was also possible before, but the web page would have to ask if any updates were available</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="6">With SSE, updates come automatically</li>
+					</ul>
+					<li class="fragment" data-fragment-index="7">Examples:</li>
+					<ul style="font-size:0.7em">
+						<li class="fragment" data-fragment-index="8">Facebook/Twitter updates</li>
+						<li class="fragment" data-fragment-index="9">Stock price updates</li>
+						<li class="fragment" data-fragment-index="10">News  feeds</li>
+						<li class="fragment" data-fragment-index="11">Sport results</li>
+						<li class="fragment" data-fragment-index="12">Etc</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+                <span id="title1" class="center-block">SSE</span><br>
+                  <div>
+                   <ul>
+                   	<li>The EventSource</li>
+                   </ul>
+                   </div><br><br>
+                    <aside class="fragment" data-fragment-index="1" style="color: #fff; width: 250px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;font-size:0.8em;">Events</aside>
+				<aside class="fragment" data-fragment-index="2" style="color: #fff; width: 700px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.8em;text-align:center;">Description</aside><br>
+			<aside class="fragment" data-fragment-index="1" style="width: 250px; margin: auto;background: #dddddd; border: 2px solid #727272;float:left;">
+			<ul style="font-size:1em;">
+				<li class="fragment" data-fragment-index="1">onopen</li><br>
+				<li class="fragment" data-fragment-index="1">onmessage</li>
+				<li class="fragment" data-fragment-index="1">onerror</li>
+			</ul>
+			</aside>
+			<aside class="fragment" data-fragment-index="2" style="width: 700px; margin: auto;background: #dddddd; border: 2px solid #727272;float:right;text-align:center;">
+			<ul style="font-size:1em;">
+				<li class="fragment" data-fragment-index="1">Used when a connection to the server is opened</li>
+				<li class="fragment" data-fragment-index="1">Used when a message is received</li>
+				<li class="fragment" data-fragment-index="1">Used when an error occurs</li>
+			</ul>
+			</aside>
+            </section>
+
+		</div>
+	</div>
+
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.js"></script>
+	<script src="reveal/js/ds-reveal-conf.js"></script>
+
+	<script>
+/*		Reveal.initialize({
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			}, {
+				src: 'plugin/markdown/markdown.js'
+			}],
+			markdown: {
+				smartypants: true
+			},
+
+			// Display controls in the bottom right corner
+			controls: true,
+
+			// Display a presentation progress bar
+			progress: true,
+
+			// Display the page number of the current slide
+			slideNumber: true,
+
+			// Push each slide change to the browser history
+			history: true,
+
+            center: false,
+
+		});
+
+Reveal.configure({ transition: 'none', transitionSpeed: 'fast'});
+*/
+	</script>
+</body>
+
+</html>

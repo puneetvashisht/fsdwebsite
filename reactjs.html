@@ -1,0 +1,1664 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>React</title>
+
+	<meta name="description" content="A dummy presentation for CodeAngelsJs Course">
+		<meta name="author" content="sudodoki / Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/beige.css">
+	<link rel="stylesheet" href="reveal/css/my.css">
+	<link rel="stylesheet" href="reveal/css/bootstrap.min.css">
+	<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Understanding Nodejs</h2>
+			</section>
+			<section>
+				<span id="title1"><b>Node.js®</b></span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">JavaScript runtime built on Chrome's V8 JavaScript engine.</li>
+					<li class="fragment" data-fragment-index="2">Uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.</li>
+					<li class="fragment" data-fragment-index="3">Lightweight and efficient, perfect for data-intensive real-time applications.</li>
+				</ul>
+					<p class="fragment" data-fragment-index="4">Run across distributed devices.</p>
+					<span style="border: 1px solid black; background: white;" class="fragment" data-fragment-index="5"><b class="fragment" data-fragment-index="5">NodeJS:<a href="https://nodejs.org/">https://nodejs.org/</a></b></span>
+			</section>
+			<section>
+				<h2><b>Node.js®</b></h2>
+				<aside class="fragment" data-fragment-index="1" style="color: #fff; width: 470px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;">Server Side Development</aside>
+				<aside class="fragment" data-fragment-index="2" style="color: #fff; width: 480px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;">Client Side Development</aside>
+<aside style="border: 3px solid black; padding:10px;width:470px;float:left;" class="fragment" data-fragment-index="3">
+<ul>
+                            <li class="fragment" data-fragment-index="5">Mongodb</li>
+                                <p class="fragment" data-fragment-index="6" style="font-size:0.5em">- Driver for mongo database</p>
+                            <li class="fragment" data-fragment-index="7">Express</li>
+                            <p class="fragment" data-fragment-index="8" style="font-size:0.5em">- Web framework</p>
+                            <li class="fragment" data-fragment-index="9">Jade/Ejs</li>
+                            <p class="fragment" data-fragment-index="10" style="font-size:0.5em">- Server side template like jsp</p>
+                            <li class="fragment" data-fragment-index="11">More...</li>
+                        </ul>
+</aside>
+<aside style="border: 3px solid black; padding:10px;width:480px;float:right;" class="fragment" data-fragment-index="4">
+<ul>
+                            <li class="fragment" data-fragment-index="12">Grunt/Gulp</li>
+                                <p class="fragment" data-fragment-index="13" style="font-size:0.5em">- Tsk runner</p>
+                            <li class="fragment" data-fragment-index="14">Yoeman</li>
+                            <p class="fragment" data-fragment-index="15" style="font-size:0.5em">- Scaffolding</p>
+                            <li class="fragment" data-fragment-index="16">Bower</li>
+                            <p class="fragment" data-fragment-index="17" style="font-size:0.5em">- Front end dependency management</p>
+                            <li class="fragment" data-fragment-index="18">More...</li>
+                        </ul>
+</aside>
+			</section>
+			<section>
+				<span id="title1"><b>NodeJs vs Traditional Server Approach</b></span>
+			</section>
+			<section>
+				<span id="title1">Traditional Server Approach</span>
+				<p class="fragment" data-fragment-index="1" style="font-size:1.5em;">Traditional web-serving techniques</p><hr>
+                <ul>
+                    <li class="fragment" data-fragment-index="2">Each connection (request) Spawns a new thread</li>
+                    <li class="fragment" data-fragment-index="3">Takes up system RAM and eventually maxing-out at the amount of RAM available</li>
+                </ul>
+			</section>
+			<section>
+			<span id="title1" class="center-block">How to handle requests/clients ?</span>
+				<section>
+					<img class="fragment" data-fragment-index="1" src="images/node/1.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/2.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/3.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/4.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/5.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/6.jpg" alt="">
+				</section>
+			</section>
+			<section>
+				<span id="title1" class="center-block">NodeJs Approach</span>
+				<span id="title2" class="fragment" data-fragment-index="1">Node.js</span>
+				<ul>
+					<li  id="center" class="fragment" data-fragment-index="2">Operates on a single-thread</li>
+					<li id="center" class="fragment" data-fragment-index="3">Using non-blocking I/O calls</li>
+					<li id="center" class="fragment" data-fragment-index="4">Allowing it to support tens of thousands of concurrent connections</li>
+				</ul>
+			</section>
+			<section>
+			<span id="title1" class="center-block">How to handle requests/clients ?</span>
+				<section>
+					<img src="images/node/7.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/8.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/9.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/10.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/node/11.jpg" alt="">
+				</section>
+			</section>
+			<section>
+				<span id="title1" class="center-block">NodeJs Approach</span>
+				<span id="title2" class="fragment" data-fragment-index="1">Node.js</span>
+				<ul>
+					<li  id="center" class="fragment" data-fragment-index="2">Node.js achieves scalability levels of over 1M concurrent connections.</li>
+					<li id="center" class="fragment" data-fragment-index="3">Let’s take a very simple piece of code like this:
+						<pre style="border:3px solid black; padding:10px;" class="fragment" data-fragment-index="4">
+var result = database.query("SELECT * FROM hugetable");
+console.log("Hello World");</pre>
+					</li>
+					<li id="center" class="fragment" data-fragment-index="5">The execution model of Node.js is different
+						<ul>
+							<li class="fragment" data-fragment-index="6" style="font-size:0.8em;">There is only one single process</li>
+							<li class="fragment" data-fragment-index="7" style="font-size:0.8em;">If there is a slow database query somewhere in this process, this affects the whole process
+								<ul>
+									<li class="fragment" data-fragment-index="8" style="font-size:0.7em;">Everything comes to a halt until the slow query has finished.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1" class="center-block">NodeJs Approach</span>
+				<ul>
+					<li id="center" class="fragment" data-fragment-index="1">To avoid this Node.js introduces the concept of event-driven, asynchronous callbacks, by utilizing an event loop.
+						<pre style="border:3px solid black; padding:10px;" class="fragment" data-fragment-index="2">
+database.query("SELECT * FROM hugetable", function(rows) {
+       var result = rows;
+});
+console.log("Hello World");</pre>
+					</li>
+					<li id="center" class="fragment" data-fragment-index="3">Node.js can handle the database request asynchronously
+						<ul>
+							<li class="fragment" data-fragment-index="4" style="font-size:0.7em;">Instead of waiting for query to be finished, node makes a mental note that says <u>“When at some point in the future the database query is done, then I have to execute the anonymous function.”</u></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1" class="center-block">NodeJs Approach</span><br>
+                <section>
+				<img class="fragment" data-fragment-index="1" src="images/node/Event-Loop/EventLoop%20(1).png" alt="">
+				</section>
+				<section>
+				<img src="images/node/Event-Loop/EventLoop%20(2).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(3).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(4).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(5).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(6).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(7).png" alt="">
+				</section><section>
+				<img src="images/node/Event-Loop/EventLoop%20(8).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(9).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(10).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(11).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(12).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(13).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(14).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(15).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(16).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(17).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(18).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(19).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(20).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(21).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(22).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(23).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(24).png" alt="">
+				</section>
+                <section>
+				<img src="images/node/Event-Loop/EventLoop%20(25).png" alt="">
+				</section>
+			</section>
+			<section>
+				<span id="title1" class="center-block">NodeJs server demo</span><br>
+				<pre style="border:3px solid black; padding:10px;">
+ var http = require("http");
+ var server = http.createSErver(function(request, response)){
+	response.writeHead(200, {"Content-Type": "text/html"});
+	let title = "My Page";
+	let heading = "Hello World";
+
+	let page = "&lt;!DOCTYPE html>&lt;html>&lt;head>"+
+				"&lt;title>"+title+"&lt;/title>&lt;/heat>"+
+				"&lt;body>&lt;h1>"+heading+"&lt;h1>&lt;/body>"+
+				"&lt;/html>";
+	response.write(page);
+	response.end();
+ });
+
+ server.listen(80);
+ console.log("Server is listening on localhost");
+				</pre>
+			</section>
+			<section>
+				<span id="title1" class="center-block">Node Package Manager</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="2">Comes by default with every Node.js installation</li>
+					<li class="fragment" data-fragment-index="3">Built-in support for package management using the <u>NPM</u> tool </li>
+					<li class="fragment" data-fragment-index="4">A set of publicly available, reusable components, available through easy installation via an online repository, with version and dependency management.</li>
+				</ul>
+				<span style="border: 1px solid black; background: white;" class="fragment" data-fragment-index="5"><b class="fragment" data-fragment-index="5">NodeJS:<a href="https://nodejs.org/">https://nodejs.org/</a></b></span>
+			</section>
+			<section>
+				<span id="title1" class="center-block">Introduction</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">React is
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Open source, maintained by Facebook</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">JS library for creating UI</li>
+								<ul>
+									<li style="font-size:0.7em;" class="fragment" data-fragment-index="4">Can be seen as V in MVC</li>
+								</ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="5">Ideal for large scale single page application</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="6">Uses a high speed VirtualDOM</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="7">Uses clean and easy to understand JSX syntax</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+			<span id="title1">Introduction</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">React is <i style="color:#39d173;">fast.</i>
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">Apps can handle complex updates and still feel quick and responsive.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="3">React is <i style="color:#39d173;">modular.</i>
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="4">Write many smaller, reusable files.</li>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="5">Solution to JavaScript's maintainability problems.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="6">React is <i style="color:#39d173;">scalable.</i>
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="7">Large programs that display a lot of changing data are where React performs best.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="8">React is <i style="color:#39d173;">flexible.</i>
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="9">You can use React for interesting projects that have nothing to do with making a web app.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="10">React is <i style="color:#39d173;">popular.</i></li>
+				</ul>
+			</section>
+			<section>
+			<span id="title1">Installation</span>
+				<ul>
+					<li class="fragment" data-fragment-index="2"><b>Package manager - <i>npm</i></b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">Lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5"><b>Compiler- <i>Babel</i></b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="7">Lets you write modern JavaScript code that still works in older browsers.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="8"><b>Bundler- <i>webpack</i> or <i>Reactify</i></b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="10">Lets you write modular code and bundle it together into small packages to opeimize load time.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Installation</span>
+
+                    <div class="fragment" data-fragment-index="1" style="font-size:1.3em;">To install React with npm, run:</div><br>
+                    <span style="border:2px solid black;padding:10px;background:black;color:white;" class="fragment" data-fragment-index="2">npm install --save react react-dom</span>
+                    <aside style="border:3px solid black;padding:10px;display:center;background:#c3d6ed;font-size:0.6em;width:480px;float:left;margin-top:20px" class="fragment" data-fragment-index="3">Use React to define and create your elements, for lifecycle hooks, ets.</aside>
+                    <aside style="border:3px solid black;padding:10px;display:center;background:#c3d6ed;font-size:0.6em;width:500px;float:right;" class="fragment" data-fragment-index="4">Glue between React and the DOM.<br>Useful features of ReactDOM are ReactDOM render(), ReactDOM findDOMNode()</aside>
+
+
+                    <ul style="font-size:0.7em;">
+                    	<li class="fragment" data-fragment-index="5">React and ReactDOM were only recently split into two different libraries.</li>
+                    	<li class="fragment" data-fragment-index="6">Prior to v0.14, all ReactDOM functionality was part of React.</li>
+                    </ul>
+
+			</section>
+			<section>
+				<span id="title1">Installation</span>
+               <br>
+                    <div class="fragment" data-fragment-index="1" style="font-size:1.3em;">Using a CDN</div>
+
+                    <aside style="border:3px solid black;padding:10px;background:#c3d6ed;font-size:0.75em;margin:auto;width:800px;margin-top:70px;" class="fragment" data-fragment-index="2">https://unpkg.com/react@15/dist/react.min.js https://unpkg.com/reacct-dom@15/dist/react-dom.min.js</aside>
+                    <div style="border:3px solid black;padding:10px;display:center;background:#fc9898;font-size:0.75em;width:700px;margin:auto;margin-top:100px;" class="fragment" data-fragment-index="3">To load a specific version of react and react-dom,<br>replace 15 with the version number.</div>
+                 </section>
+                 <section>
+				<span id="title1" class="center-block">Hello World</span><br>
+<pre style="border:3px solid black; padding:10px;" class="fragment" data-fragment-index="1">
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+	&lt;h1>Hello, world!&lt;/h1>
+	document.getElementById('title')
+);
+</pre>
+		<aside style="font-size:0.7em;" class="fragment" data-fragment-index="2">This code renders into a DOM element with the id of <b><i>title</i></b>.</aside>
+			</section>
+			<section>
+				<span id="title1" class="center-block">Introduction to JSX</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">JSX is a statically-typed, object-oriented programming language compiling to standalone JavaScript.</li>
+					<li class="fragment" data-fragment-index="2">The first thing you'll notice is the XML-ish syntax in your JavaScript.</li>
+				</ul>
+			</section>
+			<section>
+			<span id="title1" class="center-block">React without JSX</span>
+<pre style="border:3px solid black; padding:10px;">
+class SubjectList extends React.Component {
+    render() {
+        return
+            React.createElement('div', {className: ‘subject-list'},
+                React.createElement('h2', {}, ‘Subjects List for {this.props.name}’),
+                React.createElement('ul', {},
+                    React.createElement(‘li', {}, "Math") ,
+                    React.createElement(‘li', {}, "English") ,
+                    React.createElement(‘li', {}, "Javascript")
+                );
+            );
+        }
+   }
+
+// Example usage: &lt;SubjectList name=“Miley" />
+</pre>
+			</section>
+			<section>
+			<span id="title1" class="center-block">React with JSX</span>
+<pre style="border:3px solid black; padding:10px;">
+class SubjectList extends React.Component {
+    render() {
+        return (
+            &lt;div className=‘subject-list’>
+                &lt;h2>Subjects List for {this.props.name}&lt;/h2>
+                    &lt;ul>
+                        &lt;li>Math&lt;/li>
+                        &lt;li>English&lt;/li>
+                        &lt;li>JavaScript&lt;/li>
+                   &lt;/ul>
+            &lt;/div>
+        );
+    }
+}
+
+// Example usage: &lt; SubjectList name=“Miley" />
+</pre>
+			</section>
+			<section>
+				<span id="title1">Components</span><br>
+					<img class="fragment" data-fragment-index="1" src="images/reactjs/component.png" alt="">
+			</section>
+			<section>
+			<span id="title1">DOM</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Way of representing a structured document via objects</li>
+					<li class="fragment" data-fragment-index="2">Compare it to a process being an instance of a program.
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">You can have multiple processes of the same one program</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">Just like you can have multiple DOMs of the same HTML</li>
+							<ul>
+								<li class="fragment" data-fragment-index="5" style="font-size:0.7em;">The same page loaded on many tabs</li>
+							</ul>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+			<span id="title1">DOM-Issues</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">DOM is always tree-structured. </li>
+					<li class="fragment" data-fragment-index="2">This is cool because we can traverse trees fairly <n style="color:#39d173;">easily</n>.
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Unfortunately, <n style="color:#39d173;">easily</n> doesn’t mean <n style="color:#39d173;">quickly</n> here.</li>
+						</ul>
+					</li>
+				</ul>
+				<img class="fragment" data-fragment-index="4" src="images/reactjs/Dom-issues.png" alt="">
+			</section>
+			<section>
+				<span id="title1">DOM-Issues</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">The main problem is that DOM was never optimized for creating dynamic UI.</li>
+					<li class="fragment" data-fragment-index="2">Consider a DOM made of thousands of divs. Remember, we are modern web developers, our app is very SPA! </li>
+					<li class="fragment" data-fragment-index="3">Try to move a 1000 divs 5 pixel left for example. <n style="color:#f85454;"><i>It may take more than a second. It’s a lot of time for the modern web</i>.</n></li>
+					<ul>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;">You can optimize the script and use some tricks, but in the end, it’s a pain to work with huge pages and dynamic UI.</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Virtual DOM</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">It is lightweight and detached from the browser-specific implementation details.</li>
+					<li class="fragment" data-fragment-index="2">Since the DOM itself was already an abstraction, <i>the virtual DOM is, in fact, an abstraction of an abstraction.</i></li>
+					<li class="fragment" data-fragment-index="3">Think of the virtual DOM as <i>React’s local and simplified copy of the HTML DOM</i></li>
+					<ul>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;">Allows React to do its computations within this abstract world and skip the “real” DOM operations</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Virtual DOM</span><br><br>
+				<img src="images/reactjs/virtualDOM.png" alt="">
+			</section>
+				<section>
+				<span id="title1">On every update…</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ol>
+					<li class="fragment" data-fragment-index="1">React builds a new virtual DOM subtree</li>
+					<li class="fragment" data-fragment-index="2">diffs it with the old one</li>
+					<li class="fragment" data-fragment-index="3">computes the minimal set of DOM mutations and puts them in a queue</li>
+					<li class="fragment" data-fragment-index="4">and batch executes all updates</li>
+				</ol>
+			</section>
+			<section>
+				<span id="title1">ReactElement</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">This is the primary type in React.</li>
+					<li class="fragment" data-fragment-index="2">Light, <n style="color:#39d173;">stateless</n>, immutable, virtual representation of a DOM Element.</li>
+					<li class="fragment" data-fragment-index="3">Lives in the virtual DOM</li>
+					<ul>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;">Their immutability makes them easy and fast to compare and update. This is the reason of great React performance.</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">ReactElement</span>
+               <br>
+                   <ul>
+                    <li class="fragment" data-fragment-index="1" style="font-size:1em;">They are stateless, therefore don’t seem to be very helpful for the programmers</li>
+					</ul>
+                    <aside style="border:3px solid black;padding:10px;background:#c3d6ed;font-size:0.75em;margin:auto;width:850px;margin-top:70px;" class="fragment" data-fragment-index="2">var root = React.createElement('div‘, null, ‘hello world’);
+             		ReactDOM.render(root,document.getElementById('example'));
+					</aside><br>
+                   <span style="border:2px solid black;background:#fc9898;" class="fragment" data-fragment-index="3">JSX compiles HTML tags to ReactElements:</span>
+                    <div style="border:3px solid black;padding:10px;display:center;background:#c3d6ed;font-size:0.75em;width:850px;margin:auto;margin-top:50px;" class="fragment" data-fragment-index="4">var root = &lt;div>hello world&lt;/div>;
+					ReactDOM.render(root,document.getElementById('example'));.</div>
+                 </section>
+			<section>
+				<span id="title1">ReactComponent</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">What differs ReactComponent from ReactElement is - <i>ReactComponents are <n style="color:#39d173">stateful</n>.</i></li>
+				</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="2">
+var CommentBox = React.createClass({
+	render: function() {
+		return (
+			&lt;div className="commentBox">
+				Hello, world! I am a CommentBox.
+			&lt;/div>
+		);
+	}
+});
+</pre>
+			</section>
+			<section>
+				<span id="title1">Event Handling and Synthetic Events</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">With React you simply pass your event handler as a camelCased prop</li>
+					<li class="fragment" data-fragment-index="2">React ensures that all events behave similarly in all browsers
+					<ul>
+						<li class="fragment" data-fragment-index="3" style="font-size:0.8em;">by implementing a synthetic event system</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="4"><b>Under the Hood</b>
+					<ul>
+						<li class="fragment" data-fragment-index="5" style="font-size:0.8em;">Autobinding</li>
+						<li class="fragment" data-fragment-index="6" style="font-size:0.8em;">Event Delegation</li>
+					</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Autobinding</span>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">When creating callbacks in JavaScript, you usually need to explicitly bind a method to its instance such that the value of 'this' is correct.</li>
+				</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="2">
+<b>var</b> person = {firstName: ‘Black', lastName: ‘Mark'};
+
+<b>function</b> say() {
+    console.log('Hello ' + <b>this</b>.firstName + ' ' + <b>this</b>.lastName);
+}
+
+<b>var</b> sayHello = say.bind(person);
+
+sayHello(); // Hello Black Mark
+</pre>
+		<aside style="border:3px solid black;padding:5px;font-size:0.7em;background:#c3d6ed;" class="fragment" data-fragment-index="3">
+			Bind returns a new function, allowing you to pass in a this array and any number of arguments.
+		</aside>
+			</section>
+			<section>
+				<span id="title1">Event Delegation</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">React doesn't actually attach event handlers to the nodes themselves.</li>
+					<li class="fragment" data-fragment-index="2">When React starts up
+					<ul>
+						<li class="fragment" data-fragment-index="3" style="font-size:0.8em;">It starts listening for all events at the top level using a single event listener.</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="4">When a component is mounted or unmounted
+					<ul>
+						<li class="fragment" data-fragment-index="5" style="font-size:0.8em;">the event handlers are simply added or removed from an internal mapping</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="6">When an event occurs, React knows how to dispatch it using this mapping</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Separation of Concerns</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">By building modular components that reuse other components with well-defined interfaces</li>
+					<ul>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">you get much of the same benefits that you get by using functions or classes</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+			<span id="title1">Example</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+<pre style="border:3px solid black;padding:10px;">
+var Panel = React.createClass({
+	render: function(){
+		return(
+			&lt;div>
+			&lt;Badge count=“33”/>
+			&lt;Image src=“someurl.com”/>
+			&lt;/div>
+		);
+	}
+})
+</pre>
+			</section>
+			<section>
+				<span id="title1">Ownership</span><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">In the above example, instances of Panel <i>own</i> instances of Badge and Image</li>
+					<li class="fragment" data-fragment-index="2">In React, <b>an owner is the component that sets the props of other components</b>
+					<ul>
+						<li class="fragment" data-fragment-index="3" style="font-size:0.8em;">It is said that Badge is owned by Panel</li>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;"><b>A component cannot mutate its props they are always consistent with what its owner sets them to</b></li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Ownership</span><br>
+					<ul>
+						<li class="fragment" data-fragment-index="1">The owner-ownee relationship is specific to React, while the parent-child relationship is simply the one you know and love from the DOM</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Panel owns <b>the div, Badge and Image</b> instances</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">&lt;div> is the <b>parent</b> (<i>but not owner</i>) of the Badge and Image instances.</li>
+						</ul>
+					</ul>
+			</section>
+			<section>
+				<span id="title1">Children</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<span style="border:2px solid black;margin:auto;padding:10px;background:#e3e3e3;" class="fragment" data-fragment-index="1">
+					&lt;Parent>&lt;Child/>&lt;/Parent>
+				</span>
+				<ul style="margin-top:50px;">
+					<li class="fragment" data-fragment-index="2">Parent can read its children by accessing the special this.props.children prop..</li>
+					<li class="fragment" data-fragment-index="3"><b>this.props.children is an opaque data structure:</b> use the React.Children utilities to manipulate them</li>
+				</ul>
+			</section>
+			<section>
+			<span id="title1">Dynamic Children</span><br><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+<pre style="border:3px solid black;padding:10px;">
+render() {
+    return (
+      &lt;ol>
+        {this.props.results.map((result) => (
+          &lt;li key={result.id}>{result.text}&lt;/li>
+        ))}
+      &lt;/ol>
+    );
+  }
+</pre>
+			</section>
+			<section>
+				<span id="title1">Data Flow</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">This is effectively one-way data binding:</li>
+					<ul>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">owners bind their owned component's props to some value the owner has computed based on its props or state.</li>
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="3">Since this process happens recursively, data changes are automatically reflected everywhere they are used</li>
+						</ul>
+					</ul>
+				</ul>
+				<img class="fragment" data-fragment-index="4" src="images/reactjs/DataFlow.png" alt="">
+			</section>
+			<section>
+				<span id="title1">Communication between Components</span><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">The best approach would depend on how you plan to arrange those components</li>
+					<li class="fragment" data-fragment-index="2">Example scenarios:
+					<ul>
+						<li class="fragment" data-fragment-index="3" style="font-size:0.8em;">&lt;Filters /> is a child component of &lt;List /></li>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;">&lt;Filters /> and &lt;List /> are siblings</li>
+						<li class="fragment" data-fragment-index="5" style="font-size:0.8em;">&lt;Filters /> and &lt;List /> live in separate root components entirely</li>
+					</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Reusable Components</span><br>
+				<!--<img src="react/images/nodejs-logo.png" alt="">-->
+				<ul>
+					<li class="fragment" data-fragment-index="1">Break down the common design elements (<i>buttons, form fields, layout components, etc</i>) into reusable components with well-defined interfaces.</li>
+					<li class="fragment" data-fragment-index="2">The next time you need to build some UI you can write much less code</li>
+					<li class="fragment" data-fragment-index="3">Which means
+					<ul>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;">Faster development time</li>
+						<li class="fragment" data-fragment-index="5" style="font-size:0.8em;">Fewer bugs</li>
+					</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Cloning Components</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">In rare situations a component may want to change the props of a component that it doesn't own
+					<ul>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">Like changing the className of a component passed as this.props.children.</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="3">Other times it may want to make multiple copies of a component passed to it.
+					<ul>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;"><b>cloneWithProps()</b>makes this possible.</li>
+					</ul>
+					</li>
+				</ul>
+				<span style="background:#cbcbff;padding:10px;font-size:0.5em; border:2px solid black;" class="fragment" data-fragment-index="5">ReactComponent React.addons.cloneWithProps(ReactComponent component,object?extraProps</span>
+			</section>
+			<section>
+				<span id="title1">Cloning Components</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">In rare situations a component may want to change the props of a component that it doesn't own</li>
+					<li class="fragment" data-fragment-index="2">Other times it may want to make multiple copies of a component passed to it.</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment" data-fragment-index="3">
+var clonedcomponent = cloneWithProps(
+	originalComponent,
+	{
+		key: originalComponent.key
+	}
+);
+</pre>
+			</section>
+			<section>
+			<span id="title1">Controlled Component</span><br>
+			<ul>
+					<li class="fragment" data-fragment-index="1">An &lt;input> with value property is an <i>controlled</i> component</li>
+				</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="2">
+getInitialState: function() {
+    return {value: 'Hello!'};
+  },
+  handleChange: function(event) {
+    this.setState({value:
+	event.target.value});
+  },
+  render: function() {
+    return (
+      &lt;input
+        type="text"
+        value={this.state.value}
+        onChange={this.handleChange}
+      />
+    );
+  }
+</pre>
+			</section>
+			<section>
+			<span id="title1">Uncontrolled Component</span><br>
+			<ul>
+					<li class="fragment" data-fragment-index="1">An &lt;input> without value property is an <i>uncontrolled</i> component</li>
+				</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="2">
+render: function() {
+	return &lt;input type="text" />;
+}
+</pre>
+			</section>
+			<section>
+				<span id="title1">Component CSS</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">CSS pollutes the global namespace
+					<ul>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">This is bad because it leads to paralysis and confusion.</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="3">Inline styles avoid this, because the CSS is scoped to the component.</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Component CSS</span><br><br>
+<pre style="border:3px solid black;padding:10px;">
+var Title = React.createClass({
+	titleText: "Some text",
+
+	render(){
+	  var inlineCss = {
+	     padding:'10px',
+	     lineHeight:'16px',
+	     color:'red'
+	  }
+	  return&lt;div>
+	  	&lt;h1 style={inlineCss}>{titleText}&lt;/h1>
+	  &lt;/div>
+	}
+})
+</pre>
+			</section>
+			<section>
+				<span id="title1">Not really inline</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Style is actually a much better name than class.
+					<ul>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">You want to “style” the element, not “class” it.</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="3">Finally, this is not applying the style directly, this is using React virtual DOM and is being diff-ed the same way elements are.</li>
+				</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="4">
+&lt;h1 style={inlineCss}>{titleText}&lt;/h1>
+</pre>
+			</section>
+			<section>
+			<span id="title1">Conditional Rendering</span><br>
+			<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Conditional rendering in React works the same way conditions work in JavaScript. </li>
+					<li class="fragment" data-fragment-index="2">Use JavaScript operators like <n style="color:#39d173">if</n> or the <n style="color:#39d173">conditional operator</n> to create elements representing the current state, and let React update the UI to match them.</li>
+				</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="3">
+var Greeting  = React.createClass({
+	const isLoggedIn = this.props.isLoggedIn;
+		if (isLoggedIn) { return &lt;UserGreeting />; }
+		return &lt;GuestGreeting />;
+});
+</pre>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="4">
+ReactDOM.render(
+	&lt;Greeting isLoggedIn={false} />,
+	document.getElementById('root')
+);
+</pre>
+			</section>
+			<section>
+				<span id="title1" class="center-block">List</span>
+<aside class="fragment" data-fragment-index="1" style="color: #fff;background: #9b9898; border: 2px solid #727272;float:right;padding:1px;font-size:0.6em;">JavaScript List</aside>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;" class="fragment" data-fragment-index="1">
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(function(number){
+	return number*2;
+});
+console.log(doubled);
+</pre>
+		<aside class="fragment" data-fragment-index="2" style="color: #fff;background: #9b9898; border: 2px solid #727272;float:right;padding:1px;font-size:0.6em;margin-top:-10px;">ReactJS List</aside>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;" class="fragment" data-fragment-index="2">
+function NumberList(props) {
+	const numbers = props.numbers;
+	const listDoubledItems = numbers.map(function(number) {
+		let num = number*2;
+		return &lt;li>{num}&lt;/li>
+	});
+	return ( &lt;ul>{listDoubledItems}&lt;/ul> );
+}
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+	&lt;NumberList numbers={numbers} />,
+		document.getElementById('root') );
+</pre>
+			</section>
+			<section>
+				<span id="title1">List and Key</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">When you run above code, you'll be given a warning
+					<ul>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">A key should be provided for list items.</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="3">Let's assign a key to our list items inside numbers.map() and fix the missing key issue.
+					</li>
+				</ul>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;" class="fragment" data-fragment-index="4">
+function NumberList(props) {
+	const numbers = props.numbers;
+	const listDoubledItems = numbers.map(function(number) {
+		let num = number*2;
+		return &lt;li key={number.toString()}> {num} &lt;/li>
+	});
+	return ( &lt;ul>{listDoubledItems}&lt;/ul> );
+}
+</pre>
+			</section>
+			<section>
+				<span id="title1">Key</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Keys help React identify which items have changed, are added, or are removed.
+					</li>
+					<li class="fragment" data-fragment-index="2">Keys should be given to the elements inside the array to give the elements a stable identity:
+					</li>
+				</ul><br><br>
+				<aside style="float:left;font-size:0.45em;" class="fragment" data-fragment-index="3">Most often you would use IDs from your data as keys:</aside>
+				<aside style="float:left;font-size:0.45em;margin-left:80px;" class="fragment" data-fragment-index="4">Only do this if items have no stable IDs</aside>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;float:left;width:475px;font-size:0.45em;" class="fragment" data-fragment-index="3">
+const todoItems = todos.map((todo) =>
+	&lt;li key={todo.id}>
+		{todo.text}
+	&lt;/li>
+);
+</pre>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;float:right;width:475px;font-size:0.45em;" class="fragment" data-fragment-index="4">
+const todoItems = todos.map((todo, index) =>
+	&lt;li key={index}>
+		{todo.text}
+	&lt;/li>
+);
+</pre>
+			</section>
+			<section>
+				<span id="title1">Form: Crucial & Complex</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">A form creates a cohesive, effective, and compelling data entry experience. </li>
+					<li class="fragment" data-fragment-index="2">Forms seem straightforward:
+					<ul>
+						<li class="fragment" data-fragment-index="3" style="font-size:0.8em;">you make an input tag</li>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;">the user fills it out</li>
+						<li class="fragment" data-fragment-index="5" style="font-size:0.8em;">and hits submit</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="6">How hard could it be?
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Form</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Form can end up being really complex
+					<ul>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">Form inputs are meant to modify data, both on the page and the server</li>
+						<li class="fragment" data-fragment-index="3" style="font-size:0.8em;">Changes often need to be reflected elsewhere on the page</li>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;">Users have a lot of leeway in what they enter, so you need to validate values</li>
+						<li class="fragment" data-fragment-index="5" style="font-size:0.8em;">The UI needs to clearly state expectations and errors, if any</li>
+						<li class="fragment" data-fragment-index="6" style="font-size:0.8em;">Dependent fields can have complex logic</li>
+						<li class="fragment" data-fragment-index="7" style="font-size:0.8em;">We want to be able to test our forms, without relying on DOM selectors</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Form</span><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">In most cases, it's convenient to have a JavaScript function that
+					<ul>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">Handles the submission of the form</li>
+						<li class="fragment" data-fragment-index="3" style="font-size:0.8em;">Has access to the data that the user entered into the form.</li>
+					</ul>
+					</li>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="4">
+&lt;form>
+	Name: &lt;input type="text" name="name" />
+
+	&lt;input type="submit" value="Submit" />
+&lt;/form>
+</pre>
+					<li class="fragment" data-fragment-index="5">The standard way to achieve this is with a technique called "controlled components".
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Routing</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">React does not have a native router</li>
+					<li class="fragment" data-fragment-index="2">There are however a few to choose between
+					<ul>
+						<li class="fragment" data-fragment-index="3" style="font-size:0.8em;">React-router</li>
+						<li class="fragment" data-fragment-index="4" style="font-size:0.8em;">React-router-component</li>
+						<li class="fragment" data-fragment-index="5" style="font-size:0.8em;">Monorouter</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">React-Router Example</span><br><br>
+<pre style="border:3px solid black;padding:10px;">
+// other imports
+import { Router, Route, IndexRoute, hashHistory } from "react-router";
+
+const app = document.getElementById('app');
+
+ReactDOM.render(
+    &lt;Router history={hashHistory}>
+          &lt;Route path="/" component={Layout}>
+                &lt;IndexRoute component={Todos}>&lt;/IndexRoute>
+                &lt;Route path="favorites" component={Favorites}>&lt;/Route>
+                &lt;Route path="settings" component={Settings}>&lt;/Route>
+                &lt;Route path="todos1" component={Todos1}>&lt;/Route>
+          &lt;/Route>
+    &lt;/Router>,
+app);
+</pre>
+			</section>
+			<section>
+				<span id="title1">Server Rendering</span><br><br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Traditional JavaScript applications are hard to render on the server.</li>
+					<li class="fragment" data-fragment-index="2">This makes the app uncrawlable, and you miss out on SEO.</li>
+					<li class="fragment" data-fragment-index="3">Fortunately, React can handle this with ease.</li>
+				</ul>
+				<aside style="float:left;padding:10px;border:3px solid black;width:300px;font-size:0.6em;background:#c3d6ed;margin-top:100px;"class="fragment" data-fragment-index="4">
+					All you need to do is call renderToString instead of render
+				</aside>
+				<img style="float:right;height:300px;" src="images/reactjs/ServerRendering.png" alt="" class="fragment" data-fragment-index="5">
+			</section>
+			<section>
+				<span id="title1">Modules</span><br><br>
+				<aside style="background:#cbcbff;border:3px solid black;margin:auto;font-size:0.8em;">Good authors divide their books into chapters and sections,<br>
+				good programmers divide their programs into modules.</aside><br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">A separate unit of application</li>
+					<li class="fragment" data-fragment-index="2">Good modules are Highly self-contained with distinct functionality.</li>
+					<ul>
+						<li class="fragment" data-fragment-index="3">Allowing them to be shuffled, removed, or added as necessary</li>
+						<li class="fragment" data-fragment-index="4">Without disrupting the system as a whole</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">JS modules</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="2">Encapsulation & Dependency
+					<ul>
+						<li class="fragment" data-fragment-index="1" style="font-size:0.8em;">Different pieces of software are usually developed in isolation</li>
+						<li class="fragment" data-fragment-index="2" style="font-size:0.8em;">Other pieces of software are brought into the project</li>
+					</ul>
+				</ul><br>
+				<img class="fragment" data-fragment-index="3" style="float:left;height:300px;margin-left:70px;" src="images/reactjs/JSmodules1.png" alt="">
+				<img class="fragment" data-fragment-index="4" style="float:right;height:300px;margin-right:70px;" src="images/reactjs/JSmodules2.png" alt="">
+			</section>
+			<section>
+			<span id="title1">Why Modules</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="2"><b>Maintainability</b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">Updating a single module is much easier when the module is decoupled from other pieces of code.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5"><b>Namespacing</b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="7">Modules allow us to avoid namespace pollution by creating a private space for our variables..</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="8"><b>Reusability</b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="10">Let’s be honest here: copy previously written code into new projects.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1" class="center-block">JS modules</span>
+<aside class="fragment" data-fragment-index="1" style="color: #fff;background: #9b9898; border: 2px solid #727272;float:right;padding:1px;font-size:0.6em;">Backbone.js example</aside>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;" class="fragment" data-fragment-index="1">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;meta charset="utf-8">
+        &lt;title>Backbone.js Todos&lt;/title>
+        &lt;link rel="stylesheet" href="todos.css"/>
+    &lt;/head>
+	&lt;body>
+        &lt;script src="../../test/vendor/json2.js">&lt;/script>
+        &lt;script src="../../test/vendor/jquery.js">&lt;/script>
+        &lt;script src="../../test/vendor/underscore.js">&lt;/script>
+        &lt;script src="../../backbone.js">&lt;/script>
+        &lt;script src="../backbone.localStorage.js">&lt;/script>
+        &lt;script src="todos.js">&lt;/script>
+    &lt;/body>
+	&lt;!-- (...) -->
+&lt;/html>
+</pre>
+		<aside class="fragment" data-fragment-index="2" style="background: #cbcbff; border: 2px solid black;padding:2px;font-size:0.7em;margin-top:-10px;">Encapsulation is essential to prevent conflicts and ease development.</aside>
+			</section>
+			<section>
+			<span id="title1">JS modules</span><br><br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">As JavaScript development gets more and more complex
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Dependency management can get cumbersome.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Refactoring is also impaired</li>
+								<ul>
+									<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">Where should newer dependencies be put to maintain proper order of the load chain?</li>
+								</ul>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5">JavaScript module systems attempt to deal with these problems</li>
+				</ul>
+			</section>
+			<section>
+                <span id="title1" class="center-block">JS modules</span>
+                   <ul>
+					<li class="fragment" data-fragment-index="1">This pattern has been in use for quite some time in JavaScript projects
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Deals fairly nicely with the encapsulation matter</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">It does not do much about the dependencies issue</li>
+						</ul>
+					</li>
+				</ul>
+                    <aside class="fragment" data-fragment-index="4" style="color: #fff; width: 470px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;font-size:0.7em;">PROS</aside>
+				<aside class="fragment" data-fragment-index="5" style="color: #fff; width: 480px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.7em;">CONS</aside>
+<aside style="border: 3px solid black; padding:10px;width:470px;float:left;height:310px;" class="fragment" data-fragment-index="6">
+						<ul style="font-size:0.6em;">
+                            <li class="fragment" data-fragment-index="8">Simple enough to be implemented anywhere</li>
+                            <li class="fragment" data-fragment-index="9">Multiple modules can be defined in a single file.</li>
+                        </ul>
+</aside>
+<aside style="border: 3px solid black; padding:10px;width:480px;float:right;" class="fragment" data-fragment-index="7">
+						<ul style="font-size:0.6em;">
+                            <li class="fragment" data-fragment-index="10">No way to programmatically import modules</li>
+                            <li class="fragment" data-fragment-index="11">Dependencies need to be handled manually</li>
+                            <li class="fragment" data-fragment-index="12">Asynchronous loading of modules is not possible</li>
+                            <li class="fragment" data-fragment-index="13">Circular dependencies can be troublesome</li>
+                            <li class="fragment" data-fragment-index="14">Hard to analyze for static code analyzers</li>
+                        </ul>
+</aside>
+            </section>
+            <section>
+            	<span id="title1" class="center-block">CommonJS modules</span>
+                   <ul>
+					<li class="fragment" data-fragment-index="1">Synchronous, thus blocking
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Generally understood to be an easier read.</li>
+						</ul>
+					</li>
+					   <li class="fragment" data-fragment-index="3">Designed with server development in mind.</li>
+					   <li class="fragment" data-fragment-index="4">The dominant implementation of this standard is in Node.js</li>
+					</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="5">
+var a = require('module-a');
+var b = require('module-b');
+
+module.exports = {
+func: function() {...},
+integer: a.integer,
+string: b.string;
+};
+</pre>
+            </section>
+            <section>
+                <span id="title1" class="center-block">CJS Modules</span><br><br>
+                    <aside class="fragment" data-fragment-index="4" style="color: #fff; width: 470px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;font-size:0.7em;">PROS</aside>
+				<aside class="fragment" data-fragment-index="5" style="color: #fff; width: 480px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.7em;">CONS</aside>
+<aside style="border: 3px solid black; padding:10px;width:470px;float:left;" class="fragment" data-fragment-index="6">
+						<ul style="font-size:0.6em;">
+                            <li class="fragment" data-fragment-index="8">Simple: a developer can grasp the concept without looking at the docs.</li>
+                            <li class="fragment" data-fragment-index="9">Dependency management is integrated: modules require other modules and get loaded in the needed order.</li>
+                            <li class="fragment" data-fragment-index="10">“require” can be called anywhere: modules can be loaded programmatically.</li>
+                            <li class="fragment" data-fragment-index="11">Circular dependencies are supported.</li>
+                        </ul>
+</aside>
+<aside style="border: 3px solid black; padding:10px;width:480px;float:right;height:310px;" class="fragment" data-fragment-index="7">
+						<ul style="font-size:0.6em;">
+                            <li class="fragment" data-fragment-index="12">Synchronous API makes it not suitable for certain uses (client-side).</li>
+                            <li class="fragment" data-fragment-index="13">No constructor function for modules (Node supports this though).</li>
+                            <li class="fragment" data-fragment-index="14">Browsers require a loader library or transpiling.</li>
+                            <li class="fragment" data-fragment-index="15">One file per module.</li>
+                            <li class="fragment" data-fragment-index="16">Hard to analyze for static code analyzers.</li>
+                        </ul>
+</aside>
+            </section>
+            <section>
+            	<span id="title1" class="center-block">AMD Modules</span>
+                   <ul>
+					<li class="fragment" data-fragment-index="1"><b>Asynchronous Module Definition (AMD)</b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Accounts for the async nature of JS but some felt harder to read with a wrapper function.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">The most popular implementation of this standard is RequireJS</li>
+						</ul>
+					</li>
+				</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="4">
+define(['module-a', 'module-b'], function(a, b) {
+return {
+        func: function() {...},
+        integer: a.integer,
+        string: b.string;
+    };
+});
+</pre>
+            </section>
+            <section>
+                <span id="title1" class="center-block">AMD Modules</span><br><br>
+                    <aside class="fragment" data-fragment-index="4" style="color: #fff; width: 470px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;font-size:0.7em;">PROS</aside>
+				<aside class="fragment" data-fragment-index="5" style="color: #fff; width: 480px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.7em;">CONS</aside>
+<aside style="border: 3px solid black; padding:10px;width:470px;float:left;" class="fragment" data-fragment-index="6">
+						<ul style="font-size:0.6em;">
+                            <li class="fragment" data-fragment-index="8">Asynchronous loading (better startup times).</li>
+                            <li class="fragment" data-fragment-index="9">Circular dependencies are supported.</li>
+                            <li class="fragment" data-fragment-index="10">Compatibility for require and exports.</li>
+                            <li class="fragment" data-fragment-index="11">Dependency management fully integrated.</li>
+                            <li class="fragment" data-fragment-index="12">Modules can be split in multiple files if necessary.</li>
+                            <li class="fragment" data-fragment-index="13">Constructor functions are supported.</li>
+                            <li class="fragment" data-fragment-index="14">Plugin support (custom loading steps).</li>
+                        </ul>
+</aside>
+<aside style="border: 3px solid black; padding:10px;width:480px;float:right;height:340px;" class="fragment" data-fragment-index="7">
+						<ul style="font-size:0.6em;">
+                            <li class="fragment" data-fragment-index="15">Slightly more complex syntactically..</li>
+                            <li class="fragment" data-fragment-index="16">Loader libraries are required unless transpiled.</li>
+                            <li class="fragment" data-fragment-index="17">Hard to analyze for static code analyzers.</li>
+                        </ul>
+</aside>
+            </section>
+            <section>
+				<span id="title1">ES6 Modules</span><br><br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Fortunately, the ECMA team behind the standardization of JavaScript decided to tackle the issues of modules.</li>
+					<li class="fragment" data-fragment-index="2">The result is</li>
+					<ul>
+						<li class="fragment" data-fragment-index="3">ECMAScript 2015, ECMAScript 6, ES6</li>
+						<li class="fragment" data-fragment-index="4">syntactically pleasing and compatible with both synchronous and asynchronous modes of operation.</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">ES6 Modules</span><br><br>
+				<aside style="float:left;font-size:0.7em;margin-left:20px;" class="fragment" data-fragment-index="3"><u>There can be multiple named exports:</u></aside>
+				<aside style="float:left;font-size:0.7em;margin-left:80px;" class="fragment" data-fragment-index="4"><u>Import the complete module:</u></aside>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;float:left;width:490px;" class="fragment" data-fragment-index="3">
+//------ lib.js ------
+<b>export</b> const sqrt = Math.sqrt;
+<b>export</b> function square(x) {
+    return x * x;
+}
+<b>export</b> function diag(x, y) {
+    return sqrt(square(x) + square(y));
+}
+</pre>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;float:right;width:460px;" class="fragment" data-fragment-index="4">
+//------ main.js ------
+<b>import</b> { square, diag } from 'lib';
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+</pre>
+<pre style="border: 3px solid black; padding:10px; margin-top:5px;float:right;width:460px;" class="fragment" data-fragment-index="4">
+//------ main.js ------
+<b>import</b> * as lib from 'lib';
+console.log(lib.square(11)); // 121
+console.log(lib.diag(4, 3)); // 5
+</pre>
+			</section>
+			<section>
+                <span id="title1" class="center-block">ES6 Modules</span><br><br>
+                    <aside class="fragment" data-fragment-index="4" style="color: #fff; width: 470px; margin: auto;background: #9b9898; border: 2px solid #727272;float:left;font-size:0.7em;">PROS</aside>
+				<aside class="fragment" data-fragment-index="5" style="color: #fff; width: 480px; margin: auto;background: #9b9898; border: 2px solid #727272;float:right;font-size:0.7em;">CONS</aside>
+<aside style="border: 3px solid black; padding:10px;width:470px;float:left;" class="fragment" data-fragment-index="6">
+						<ul style="font-size:0.6em;">
+                            <li class="fragment" data-fragment-index="8">Synchronous and asynchronous loading supported.</li>
+                            <li class="fragment" data-fragment-index="9">Syntactically simple.</li>
+                            <li class="fragment" data-fragment-index="10">Support for static analysis tools.</li>
+                            <li class="fragment" data-fragment-index="11">Integrated in the language (eventually supported everywhere, no need for libraries).</li>
+                            <li class="fragment" data-fragment-index="12">Circular dependencies supported.</li>
+                        </ul>
+</aside>
+<aside style="border: 3px solid black; padding:10px;width:480px;float:right;height:280px;" class="fragment" data-fragment-index="7">
+						<ul style="font-size:0.6em;">
+                            <li class="fragment" data-fragment-index="13">Still not supported everywhere.</li>
+                        </ul>
+</aside>
+            </section>
+            <section>
+			<span id="title1">Implementation</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Unfortunately none of the major JavaScript runtimes support ES2015 modules in their current stable branches</li>
+					<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">No support in Firefox, Chrome or Node.js</li>
+						</ul>
+					<li class="fragment" data-fragment-index="3">Fortunately
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="4">Many transpilers do support modules</li>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="5">A polyfill is also available</li>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="6">Currently, the ES2015 preset for Babel can handle modules with no trouble.</li>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="7">System.js: a universal module loader that supports CommonJS, AMD and ES2015 modules</li>
+								<ul>
+									<li style="font-size:0.6em;" class="fragment" data-fragment-index="8">Can work in tandem with transpilers such as Babel, Traceur or Typescript?</li>
+									<li style="font-size:0.6em;" class="fragment" data-fragment-index="9">Does all the job on-the-fly</li>
+								</ul>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<span id="title1"><h4>Flux</h4></span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">An architecture</li>
+					<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">Facebook uses internally when working with React</li>
+						</ul>
+					<li class="fragment" data-fragment-index="3">Not a framework or a library
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="4">Design pattern</li>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="5">The concept of Unidirectional Data Flow</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+			<span><h3>Flux-Individual Components</h3></span>
+				<ul>
+					<li class="fragment" data-fragment-index="2"><b>Actions</b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">Helper methods that facilitate passing data to the Dispatcher</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5"><b>Dispatcher</b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="7">Receives actions and broadcasts payloads to registered callbacks</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="8"><b>Stores</b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="10">Containers for application state & logic that have callbacks registered to the dispatcher</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="11"><b>Controller Views</b>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="12">React Components that grab the state from Stores and pass it down via props to child components.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Flux-Individual Components</span>
+				<img src="images/reactjs/flux.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.8em;" id="title1">Flux-Individual Components</span><br><br>
+				<img src="images/reactjs/flux2.png" alt="">
+			</section>
+			<section>
+				<span id="title1">Dispatcher</span><br><br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">The Dispatcher is basically the manager of entire process.</li>
+					<li class="fragment" data-fragment-index="2">Receives actions and dispatches the actions and data to registered callbacks</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Dispatcher</span><br><br>
+				<span style="background:#cbcbff;border:3px solid black;" class="fragment" data-fragment-index="1">One dispatcher per application</span>
+<pre class="fragment" data-fragment-index="2" style="border:3px solid black;padding:10px; width:500px;">
+import { Dispatcher } from 'flux';
+
+export default new Dispatcher;
+</pre>
+			</section>
+			<section>
+				<span id="title1">ActionCreators & Actions</span><br><br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Action Creators are collections of methods that are called within views to send actions to the Dispatcher.</li>
+					<li class="fragment" data-fragment-index="2">Actions are the actual payloads that are delivered via the dispatcher.</li>
+				</ul>
+<pre class="fragment" data-fragment-index="3" style="border:3px solid black;padding:10px;">
+import dispatcher from '../dispatcher';
+
+export function createTodo(text, competed){
+	dispatcher.dispatch({type:"CREATE_TODO", text: text, complete:completed});
+}
+
+export function deleteTodo(id){
+	dispatcher.dispatch({type:"DELETE_TODO", id: id});
+}
+</pre>
+			</section>
+			<section>
+				<span id="title1">Stores</span><br><br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Stores manage application state for a particular domain within your application. </li>
+					<li class="fragment" data-fragment-index="2">This basically means that per app section Stores manage</li>
+					<ul>
+						<li class="fragment" data-fragment-index="3">The data</li>
+						<li class="fragment" data-fragment-index="4">Data retrieval methods </li>
+						<li class="fragment" data-fragment-index="5">Dispatcher callbacks</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Stores</span>
+				<aside style="background:#cbcbff;border:2px solid black;width:350px;text-align:left;padding-left:30px;font-size:0.7em;" class="fragment" data-fragment-index="1">The data<br>
+				Data reteieval methods<br>
+				Dispatcher callbacks
+				</aside>
+<pre class="fragment" data-fragment-index="2" style="border:3px solid black;padding:10px; width:600px;float:right;margin-top:-110px;font-size:0.3em;">
+import EventEmitter from 'events';
+import dispatcher from '../dispatcher';
+
+class TodoStore extends EventEmitter{
+	constructor(){
+		super();
+		this.todos = [...]
+	}
+	getAllTodos(){
+		return this.todos;
+	}
+	createTod(text, completed){
+		let id=Date.now();
+		this.todos.push({id: id, text, complete: completed});
+		// this.emit("change");
+	}
+	updateTodo(){
+		// this.emit("update");
+	}
+	handleAction(action){
+		console.log(action);
+		switch(acction.type){
+			case 'CREATE_TODO': this>createTodo(action.text, action.complete);
+				break;
+		}
+	}
+}
+</pre>
+<pre style="border:3px solid black;font-size:0.7em;padding:10px;" class="fragment" data-fragment-index="3">
+var todoStore = new TodoStore;
+dispatcher.register(todoStore.handleAction.bind(todoStore));
+</pre>
+			</section>
+			<section>
+			<span id="title1">Stores</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">The most important thing we did above is to extend our store with NodeJS’s <b>EventEmitter</b>.</li>
+					<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Allows our stores to listen/broadcast events.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Allows our Views/Components to update based upon those events</li>
+							<ul>
+								<li style="font-size:0.7em;" class="fragment" data-fragment-index="4">Because our Controller View listens to our Stores, leveraging this to emit change events will let our Controller View know that our application state has changed and its time to retrieve the state to keep things fresh.</li>
+							</ul>
+					</ul>
+				</ul>
+			</section>
+			<section>
+			<span id="title1">Stores</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">We also registered a callback with our Dispatcher using its register method.</li>
+					<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">This means that our Store is now listening to Dispatcher broadcasts. </li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Our switch statement determines if there are any relevant actions to take.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">If a relevant action is taken, a change event is emitted, and views that are listening for this event update their states.</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.8em;" id="title1">Stores</span><br><br>
+				<img src="images/reactjs/Stores.png" alt="">
+			</section>
+			<section>
+			<span id="title1">Controller Views</span>
+				<ul>
+					<li style="font-size:0.8em;" class="fragment" data-fragment-index="1">Controller views are really just React components</li>
+					<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="2">That listen to change events and retrieve Application state from Stores.</li>
+							<li class="fragment" data-fragment-index="3">Our switch statement determines if there are any relevant actions to take.</li>
+							<li class="fragment" data-fragment-index="4">They then pass that data down to their child components via props.</li>
+					</ul>
+				</ul>
+				<img class="fragment" data-fragment-index="5" style="width:300px;" src="images/reactjs/Controller.png" alt="">
+			</section>
+			<section>
+				<span id="title1">Controller Views</span>
+<pre class="fragment" data-fragment-index="1" style="border:3px solid black;padding:10px; width:470px;float:left;font-size:0.3em;">
+import React from 'react';
+import Todo from '../components/Todo';
+import todoStore from '../store/TodoStore';
+import * as TodoAction from '../action/TodoAction';
+
+export default class Todos extends React.Component {
+	constructor(){
+		super();
+		this.state = {
+			todo: todoStore.getAllTodos()
+		};
+	}
+	componentWillMount(){
+		todoStore.on("change", ()=>{
+			let todos = todoStore.gerAllTodos();
+			this.setState({todos: todos});
+		});
+		todoStore.on("update", ()=>{
+			console.log("update date...");
+		});
+	}
+	createTodo(){
+		let text = "Read Java";
+		let complete = false;
+		TodoAction.createTodo(text, complete);
+	}
+}
+</pre>
+<pre style="border:3px solid black;font-size:0.7em;padding:10px; width:470px;float:right;font-size:0.3em;" class="fragment" data-fragment-index="2">
+render() {
+	const{ todos } = this.state;
+
+	const TodoComponents = todos.map(todo) => {
+		return &lt;Todo key={todo.id} {...todo}/>;
+	}
+
+	return(
+		&lt;div>
+			&lt;h1>Todos&lt;/h1>
+			&lt;ul>{TodoComponents}&lt;/ul>
+
+			&lt;button onclick={this.createTodo.bind(this)}>Create Todo&lt;/button>
+		&lt;/div>
+	);
+}
+</pre>
+			</section>
+			<section>
+				<span id="title1">Putting It All Together</span>
+				<img src="images/reactjs/AllTogether.png" alt="">
+			</section>
+
+			<section>
+				<span id="title1">Best Practices</span>
+				<ol>
+					<li class="fragment" data-fragment-index="1">
+						Always define your <i>propTypes</i>.
+					</li>
+					<li class="fragment" data-fragment-index="2">
+						For any propType that isn't <b>required</b>, always set it in getDefaultProps.
+					</li>
+					<li class="fragment" data-fragment-index="3">
+						Rely on <b>...spreadSyntax</b> over passing props explicity.
+					</li>
+					<li class="fragment" data-fragment-index="4">
+						Place your derived props or state in render() rather than in getInitialState().
+					</li>
+					<li class="fragment" data-fragment-index="5">
+						Use
+							<ul>
+								<li class="fragment" data-fragment-index="6">JSX</li>
+								<li class="fragment" data-fragment-index="7">ES6 (transpiled with Babel)</li>
+								<li class="fragment" data-fragment-index="8">Webpack</li>
+							</ul>
+					</li>
+				</ol>
+			</section>
+			<section>
+				<span id="title1">Best Practices</span>
+						<br/>
+
+				<ul>
+					<li class="fragment" data-fragment-index="1">
+						Always look at your bundle size
+							<br/>
+						<code>
+						<span>Bad=></span>
+							<code>import {Foo} from ‘foo’</code>
+							<br/>
+						<span>Good=></span>
+							<code>import Foo from ‘foo/Foo’</code>
+						</code>
+
+					</li>
+					<li class="fragment" data-fragment-index="2">
+						Keep your components small (Very Small)
+					</li>
+					<li class="fragment" data-fragment-index="3">
+						Minimize your States
+						<ul><li class="fragment" data-fragment-index="4">Avoid synchronizing state between a child and parent</li></ul>
+					</li>
+					<li class="fragment" data-fragment-index="5">
+						Use ShouldComponentUpdate for performance optimization
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Best Practices</span><br/>
+									<ul>
+<li class="fragment" data-fragment-index="1">Always bind the functions in the constructor
+<pre  class="fragment" data-fragment-index="1" style="border:3px solid black;padding:10px; width:60%;font-size:0.3em;">
+export default class BindFunctionExample extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			hidden: true,
+		};
+		this.toggleHidden = this.toggleHidden.bind(this);
+	}
+
+	toggleHidden() {
+    		const hidden = !this.state.hidden;
+    		this.setState({hidden})
+	}
+	render(){
+		return(
+			&lt;button onClick={this.toggleHidden} /&gt;
+		);
+	}
+}
+</pre>
+</li>
+					<li class="fragment" data-fragment-index="2">Use Prop validation
+						<ul>
+							<li class="fragment" data-fragment-index="3">PropTypes will make your life a lot better when working with a large team.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Best Practices</span><br/>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Use Redux/Flux
+						<ul>
+							<li class="fragment" data-fragment-index="2">Flux/Redux allows you to handle data easily and takes the pain away from handling front end cache.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="3">Avoid Refs
+						<ul>
+							<li class="fragment" data-fragment-index="4">Refs will only make your code harder to maintain.</li>
+							<li class="fragment" data-fragment-index="5">Plus when you use refs you are manipulating the virtual Dom directly.</li>
+							<li class="fragment" data-fragment-index="6">Which means that the component will have to re-render the whole Dom tree.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span id="title1">Best Practices</span><br/>
+				<div style="width:50%;float:left;">
+					<img width="80%;" src="images/reactjs/file_structure_1.png" alt="file_structure_1">
+					<br/>
+					<h5>File structures with React/Redux that makes things easy to work with.</h5>
+				</div>
+				<div style="width:50%;float:right;">
+					<img width="80%;" src="images/reactjs/file_structure.png" alt="file_structure_2">
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.js"></script>
+	<script src="reveal/js/ds-reveal-conf.js"></script>
+
+	<script>
+/*		Reveal.initialize({
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			}, {
+				src: 'plugin/markdown/markdown.js'
+			}],
+			markdown: {
+				smartypants: true
+			},
+
+			// Display controls in the bottom right corner
+			controls: true,
+
+			// Display a presentation progress bar
+			progress: true,
+
+			// Display the page number of the current slide
+			slideNumber: true,
+
+			// Push each slide change to the browser history
+			history: true,
+
+            center: false,
+
+		});
+
+Reveal.configure({ transition: 'none', transitionSpeed: 'fast'});
+*/
+	</script>
+
+</body>
+
+</html>

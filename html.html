@@ -1,0 +1,1149 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>HTML</title>
+
+	<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/beige.css">
+	<link rel="stylesheet" href="reveal/css/my.css">
+	<link rel="stylesheet" href="reveal/css/bootstrap.min.css">
+	<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<span style="font-size:1.6em;">HTML</span><br><br>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">Table of Contents</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Introduction
+						<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="2">What is HTML</li>
+							<li class="fragment" data-fragment-index="3">Semantics</li>
+							<li class="fragment" data-fragment-index="4">Structure of an HTML Page</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5">HTML</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="6">Document Metadata</li>
+							<li class="fragment" data-fragment-index="7">Scripting</li>
+							<li class="fragment" data-fragment-index="8">Sections</li>
+							<li class="fragment" data-fragment-index="9">Grouping Content</li>
+							<li class="fragment" data-fragment-index="10">Text-Level Semantics</li>
+							<li class="fragment" data-fragment-index="11">Links</li>
+							<li class="fragment" data-fragment-index="12">Embedded Content</li>
+							<li class="fragment" data-fragment-index="13">Tabular Data</li>
+							<li class="fragment" data-fragment-index="14">Forms</li>
+						</ul>
+				</ul>
+			</section>
+			<section>
+                <span style="font-size:1.3em;" class="center-block" style="font-size:1.4em;">HTML | Introduction – Pop up <img src="images/html/HTMLfile.png" style="border:none;float:right;margin-right:50px;" alt=""></span><br>
+<aside style=" padding:10px;width:470px;float:left;height:570px;margin-top:40px;">
+						<ul style="font-size:0.65em;">
+                            <li class="fragment" data-fragment-index="1">What is HTML ?</li>
+                            <li class="fragment" data-fragment-index="3">What is Hypertext ?</li><br><br>
+                            <li class="fragment" data-fragment-index="5">What is markup language ?</li><br><br><br>
+                            <li class="fragment" data-fragment-index="7">HTML document is also called a _______ ?</li>
+                            <li class="fragment" data-fragment-index="9">What is the purpose of a Web Browser (like Internet Explorer, Firefox, Chrome etc.?</li>
+                            <li class="fragment" data-fragment-index="11">What is the latet version ?</li>
+                        </ul>
+</aside>
+<aside style=" padding:10px;width:480px;float:right;">
+						<ul style="font-size:0.65em;">
+                            <li class="fragment" data-fragment-index="2">Hyper Text Markup Language</li>
+                            <li class="fragment" data-fragment-index="4">As opposed to plain text, hypertext can serve additional purposes. For example it can be a link to other text</li>
+                            <li class="fragment" data-fragment-index="6">It is set of mark up tags that are used to represent texts as well as details about the structure and appearance of the texts</li>
+                            <li class="fragment" data-fragment-index="8">Webpage</li><br>
+                            <li class="fragment" data-fragment-index="10">Read HTML document and display them as web pages</li><br>
+                            <li class="fragment" data-fragment-index="12">HTML5</li>
+                        </ul>
+</aside>
+            </section>
+            <section>
+                <span style="font-size:1.6em;" class="center-block" style="font-size:1.5em;">What is HTML ?</span><br>
+<aside style=" padding:10px;width:470px;float:left;height:570px;">
+						<ul style="font-size:0.7em;">
+                            <li class="fragment" data-fragment-index="1"><b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage is a markup language for displaying</li>
+                            <li class="fragment" data-fragment-index="2">HTML structures the content (words, images, video, etc.) of your web page.</li>
+                            <li class="fragment" data-fragment-index="3">HTML is interpreted and displayed by a <u>web browser</u>.</li>
+                            <li class="fragment" data-fragment-index="4">HTML uses <u>elements</u>, consisting of <u>tags</u>, to describe the <u>semantics</u>, or meaning, of the content.</li>
+                            <li class="fragment" data-fragment-index="5">Different browsers may render HTML differently.</li>
+                        </ul>
+</aside>
+<aside style="padding:10px;width:480px;float:right;">
+<img style="width:400px;" src="images/html/htmlJavascriptCss.png" alt="">
+</aside>
+            </section>
+            <section>
+                <span style="font-size:1.6em;" class="center-block" style="font-size:1.5em;">Elements</span>
+<aside style=" padding:10px;width:470px;float:left;">
+						<ul style="font-size:0.75em;">
+                            <li class="fragment" data-fragment-index="1">HTML Element are the building bocks of HTML documents.</li>
+                            <ul style="font-size:0.65em;">
+                            	<li class="fragment" data-fragment-index="2">Element and Tags are sometimes used synonymously in the industry</li>
+                            </ul>
+                            <li class="fragment" data-fragment-index="3">An HTML Element is made of </li>
+                            <ul style="font-size:0.65em;">
+                            	<li class="fragment" data-fragment-index="4">A Start Tag/Opening Tag: Tag Name enclosed between "&lt;" and ">"</li>
+                            	<li class="fragment" data-fragment-index="5">Content: Text (or some other element)</li>
+                            	<li class="fragment" data-fragment-index="6">End Tag/Closing Tag: Text preceded by "/" and enclosed between "&lt;" and ">"</li>
+                            </ul>
+                        </ul>
+</aside>
+<aside style="float:right;margin-right:80px;"><img src="images/html/building-blocks.jpg" style=width:250px; alt=""></aside>
+<pre style="border:3px solid black;font-size:0.4em;padding:10px;margin:auto;width:500px;margin-top:-200px;" class="fragment" data-fragment-index="7">
+&lt;!DOCTYPE html public "-//w3c//dtd html 4.01//en"
+   "http://www.w3.org/TR/html4/strict.dtd">
+&lt;html>
+   &lt;head>
+      &lt;title>My first HTML document&lt;/title>
+   &lt;/head>
+   &lt;body>
+      &lt;p>Hello world! &lt;/p>
+   &lt;/body>
+&lt;/html>
+</pre>
+            </section>
+            <section>
+				<span style="font-size:1.6em;" class="center-block">Element Attributes</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Attributes provide additional information about the HTML elements</li>
+					<li class="fragment" data-fragment-index="2">They are part of the start tag and comprise of name-value pairs</li>
+					<li class="fragment" data-fragment-index="3">Attribute names are always case-insensitive.</li>
+					<li class="fragment" data-fragment-index="4">Attribute values are generally case-insensitive and are always enclosed in quotes</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment" data-fragment-index="5">If the value contains double quotes then it is imperative to use single quote for the value</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;font-size:0.45em;"  class="fragment" data-fragment-index="6">
+&lt;!DOCTYPE html public "-//w3c//dtd html 4.01//en"  "http://www.w3.org/tr/html4/strict.dtd">
+&lt;html>
+   &lt;head>
+      &lt;title>My first HTML document&lt;/title>
+   &lt;/head>
+   &lt;body>
+      &lt;p id=“1001” align=‘left’> Hello world! &lt;/p>
+   &lt;/body>
+&lt;/html>
+</pre>
+			</section>
+            <section>
+				<span style="font-size:1.6em;" class="center-block">Empty vs. Container Tags</span>
+				<aside style="float:left;width:700px;">
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="1">Refresher: Element has Start Tag, Content, End Tag
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">Element and Tags are sometimes used synonymously in the industry</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="3">Container tag: acts as a container for content or for other tags
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="4">Closing tag is mandatory for container tag</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5">Empty tag: has no content/tags to operate on
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="6">Consequently, closing tag is not mandatory for empty tags</li>
+						</ul>
+					</li>
+				</ul>
+				</aside>
+<pre style="padding:10px;border:3px solid black;float:right;width:250px;" class="fragment" data-fragment-index="7">
+....
+&lt;BODY>
+&lt;p>Hello world!
+&lt;/p>
+&lt;/BODY>
+&lt;/HTML>
+</pre>
+<pre style="padding:10px;border:3px solid black;width:380px;margin-left:80px;margin-top:300px;" class="fragment" data-fragment-index="8">
+&lt;BODY>
+&lt;hr width="50">
+&lt;p>&lt;b>&lt;i>Paragraph1&lt;/i>&lt;/b>
+&lt;/p>
+&lt;hr>
+&lt;/BODY>
+</pre>
+		<img style="float:right;margin-top:-200px;" src="images/html/paragraph.png" alt="" class="fragment" data-fragment-index="9">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Blocks and Inline Elements</span>
+				
+				<ul style="font-size:0.8em">
+					<li class="fragment" data-fragment-index="1">If you want to display some content using:
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">complete width available (use a BLOCK Elemtnt)</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">only the required width (use an INLINE Element)</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="4">Consequently,
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="5">BLOCK elements always appear on a new line</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="6">INLINE elements continue in the same line (unless space is not available)</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="7">Block Elements can contain:
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="8">Other BLOCK Elements,</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="9">INLINE Elements can ONLY contain other INLINE elements</li>
+						</ul>
+					</li>
+				</ul>
+<pre class="fragment" data-fragment-index="10" style="padding:10px;border:3px solid black;width:500px;height:250px;margin-left:80px;">
+ &lt;body>
+  &lt;p style="background-color:yellow">  Paragraph1 &lt;/p>
+  &lt;table border="1">
+    &lt;tr>
+      &lt;td> &lt;h1>This is Block1&lt;/h1> &lt;h1>This is Block2&lt;/h1> &lt;/td>
+      &lt;td> &lt;strong>Inline Text1&lt;/strong>&lt;i>Inline Text2&lt;/i> &lt;/td>
+    &lt;/tr> 
+  &lt;/table>
+  &lt;i style="background-color:yellow">Inline Text2 with color&lt;/i>
+   &lt;/body>
+</pre>
+		<img style="float:right;margin-top:-220px;width:250px;" src="images/html/block.png" alt="" class="fragment" data-fragment-index="11">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Comments in HTML</span>
+				<aside style=" padding:10px;width:550px;float:left;">
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="1">Code may also contain comments
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Developer can use them to remember what he/she is doing.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Developers can use them to communicate with other developers.</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="4">Comments aren't displayed on the browser.</li>
+					<li class="fragment" data-fragment-index="5">The syntax to write a comment
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="6">"&lt;!--" starts the comment</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="7">"-->" ends the comment</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="8">Contains some text between the start and the end syntax.</li>
+						</ul>
+					</li>
+				</ul>
+			   </aside>
+			   <img style="float:right;width:400px;;margin-top:150px;" src="images/html/comment.gif" alt="" class="fragment" data-fragment-index="9">
+<pre class="fragment" data-fragment-index="10" style="padding:10px;border:3px solid black;width:600px;float:left;font-size:0.4em;">
+&lt;BODY>
+&lt;hr width="50">
+&lt;!– This comment won’t be shown on the browser -->
+&lt;p>&lt;b>&lt;i>Paragraph1&lt;/i>&lt;/b>
+&lt;/p>
+&lt;hr>
+&lt;/BODY>
+</pre>
+		<img style="float:right;margin-top:-20px;width:300px;" src="images/html/block.png" alt="" class="fragment" data-fragment-index="11">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Case Sensitivity in HTML</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">HTML is case insensitive with some exceptions
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">The values of IDs, classes, element names, attribute names, and attribute values may be handled as case-sensitive.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">According to the practice, we follow lower case for HTML tags.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Semantics</span>
+				<br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">SEMANTICS = MEANINGS.</li>
+					<li class="fragment" data-fragment-index="2">Elements, attributes, and attribute values in HTML all have specific semantics.</li>
+					<li class="fragment" data-fragment-index="3">HTML documents can be presented in many different ways</li>
+						<ul>
+							<li style="font-size:0.75em;" class="fragment" data-fragment-index="4">With a web browser on a desktop PC.</li>
+							<li style="font-size:0.75em;" class="fragment" data-fragment-index="5">With a tablet device, such as an iPad</li>
+							<li style="font-size:0.75em;" class="fragment" data-fragment-index="6">For a screen reader for  someone who is visually impaired</li>
+						</ul>
+					<li class="fragment" data-fragment-index="7">HTML can present content on many different types of devices because the markup conveys they  meaning of the content, not how it should be displayed</li>
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Page Structure</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">An HTML webpage is made up of three main parts:</li>
+				<ul>
+					<li class="fragment" data-fragment-index="2">Document Type Declaration (&lt;!DOCTYPE html>)
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">A single tag which contains information about the markup language used in the document</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">The HTML5 Doctype Declaration is simply &lt;!DOCTYPE html></li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5">Header (&lt;head>)
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="6">Contains information about the web page</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="7">Body (&lt;body>)
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="8">Contains the content for the web page</li>
+						</ul>
+					</li>
+				</ul>
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Document Metadata</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">The head element represents a colletion of metadata for the Document.</li>
+					<li class="fragment" data-fragment-index="2">The head element includes the following elements:</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">title</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">meta</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="5">link</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="6">style</li>
+						</ul>
+				</ul>
+				<img style="margin-top:-150px;" src="images/html/documentMetadata.png" alt="" class="fragment" data-fragment-index="7">
+				<p style="font-size:0.5em;" class="fragment" data-fragment-index="8">The following code demonstrates a use of each f the elements mentioned above.</p>
+			</section>
+           <section>
+				<span style="font-size:1.5em;" class="center-block">Document Metadata (continued)</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Title</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="2">The title element represents the document's title or name.</li>
+							<li class="fragment" data-fragment-index="3">Authors should use titles that identify their documents even when they are used out of context, for example in a user's history or bookmarks, or in search results.</li>
+							<li class="fragment" data-fragment-index="4">The documents's title is often different from its first heading, since the first heading does not have to stand alone when taken out of context.</li>
+							<li class="fragment" data-fragment-index="5">There must be no more than one title element per document.</li>
+							<li class="fragment" data-fragment-index="6">In the code snippet given in the previous slide, “Document Metadata Illustration” is the title of the page.</li>
+							<img style="margin-left:200px;margin-top:-25px;height:150px;" src="images/html/DocumentMetadataOutput.png" alt=""  class="fragment" data-fragment-index="7">
+							<li class="fragment" data-fragment-index="8">The above image shows the html document in the previous page being rendered on a browser.</li>
+						</ul>
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.5em;" class="center-block">Document Metadata (continued)</span>
+				<br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Meta</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="2">Meta tags are doat tags that tell browsers (or other services, such as search engines) information about the HTML document.</li>
+							<li class="fragment" data-fragment-index="3">They are not displayed, but they are parsed by browsers</li>
+							<li class="fragment" data-fragment-index="4">There are several different types of meta elements, and they are specified by using the name/content attributes, the charset attribute, or the http-equiv attribute.</li>
+							<li class="fragment" data-fragment-index="5">The following are just a few examples of how meta elements are used.</li><br>
+							<li class="fragment" data-fragment-index="6"><b>Character encoding</b></li>
+<pre style="border:3px solid black;padding:10px;font-size:0.8em;" class="fragment" data-fragment-index="6">&lt;meta charset="utf-8">
+</pre>
+							<ul  style="font-size:0.65em;">
+								<li class="fragment" data-fragment-index="7">Use UTF-8 encode your files, and declare it by using the above meta tag (in HTML5) right after your &lt;head> -tag</li>
+								<li class="fragment" data-fragment-index="8">Character encoding affects the range of characters you can use in your document. Standard letters in English are't an issue, but special characters or characters in other languages may be more of a concern.</li>
+								<li class="fragment" data-fragment-index="9">This encoding inforation should also be sent by your wb server.</li>
+							</ul>
+						</ul>
+				</ul>
+			</section>
+            <section>
+				<span style="font-size:1.6em;" class="center-block">Document Metadata(continued)</span><br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Link</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="2">&lt;link rel="stylesheet" href="style-original.css" type="text/css" /></li>
+							<li class="fragment" data-fragment-index="3">This is the most frequently used link relation and it is used for pointing to CSS rules that are tored in a separate file.</li>
+							<li class="fragment" data-fragment-index="4">CSS being the only style sheet language for the we, so from HTML5 we can omit type attribute of the link tag.</li>
+						</ul>
+						<li class="fragment" data-fragment-index="5">Style</li>
+				</ul>
+				<p style="border:2px solid black;background:#abefcd;border-radius:10px;font-size:0.6em;" class="fragment" data-fragment-index="6">CSS files should always be included in the HEAD  of the document. This is important from a performance perspective. This is especially important when you consider the perceived performance of a page. With the CSS rules in place before the body element is reached the browser is able to go about the important task of rendering your markup as early as possible. <i style="float:right;color:#880000;">Best Practices</i> </p>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Scripting</span>
+				<aside style="float:left;width:550px;">
+				<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="1">The script element allows authors to include dynamic script in their documents.</li>
+							<li class="fragment" data-fragment-index="2">The element does not represent content for the user.</li>
+							<li class="fragment" data-fragment-index="3">When used to include dynamic scripts, the scripts may either be embedded inline or may be imported from an external file using the src attribute.</li>
+							<li class="fragment" data-fragment-index="4">In the code snippet shown alongside, we have included an external script and created one internal script in the head section of our document.</li>
+							<li class="fragment" data-fragment-index="5">It can also be used within the body of the document as shown in the code snippet.</li>
+				</ul>
+				</aside>
+				<img style="float:right;width:400px;" src="images/html/scripting.png" alt="" class="fragment" data-fragment-index="6">
+				<p style="border:2px solid black;background:#abefcd;border-radius:10px;font-size:0.6em;float:right;margin-top:0px;" class="fragment" data-fragment-index="7">JS files should always be included near the END of a document. This is to maximize page performance. Keep the number of JS files to a minimum and avoid inline-JS (unless you know why it might be ok, don't do it). <i style="float:right;color:#880000;">Best Practices</i></p>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">div</span>
+				<br>
+				<aside style="float:left;width:500px;">
+				<ul style="font-size:0.8em;">
+							<li class="fragment" data-fragment-index="2">Defines a division or a section in an HTML document.</li>
+							<li class="fragment" data-fragment-index="3">The div element has no special meaning at all. It represents its children.</li>
+							<li class="fragment" data-fragment-index="4">Is used to group elements to format them with styles and is widely used for html page development.</li>
+							<li class="fragment" data-fragment-index="5">It is block element</li>
+							<li class="fragment" data-fragment-index="6">Uses of div element in place of table is recommended for layout purpose.</li>
+				</ul>
+				</aside>
+				<img style="float:right;width:450px;" src="images/html/div.png" alt=""  class="fragment" data-fragment-index="7">
+				<img style="float:right;width:450px;" src="images/html/divoutput.png" alt=""  class="fragment" data-fragment-index="8">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">pre</span>
+				<br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Represents a block of preformatted text so that the formatting will be preserved.</li>
+					<li class="fragment" data-fragment-index="2">Use cases can be</li>
+						<ul  style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="3">Including an e-mail, with paragraphs indicated by blank lines, lists indicated by lines prefixed with a bullet, and so on.</li>
+							<li class="fragment" data-fragment-index="4">Including fragments of computer code, with structure indicated according to the conventions of that language.</li>
+						</ul>
+						<li class="fragment" data-fragment-index="5">The following shows a contemporary poem that uses the pre element to preserve its unusual formatting</li>
+				</ul>
+				<img style="float:left;width:500px;" src="images/html/pre.png" alt=""class="fragment" data-fragment-index="6">
+				<img style="float:right" src="images/html/preoutput.png" alt=""class="fragment" data-fragment-index="7">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">List Elements</span>
+				<br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Lists group lists of information, and contain at least one list element.</li>
+					<li class="fragment" data-fragment-index="2">There are three types of lists in HTML:</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="3">Unordered List (&lt;ul>)</li>
+							<ul>
+								<li class="fragment" data-fragment-index="4">An unordered list contains list elements where the order is not important.  They are generally displayed with some type of bullet character.</li>
+							</ul>
+							<li class="fragment" data-fragment-index="5">Ordered List (&lt;ol>)</li>
+							<ul>
+								<li class="fragment" data-fragment-index="6">An ordered list contains list elements where the order is important.  They are generally numbered in some manner when displayed.</li>
+							</ul>
+							<li class="fragment" data-fragment-index="7">Definition List (&lt;dl>)</li>
+							<ul>
+								<li class="fragment" data-fragment-index="8">A definition list generally contains term/definition pairs.</li>
+							</ul>
+						</ul>
+				</ul>
+				<aside style="width:500px;float:left;">
+					<ul style="font-size:0.8em;">
+						<li class="fragment" data-fragment-index="9">Lists can be nested, even between different types of lists.</li>
+						<li class="fragment" data-fragment-index="10">Lists are also frequently used for navigation menus.</li>
+				</ul>
+				</aside>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Ordered List (ol)</span>
+				<br>
+				<aside style="float:left;width:500px;">
+				<ul>
+					<li class="fragment" data-fragment-index="1">List items are, by default, marked with numbers</li>
+					<li class="fragment" data-fragment-index="2">Tag details</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Start tag-&lt;ol></li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">Each list item starts with &lt;li> tag.</li>
+						</ul>
+				</ul>
+				</aside>
+<pre style="padding:10px;border:3px solid black;float:left;width:500px;"class="fragment" data-fragment-index="5">
+ &lt;ol>
+        &lt;li>Red&lt;/li>
+        &lt;li>Green&lt;/li>
+        &lt;li>Blue&lt;/li>
+        &lt;li>Yellow&lt;/li>
+&lt;/ol>
+</pre>
+				<img style="float:right;" src="images/html/oderedList.png" alt=""class="fragment" data-fragment-index="6">
+			</section>
+          <section>
+				<span style="font-size:1.6em;" class="center-block">Unordered List (ol)</span>
+				<br>
+				<aside style="float:left;width:500px;">
+				<ul>
+					<li class="fragment" data-fragment-index="1">The list items are, by default, marked with bullets</li>
+					<li class="fragment" data-fragment-index="2">Tag details</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Start tag-&lt;ul></li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">Each list item starts with &lt;li> tag.</li>
+						</ul>
+				</ul>
+				</aside>
+<pre style="padding:10px;border:3px solid black;float:left;width:500px;"class="fragment" data-fragment-index="5">
+ &lt;ul>
+        &lt;li>Red&lt;/li>
+        &lt;li>Green&lt;/li>
+        &lt;li>Blue&lt;/li>
+        &lt;li>Yellow&lt;/li>
+&lt;/ul>
+</pre>
+				<img style="float:right;" src="images/html/unoderedListoutput.png" alt=""class="fragment" data-fragment-index="6">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Definition List (dl)</span>
+				<br>
+				<aside style="float:left;">
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Definition lists provide the description of each list items.</li>
+					<li class="fragment" data-fragment-index="2">Tag details</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="3">Start tag-&lt;dl></li>
+							<li class="fragment" data-fragment-index="4">Each list item starts with &lt;dt> tag.</li>
+							<li class="fragment" data-fragment-index="5">Description of each item starts with &lt;dd> tag.</li>
+						</ul>
+				</ul>
+				</aside>
+<pre style="border:3px solid black;padding:10px;float:left;width:500px;font-size:0.5em;" class="fragment" data-fragment-index="6">
+ &lt;dl>
+ &lt;dt>Red&lt;/dt>
+	&lt;dd>-Apple is red in color&lt;/dd>
+ &lt;dt>Green&lt;/dt>
+	&lt;dd>-Plants are green in color&lt;/dd>
+ &lt;dt>Blue&lt;/dt>
+	&lt;dd>-Sky looks blue in color&lt;/dd>
+ &lt;dt>Soup&lt;/dt>
+	&lt;dd>-Mango is yellow in color&lt;/dd>
+&lt;/dl>
+</pre>
+		<img style="float:right;" src="images/html/definitionListOutput.png" alt="" class="fragment" data-fragment-index="7">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">paragraph</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">The p element represents a paragraph.</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;width:500px;float:left;" class="fragment" data-fragment-index="2">
+&lt;p>One day the lion was caught in a net
+spread by a hunter. It roared and tried
+to escape but in vain. The mouse&lt;br>
+heared the lion's roaring and came
+there.
+&lt;/p>
+</pre>
+		<img style="width:350px;float:right;" src="images/html/paragraphoutput.png" alt="" class="fragment" data-fragment-index="3">
+<pre style="padding:10px;border:3px solid black;width:400px;float:left;margin-top:100px;" class="fragment" data-fragment-index="4">
+&lt;section>
+	&lt;p>Contact Us&lt;/p>
+	&lt;p>mail@example.com&lt;/p>
+&lt;/section>
+</pre>
+<pre style="padding:10px;border:3px solid black;width:500px;float:right;" class="fragment" data-fragment-index="5">
+&lt;section>
+	&lt;footer>
+		&lt;p>Contact Us&lt;/p>
+		&lt;address>mail@example.com&lt;/address>
+	&lt;/footer>
+&lt;/section>
+</pre>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Strong</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">The strong element represents strong importance for its contents.</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment" data-fragment-index="2">
+&lt;p>&lt;strong>Node:&lt;/strong>This is important.&lt;/p>
+</pre>
+			<img src="images/html/strong.png" alt="" class="fragment" data-fragment-index="3">	
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">span</span>
+				<br>
+				<aside style="float:left;width:500px;">
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="1">The span element doesn't mean anything on its own. It represents its children.</li>
+					<li class="fragment" data-fragment-index="2">It is useful when global attributes like class have to be applied to its children.</li>
+					<li class="fragment" data-fragment-index="3">It is inline element</li>
+					<li class="fragment" data-fragment-index="4">Uses of span tag should be the last resort when no oter suitable element can server the purpose.</li>
+				</ul>
+				</aside>
+<pre style="padding:10px;border:3px solid black;float:right;width:400px;" class="fragment" data-fragment-index="5">
+&lt;span style="color:green; background-color:yellow;">
+	&lt;h3>This is a Heading&lt;/h3>
+	&lt;p>This is a paragraph.&lt;/p>
+&lt;/span>
+</pre>
+			<img style="float:right;" src="images/html/spanoutput.png" alt="" class="fragment" data-fragment-index="6">
+			<img style="float:left;margin-top:50px;width:400px;" src="images/html/spanoutput2.png" alt="" class="fragment" data-fragment-index="7">
+			</section>
+          <section>
+				<span style="font-size:1.6em;" class="center-block">sup</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">The sup element represents a superscript</li>
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment" data-fragment-index="2">
+&lt;Today is my 2&lt;sup>nd&lt;/sup>marriage anniversary&lt;/p>
+</pre>
+					<img style="margin-left:300px;width:300px;margin-top:0px;" src="images/html/supoutput.png" alt="" class="fragment" data-fragment-index="3">
+					<li class="fragment" data-fragment-index="4">The sub element represents a subscript.</li>
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment" data-fragment-index="5">
+&lt;p>The coordinate of the i&lt;sup>th&lt;/sup>point is (x&lt;sub>i&lt;/sub>, y&lt;sub>i&lt;/sub>)&lt;/p>
+</pre>
+					<img style="margin-left:300px;width:300px;margin-top:0px;" src="images/html/supoutput2.png" alt="" class="fragment" data-fragment-index="6">
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Links</span>
+				<br>
+				<aside style="float:left;width:500px;">
+				<ul>
+					<li class="fragment" data-fragment-index="1">Links help in navigating from one page to another or to a new section in current page</li>
+					<li class="fragment" data-fragment-index="1">Moving mouse over a lin, changes the arrow of the mouse to a little hand.</li>
+				</ul>
+				</aside>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Text Link</span>
+				<br>
+				<aside style="float:left;width:600px;">
+				<ul>
+					<li class="fragment" data-fragment-index="1">It is also called anchor tag</li>
+					<li class="fragment" data-fragment-index="2">Components of text link</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Start tag-&lt;a></li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">content-text or some other tag</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="5">End tag-&lt;/a></li>
+						</ul>
+						<li class="fragment" data-fragment-index="6">“href” attribute defines the reference the link refers to.</li>
+<pre style="border:1px solid black;background:#c9c9c9;font-size:0.7em;" class="fragment" data-fragment-index="7">
+&lt;a href=‘http://www.google.com’>Google &lt;/a>
+</pre>
+					
+						<li class="fragment" data-fragment-index="8">“href” is also called URL.</li>
+				</ul>
+				</aside>
+				<img style="float:right;width:250px;margin-top:300px;" src="images/html/text-link.png" alt="" class="fragment" data-fragment-index="9">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Text Link(Contd.)</span><br>
+				<aside style="float:left;width:500px;">
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Target attribute defines the location of new page.<br>Its value can be</li>
+						<ul style="font-size:0.75em;">
+							<li class="fragment" data-fragment-index="2">_blank - open in new browser window</li>
+							<li class="fragment" data-fragment-index="3">_self - open in current frame</li>
+							<li class="fragment" data-fragment-index="4">_parent - load the page in the parent frae</li>
+							<li class="fragment" data-fragment-index="5">_top -top most frame in the window.</li>
+						</ul>
+						<li class="fragment" data-fragment-index="6">Default value of this attribute is _self.</li>
+						</ul>
+						</aside>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="7">
+&lt;a href=‘http://www.google.com’>Google&lt;/a>
+</pre>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Absolute vs. Relative Paths</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">There are two ways to provie url to a link
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Absolute path url</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Relative path url</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="4">Absolute path URL
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="5">Used to point to a location on another domain. It typically uses the absolute path with domain name</li>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="6">
+&lt;a href=‘http://www.google.com’>Google&lt;/a>
+</pre>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="7">Relative path URL
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="8">Used to point to a location on current domain</li>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="9">
+&lt;a href=‘current_director/anotherPage.html’>...&lt;/a>
+</pre>
+						</ul>
+					</li>
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Email Links</span>
+				<br>
+				<aside style="width:650px;float:left;">
+				<ul>
+					<li class="fragment" data-fragment-index="1">Link to send feedback using email</li>
+					<li class="fragment" data-fragment-index="2">Clicking an email link opens the default mailing application for the browser</li>
+				</ul>
+<pre style="border:3px solid black;margin-top:50px;padding:10px;" class="fragment" data-fragment-index="3">
+&lt;a href=‘mailto:manager@gmail.com’>Contact Us&lt;/a>
+</pre>
+		</aside>
+		<img style="float:right;margin-top:0px;width:250px" src="images/html/email-logo.png" alt="">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Adding Bookmark</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Intra page navigation is facilitated by bookmarks</li>
+					<li class="fragment" data-fragment-index="2">Also referred as "Named Anchor Tag"</li>
+				</ul>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="3">
+&lt;a href="#bookmark_desc">Description of bookmark&lt;/a>
+</pre>
+				<li class="fragment" data-fragment-index="4">Url of href starts with "#"</li>
+<pre style="border:3px solid black;padding:10px;" class="fragment" data-fragment-index="5">
+&lt;p name="bookmark_desc">Here  comes the description of bookmark&lt;/p>
+</pre>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Embedded Content</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">img</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">An img element represents an image.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Important attributes are</li>
+							<ul>
+								<li class="fragment" data-fragment-index="3">alt</li>
+								<li class="fragment" data-fragment-index="3">src</li>
+							</ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">The image given by the src attributes is the embedded content.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="5">The value of the alt attribute provides equivalent content for those who cannot process images or who have image loading disabled.</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="6">The src attribute must be present, and must contain a valid non-empty URL potentially surrounded by spaces</li>
+						</ul>
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Embedded Content</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">A single image can have different appropriate alternative text depending on the context.</li>
+					<li class="fragment" data-fragment-index="2">In each of the following cases, the same image is used, yet the alt text is different each time.</li>
+				</ul>
+				<img style="width:400px;" src="images/html/button.png" alt="" class="fragment" data-fragment-index="3">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Tabular Data</span>
+				<aside style="float:left;width:500px;">
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="1"><b>Table Element</b> -The table element represents data with more than one dimension, in the form of a table.</li>
+					<li class="fragment" data-fragment-index="2">A table element can have the following child elements</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment" data-fragment-index="3">caption</li>
+							<li class="fragment" data-fragment-index="4">details</li>
+							<li class="fragment" data-fragment-index="5">summary</li>
+							<li class="fragment" data-fragment-index="6">thead</li>
+							<li class="fragment" data-fragment-index="7">tfoot</li>
+							<li class="fragment" data-fragment-index="8">tbody</li>
+							<li class="fragment" data-fragment-index="9">tr</li>
+							<li class="fragment" data-fragment-index="10">td</li>
+							<li class="fragment" data-fragment-index="11">th</li>
+						</ul>
+				</ul>
+				<p style="font-size:0.7em"  class="fragment" data-fragment-index="12">The meaning of each element is also discussed subsequently.</p>
+				</aside>
+				<img style="float:right;width:450px;margin-top:200px;" src="images/html/Table.png" alt="" class="fragment" data-fragment-index="13">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Tabular Data (continued)</span>
+				<ul style="font-size:0.75em;">
+				<li class="fragment" data-fragment-index="1">caption</li>
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="2">The caption element represents the title of the table. A caption can introduce context for a table, making it significantly easier to understand.</li>
+					<li class="fragment" data-fragment-index="3">It is introduced as the first element child of a table element.</li>
+					<li class="fragment" data-fragment-index="4">“This is a 2-dimensional grid” is the caption.</li>
+				</ul>
+				<li class="fragment" data-fragment-index="5">details</li>
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="6">We can add more information about the table in the caption using the details element.</li>
+					<li class="fragment" data-fragment-index="7">From the code snippet shown alongside we can observe, <i>“Finding the Sum of the Monthly Savings and expenditure in the given table for a period of two months”</i> is a more detailed caption.</li>
+				</ul>
+				<li class="fragment" data-fragment-index="8">Summary</li>
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="9">The additional information provided by the details element can be summarized using  summary element.</li>
+					<li class="fragment" data-fragment-index="10">In this example “Help” summarizes the details.</li>
+				</ul>
+				</ul>
+<pre style="font-size:0.4em;padding:10px;border:3px solid black;" class="fragment" data-fragment-index="11">
+&lt;caption>
+&lt;strong>2-dimensional grid.&lt;/strong>
+	&lt;details>
+		&lt;summary>Summary&lt;/summary>
+		&lt;p>This is detail&lt;/p>
+	&lt;/details>
+&lt;/caption>
+</pre>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Tabular Data (continued)</span>
+				<br>
+				<aside style="float:left;width:550px;">
+				<ul style="font-size:0.75em;">
+				<li class="fragment" data-fragment-index="1">th</li>
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="3">The th element represents a header cell in a table.</li>
+					<li class="fragment" data-fragment-index="4">It is used as a child of a tr element.</li>
+				</ul>
+				<li class="fragment" data-fragment-index="5">td</li>
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="7">The td element represents a data cell in a table.</li>
+					<li class="fragment" data-fragment-index="8">It is used as a child of a tr element</li>
+				</ul><br>
+				<li class="fragment" data-fragment-index="9">tr</li>
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="11">The tr element represents a row of cells in a table.</li>
+					<li class="fragment" data-fragment-index="12">It can have zero or more td  or th elements.</li>
+				</ul>
+				</ul>
+			   </aside>
+			   <aside style="float:right;width:400px;">
+			   <img style="width:250px;" src="images/html/TableHead.png" alt="" class="fragment" data-fragment-index="2">
+			   <img style="width:170px;" src="images/html/TableColom.png" alt="" class="fragment" data-fragment-index="6">
+			   <img style="width:300px;" src="images/html/TableRow.png" alt="" class="fragment" data-fragment-index="10">
+			   </aside>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">HTML | Table Attributes</span>
+				<br>
+				<aside style="float:left;width:550px;">
+				<ul style="font-size:0.75em;">
+				<li class="fragment" data-fragment-index="1">Important attributes of &lt;table></li>
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="2">Id-uniquely identifies a table</li>
+					<li class="fragment" data-fragment-index="3">Border-places border around each cell</li>
+					<li class="fragment" data-fragment-index="4">Align-table alignment</li>
+					<li class="fragment" data-fragment-index="5">Bordercolor-color of the border</li>
+					<li class="fragment" data-fragment-index="6">Cellpadding-padding of each cell</li>
+					<li class="fragment" data-fragment-index="7">Cellspacing-spacing</li>
+					<li class="fragment" data-fragment-index="8">Class-css class of the table</li>
+					<li class="fragment" data-fragment-index="9">Height-height of the table</li>
+					<li class="fragment" data-fragment-index="10">Width-width of the table</li>
+				</ul>
+				<li class="fragment" data-fragment-index="11">Important attributes of &lt;td></li>
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="12">Rowspan-span the specified number of rows</li>
+					<li class="fragment" data-fragment-index="13">Colspan-span the specified number of column</li>
+				</ul>
+				</ul>
+			   </aside>
+			   <aside style="float:right;width:400px;">
+			   <img style="width:270px;" src="images/html/tablecode.png" alt="" class="fragment" data-fragment-index="14">
+			   <img style="width:170px;" src="images/html/tableoutput.png" alt="" class="fragment" data-fragment-index="15">
+			   </aside>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Tabular Data (continued)</span>
+				<br>
+				<aside style="float:left;width:500px;">
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="1">The table on the right shows a table with a caption “This table shows a x*y grid”.</li>
+					<li class="fragment" data-fragment-index="2">There are also some details with some summary.</li>
+					<li class="fragment" data-fragment-index="3">The summary is displayed as “Help”.</li>
+					<li class="fragment" data-fragment-index="4">But the details are not shown in this figure.</li>
+					<li class="fragment" data-fragment-index="5">The figure in the bottom of the slide shows some details as well.</li>
+					<li class="fragment" data-fragment-index="6">The details become visible when we click on the symbol “&#9658;”</li>
+				</ul>
+				</aside>
+				<aside style="float:right;width:400px;">
+			   <img style="width:270px;" src="images/html/tabularData1.png" alt="" class="fragment" data-fragment-index="7">
+			   <img style="width:270px;" src="images/html/tabularData2.png" alt="" class="fragment" data-fragment-index="8">
+			   </aside>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Forms</span>
+				<aside style="float:left;width:500px;">
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="1">Html form element is used to pass data to the server</li>
+					<li class="fragment" data-fragment-index="2">It contains all the Html elements whose contents can be submitted and passed to the xerver. Some important components are</li>
+						<ul style="font-size:0.65em;">
+							<li class="fragment" data-fragment-index="3">Text field</li>
+							<li class="fragment" data-fragment-index="3">Check box</li>
+							<li class="fragment" data-fragment-index="3">Radio-button</li>
+							<li class="fragment" data-fragment-index="3">Submit button</li>
+							<li class="fragment" data-fragment-index="3">Select list</li>
+							<li class="fragment" data-fragment-index="3">Date</li>
+							<li class="fragment" data-fragment-index="3">Number</li>
+						</ul>
+						<li class="fragment" data-fragment-index="4">
+						&lt;form> tag is used to create the form</li>
+						<li class="fragment" data-fragment-index="5">HTML 5 by default validates a form, to disable it use “novalidate” attribute</li>
+				</ul>
+				</aside>
+				<img style="width:270px;" src="images/html/htmlForm.png" alt="" class="fragment" data-fragment-index="1">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">text and password</span>
+				<br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Text field defines one line input fields that a user can enter text into</li>
+<pre style="padding:10px;border:3px solid black;"  class="fragment" data-fragment-index="2">
+&lt;form>
+UserName:&lt;input type="text"name="username"/>&lt;br/>
+Password:&lt;input type="password" name="password"/>
+&lt;/form>
+</pre>
+					<li class="fragment" data-fragment-index="3">Password field is similar to Text field except that the characters in password field are masked.</li>
+				</ul>
+				<img style="width:400px;" src="images/html/textPasswordoutput.png" alt="" class="fragment" data-fragment-index="4">
+			</section>
+           <section>
+				<span style="font-size:1.4em;">required, autofocus and placeholder attribute</span>
+				<ul style="font-size:0.65em;">
+					<li class="fragment" data-fragment-index="1">“required” specifies that this field is mandatory</li>
+					<li class="fragment" data-fragment-index="2">“autofocus” makes an element as default focus when page is loaded .</li>
+<pre style="padding:10px;border:3px solid black;margin-top:0px;"  class="fragment" data-fragment-index="3">
+UserName:&lt;input type="text"name="username" autofocus required/>&lt;br/>
+Password:&lt;input type="password" name="password"/>
+&lt;input type="submit" name="">
+</pre>
+				<img style="width:300px;margin-top:-15px;" src="images/html/autofocusOutput.png" alt="" class="fragment" data-fragment-index="4">
+					<li style="margin-top:0px;" class="fragment" data-fragment-index="5">“placeholder” defines the default text for a field. When the element is focused , placeholder text disappears.</li>
+					<li class="fragment" data-fragment-index="6">These attributes were added in HTML 5.</li>
+<pre style="padding:10px;border:3px solid black;margin-top:0px;"  class="fragment" data-fragment-index="7">
+UserName:&lt;input type="text"name="username" placeholder="Please enter your name" required/>&lt;br/>
+Password:&lt;input type="password" name="password"/>
+&lt;input type="submit" name="">
+</pre>
+			<img style="width:280px;margin-top:-15px;" src="images/html/placeholderOutput.png" alt="" class="fragment" data-fragment-index="8">
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.4em;" class="center-block">radio buttons and checkboxes</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Radio button allows one selection from a set of values</li>
+<pre style="padding:10px;border:3px solid black;width:400px;float:left;"  class="fragment" data-fragment-index="2">
+&lt;form>
+UserName:&lt;input type="radio" name="sex" value="male"/>male&lt;br/>
+Password:&lt;input type="radio" name="sex" value="female/>
+&lt;/form>
+</pre>
+			<img style="width:250px;float:right;" src="images/html/radio.png" alt="" class="fragment" data-fragment-index="3">
+			</ul>
+			<ul style="font-size:0.8em;margin-left:50px;">
+			<li class="fragment" data-fragment-index="4">Checkbox allows selection of more that one from a set of values</li>
+<pre style="padding:10px;border:3px solid black;width:500px;float:left;"  class="fragment" data-fragment-index="5">
+&lt;form>
+UserName:&lt;input type="checkbox" name="interests" value="Reading"/>Reading&lt;br/>
+UserName:&lt;input type="checkbox" name="interests" value="Playing"/>Playing&lt;br/>
+UserName:&lt;input type="checkbox" name="interests" value="Music"/>Music&lt;br/>
+&lt;/form>
+</pre>
+			<img style="width:300px;float:right;" src="images/html/checkbox.png" alt="" class="fragment" data-fragment-index="6">
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">select</span>
+				<br>
+				<aside style="float:left;width:500px;">
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">&lt;select> tag is used to create a drop down box</li>
+					<li class="fragment" data-fragment-index="2">&lt;option> tag inside the &lt;select> tag defines the options available</li>
+					<li class="fragment" data-fragment-index="3">Important attributes</li>
+						<ul style="font-size:0.75em;">
+							<li class="fragment" data-fragment-index="4">disabled -specifies that the drop down box is disabled.</li>
+							<li class="fragment" data-fragment-index="5">multiple- specifies that ultiple options can be selected</li>
+							<li class="fragment" data-fragment-index="6">size- specifies the number of visible options in a drop down list</li>
+						</ul>
+				</ul>
+				</aside>
+				<aside style="float:right;width:400px;">
+<pre style="padding:10px;border:3px solid black;width:400px;" class="fragment" data-fragment-index="7">
+&lt;select>
+	&lt;option>India&lt;/option>
+	&lt;option>Australia&lt;/option>
+	&lt;option>USA&lt;/option>
+	&lt;option>China&lt;/option>
+&lt;/select>
+</pre>
+			<img style="width:200px;float:right;margin-right:50px;" src="images/html/select.png" alt="" class="fragment" data-fragment-index="8">
+			   </aside>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">email</span>
+				<br>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Provides the default validation of email.</li>
+					<li class="fragment" data-fragment-index="1">Specified by setting the type attribute to "email"</li>
+					<li class="fragment" data-fragment-index="1">If browser does not support this feature then it defaults to text field</li>
+					<li class="fragment" data-fragment-index="1">Automatic email validation when form is submitted.</li>
+					<li class="fragment" data-fragment-index="1">Added in HTML5.</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;width:600px;" class="fragment" data-fragment-index="7">
+&lt;input type="email"name="emailAddress"/>&lt;br/>
+&lt;input type="submit" value="Submit">
+</pre>
+			<img style="width:300px;" src="images/html/email-input.png" alt="" class="fragment" data-fragment-index="8">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">number</span>
+				<br>
+				<aside style="float:left;width:450px;">
+				<ul style="font-size:0.7em;">
+					<li class="fragment" data-fragment-index="1">Defines a number field.</li>
+					<li class="fragment" data-fragment-index="2">Specified by setting the type attribute to “number”</li>
+					<li class="fragment" data-fragment-index="3">min-defines the minimum range.</li>
+					<li class="fragment" data-fragment-index="4">max- defines the maximum range.</li>
+					<li class="fragment" data-fragment-index="5">step -defines the difference between two consecutive permissible values</li>
+					<li class="fragment" data-fragment-index="6">value-defines the default value.</li>
+					<li class="fragment" data-fragment-index="7">Auto validation of the field when form is submitted.</li>
+					<li class="fragment" data-fragment-index="8">If browser does not support it it’ll be treated as text field.</li>
+					<li class="fragment" data-fragment-index="9">Added in HTML5.</li>
+				</ul>
+			   </aside>
+			   <aside style="float:right;width:450px;">
+<pre style="padding:10px;border:3px solid black;width:450px;" class="fragment" data-fragment-index="10">
+&lt;input type="number" min="0" max="100" step="10" value="50"/>&lt;br/>
+&lt;input type="submit" value="Submit">
+</pre>
+			<img style="width:300px;" src="images/html/number.png" alt="" class="fragment" data-fragment-index="11">
+			<img style="width:300px;" src="images/html/number2.png" alt="" class="fragment" data-fragment-index="12">
+			   </aside>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">range</span>
+				<br>
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="1">Defines a slider control for number.</li>
+					<li class="fragment" data-fragment-index="2">Remaining attributes are same as those of number.</li>
+					<li class="fragment" data-fragment-index="3">If browser does not support this feature, it is rendered as text field.</li>
+					<li class="fragment" data-fragment-index="4">Added in HTML5.</li>
+<pre style="padding:10px;border:3px solid black;width:500px;float:left;" class="fragment" data-fragment-index="5">
+&lt;input type="range" min="0" max="100" step="10" value="50"/>&lt;br/>
+&lt;input type="submit" value="Submit">
+</pre>
+			<img style="width:300px;float:right;" src="images/html/range.png" alt="" class="fragment" data-fragment-index="6">
+				</ul>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">submit button</span>
+				<br>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Submit button is used to submit a form and send data from browser to a server.</li>
+				</ul>
+				<aside style="float:left;width:450px;">
+<pre style="padding:10px;border:3px solid black;width:500px;float:left;" class="fragment" data-fragment-index="2">
+&lt;form>
+Username:&lt;input type="text" name="username"/>&lt;br/>
+Password:&lt;input type="password" name="pwd">&lt;br/>
+&lt;input type="submit" value="Submit"/>
+&lt;/form>
+</pre>
+			<img style="width:300px;float:right;" src="images/html/submit.png" alt="" class="fragment" data-fragment-index="3">
+			   </aside>
+			   <aside style="float:right;width:450px;">
+			   <img style="width:300px;float:right;" src="images/html/clientServer.png" alt="" class="fragment" data-fragment-index="4">
+			   </aside>
+			</section>
+          <section>
+				<span style="font-size:1.6em;" class="center-block">How HTML Forms Work</span>
+				<br>
+				<aside style="float:left;width:450px;">
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="1">When a form is submitted, input fields in the form are passed to the server as key value pair.
+					</li>
+					<li class="fragment" data-fragment-index="2">The user submits a form. The data is sent to the server</li>
+					<li class="fragment" data-fragment-index="3">Data is processed at the server</li>
+					<li class="fragment" data-fragment-index="4">Server returns the result of data processing and result is displayed as Html page.
+					</li>
+				</ul>
+			   </aside>
+			   <img style="float:right;" src="images/html/Q8T7Z.png" alt="" class="fragment" data-fragment-index="5">
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Action and Method Attributes</span>
+				<br>
+				<aside style="float:left;width:450px;">
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="1">Form has two important attributes which facilitates communication with server.
+					<ul>
+						<li>Action</li>
+						<li>Method</li>
+					</ul>
+					</li>
+					<li class="fragment" data-fragment-index="2">Action attribute specifies the url of the server which processes the form data.</li>
+					<li class="fragment" data-fragment-index="3">Data is processed at the server</li>
+					<li class="fragment" data-fragment-index="4">Method attribute specifies how the data will be passed to the server
+					<ul>
+						<li>get</li>
+						<li>post</li>
+					</ul>
+					</li>
+				</ul>
+			   </aside>
+			   <aside style="float:right;width:450px;">
+<pre style="padding:10px;border:3px solid black;width:450px;float:left;" class="fragment" data-fragment-index="5">
+&lt;form action="login.do" method="get">
+	Username:&lt;input type="text" name="username"/>&lt;br/>
+	Password:&lt;input type="password" name="pwd">&lt;br/>
+
+	&lt;input type="submit" value="Submit"/>
+&lt;/form>
+</pre>
+			   </aside>
+			</section>
+           <section>
+				<span style="font-size:1.6em;" class="center-block">Get vs. Post</span>
+				<br>
+				<aside style="float:left;width:500px;">
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="1">Get
+					<ul style="font-size:0.7em;">
+						<li>Data is appended to the url as query string</li>
+						<li>Mostly used by search engine</li>
+						<li>can be bookmarked</li>
+						<li>There is upper limit on the length of query string</li>
+					</ul></li>
+					<li class="fragment" data-fragment-index="3">Post
+					<ul style="font-size:0.7em;">
+						<li>Data is not appended to the url. It's sent as part of the request body</li>
+						<li>There is no limit on the data to be sent</li>
+					</ul></li>
+					<li class="fragment" data-fragment-index="5">As a general rule, post method should be used unless there is a need to bookmark the page</li>
+				</ul>
+				</aside>
+<pre style="padding:10px;border:3px solid black;width:450px;float:right;" class="fragment" data-fragment-index="2">
+<kbd>https://www.flipkart.com/moto-e3-power-white-16-gb/itme?id=MOB&price=7999</kbd>
+</pre>
+<pre style="padding:10px;border:3px solid black;width:450px;float:right;" class="fragment" data-fragment-index="4">
+<kbd>https://angular.io/docs/ts/latest/api/router/index/Resolve-interface.html</kbd>
+</pre>
+			</section>
+		</div>
+	</div>
+
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.js"></script>
+	<script src="reveal/js/ds-reveal-conf.js"></script>
+
+	<script>
+/*		Reveal.initialize({
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			}, {
+				src: 'plugin/markdown/markdown.js'
+			}],
+			markdown: {
+				smartypants: true
+			},
+
+			// Display controls in the bottom right corner
+			controls: true,
+
+			// Display a presentation progress bar
+			progress: true,
+
+			// Display the page number of the current slide
+			slideNumber: true,
+
+			// Push each slide change to the browser history
+			history: true,
+
+            center: false,
+
+		});
+
+Reveal.configure({ transition: 'none', transitionSpeed: 'fast'});
+*/
+	</script>
+</body>
+
+</html>

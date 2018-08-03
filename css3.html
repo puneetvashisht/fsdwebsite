@@ -1,0 +1,1817 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>CSS3</title>
+
+	<meta name="description" content="A dummy presentation for CodeAngelsJs Course">
+		<meta name="author" content="sudodoki / Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/beige.css">
+	<link rel="stylesheet" href="reveal/css/my.css">
+	<link rel="stylesheet" href="reveal/css/bootstrap.min.css">
+	<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+	
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<span style="font-size:1.6em;">CSS3</span><br><br>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">Brief history...1997-2001</span>
+				<ul style="float:left;margin-left:200px;">
+					<li class="fragment" data-fragment-index="1">Content: HTML 4.01</li>
+					<li class="fragment" data-fragment-index="3">Presentation: CSS1</li>
+				</ul>
+				<img style="float:left;width:450px;height:400px;" data-fragment-index="2" src="images/css3/history1.png" alt="" class="fragment">
+				<img style="float:right;width:450px;" src="images/css3/history2.png" data-fragment-index="4" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">Brief history...2001-2006</span>
+				<ul style="float:left;margin-left:200px;">
+					<li class="fragment" data-fragment-index="1">Content: XHTML 1
+					</li>
+					<li class="fragment" data-fragment-index="5">Presentation: CSS2</li>
+				</ul>
+				<img style="float:left;width:450px;" src="images/css3/history3.png" alt="" class="fragment">
+				<img style="float:right;width:450px;height:450px;" src="images/css3/history4.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">Brief history...2007-present</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Content: HTML5
+					</li>
+					<li class="fragment" data-fragment-index="5">Presentation: CSS3</li>
+				</ul><br/>
+				<img style="float:left;width:320px;" src="images/css3/history5.png" alt="" class="fragment">
+				<img style="float:left;width:300px;margin-left:20px;" src="images/css3/history6.png" alt="" class="fragment">
+				<img style="float:right;width:300px;height:400px;" src="images/css3/history7.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">Vendor Prefixes</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Some CSS rules won’t work without the vendor prefix.</li>
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="2">Mozilla Browsers (Firefox)
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">moz</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="3">Webkit Browsers (Safari, Chrome)
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="3">webkit</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5">Opera
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="5">o</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="6">Internet Explorer
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="6">ms</li>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="6">&lt;!--[ifIE]> &lt;![endif]</li>
+						</ul>
+					</li>
+				</ul>
+				<li class="fragment" data-fragment-index="7">Not all CSS rules work with all browsers:</li>
+				<ul style="font-size:0.75em;" class="fragment">
+					<li><a href="http://www.caniuse.com/">http://www.caniuse.com/</a></li>
+					<li><a href="http://www.css3.info/selectors-test/"></a>http://www.css3.info/selectors-test/</li>
+					<li><a href="http://quirksmode.org/css/contents.html"></a>http://quirksmode.org/css/contents.html</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">Agenda</span>
+				<ol style="font-size:0.8em;">
+				<li class="fragment" data-fragment-index="1">Introduction to CSS3</li>
+				<li class="fragment" data-fragment-index="2">CSS3 Borders</li>
+				<li class="fragment" data-fragment-index="3">CSS3 Backgrounds</li>
+				<li class="fragment" data-fragment-index="4">CSS3 Text Effects</li>
+				<li class="fragment" data-fragment-index="5">CSS3 Shadows</li>
+				<li class="fragment" data-fragment-index="6">CSS3 Fonts</li>
+				<li class="fragment" data-fragment-index="7">CSS3</li>
+				<ul style="font-size:0.75em;">
+					<li class="fragment" data-fragment-index="8">2D Transforms</li>
+					<li class="fragment" data-fragment-index="9">3D Transforms</li>
+					<li class="fragment" data-fragment-index="10">Transitions</li>
+				</ul>
+				<li class="fragment" data-fragment-index="11">CSS3 Animations</li>
+				<li class="fragment" data-fragment-index="12">CSS3 Multiple columns</li>
+				<li class="fragment" data-fragment-index="13">CSS3 selectors</li>
+				<li class="fragment" data-fragment-index="14">CSS3 Gradients</li>
+				<li class="fragment">Misc.</li>
+				</ol>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">1. What is CSS3?</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Cascading Style Sheets 3
+					</li>
+					<li class="fragment" data-fragment-index="2">CSS3 is the latest standard for CSS
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="3">support is still limited</li>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="4">Layout Engine Support
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="5">Some of the CSS3 properties still in experimental phase are lead by a prefix:</li>
+							<ul style="font-size:0.75em;" class="fragment" data-fragment-index="6">
+								<li>Trident (Microsoft Internet Explorer) : -ms-</li>
+								<li>Gecko (Google Chrome & Safari) : -webkit-</li>
+								<li>WebKit (Mozilla Firefox): -moz-</li>
+							</ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="7">Still wait for all browsers to fully support CSS3</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">1. Why is CSS3?</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="2">CSS3 is the latest standard for CSS
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="3">Example:</li>
+							<ul class="fragment" data-fragment-index="3">
+								<li>Rounded corners and shadows</li>
+								<li>Text Effects</li>
+								<li>Animations</li>
+								<li>2D/3D Transformation</li>
+								<li>Multiple Column Layout</li>
+								<li>Box Model</li>
+							</ul>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="4">Easy to apply changes & also decreases the size of a web page (with limited images)
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="5">Might not be a problem for a computer</li>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="7">But with mobile Internet usage it might be a factor</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">1. Why is CSS3?</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Without using a design program, like Photoshop
+						<ul>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="2">Create rounded borders</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="3">Add shadow to boxes</li>
+							<li style="font-size:0.8em;" class="fragment" data-fragment-index="4">Use an image as a border</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">1. Why is CSS3?</span>
+				<ul>
+					<li class="fragment" data-fragment-index="1">Without using a design program, like Photoshop</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment" data-fragment-index="2">
+&lt;div>Box with imageBorder&lt;/div>
+&lt;style> 
+div
+{
+	border:2px solid blue;
+	padding:10px 20px; 
+	background:#abcabc;
+	width:200px;
+	border-image: url(border-image.png) 25 30 10 20 repeat stretch;
+}
+&lt;/style>
+</pre>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Borders</span>
+				<img src="images/css3/border.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Borders</span>
+				<img src="images/css3/border2.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Borders</span>
+				<img src="images/css3/border3.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Borders</span>
+				<img src="images/css3/border4.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Borders</span>
+				<img src="images/css3/border5.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Borders</span>
+				<img src="images/css3/border6.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Borders</span>
+				<img src="images/css3/border7.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Borders</span>
+				<img src="images/css3/border8.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – Background  Properties</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Several new background properties to allow greater control
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">background-origin</li>
+							<ul class="fragment" data-fragment-index="2">
+								<li>Specifies the positioning area of the background images</li>
+							</ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="3">background-size</li>
+							<ul class="fragment" data-fragment-index="3">
+								<li>Specifies the size of the background images</li>
+							</ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="4">background-clip</li>
+							<ul class="fragment" data-fragment-index="4">
+								<li>Specifies the painting area of the background images</li>
+							</ul>
+						</ul>
+					</li>
+					<li class="fragment" data-fragment-index="5">Multiple images</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – Background  Properties</span>
+				
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+&lt;style> div {
+	border:1px solid black;
+	padding:35px;
+	background:url(domshom-logo.png);	
+	background-repeat:no-repeat;
+	background-position:left;
+}
+#div {
+background-origin:content-box;
+}
+&lt;/style> &lt;div>
+Education Website&lt;br> WWW.DOMSHOM.COM&lt;br>
+Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends.&lt;br>
+Education Website&lt;br> WWW.DOMSHOM.COM&lt;br>
+Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends.&lt;br>
+Education Website&lt;br> WWW.DOMSHOM.COM&lt;br>
+Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends.&lt;br>
+&lt;/div>
+</pre>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – Background  Properties</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Several new background properties to allow greater control
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">background-origin</li>
+						</ul>
+					</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;float:left;width:400px;margin-left:50px;" class="fragment">
+multiplebackgrounds {
+height: 150px;
+width:270px;
+padding: 20px 20px 20px 20px;
+background: url(top.gif) top left no-repeat,
+url(bottom.gif)bottom left no-repeat,
+url(middle.gif) left repeat-y;
+}
+</pre>
+			<img style="float:right;width:400px;margin-right:50px;" src="images/css3/multipleBackground.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3-Text Effects</span><br>
+				<ul>
+					<li class="fragment">CSS3 contains several new text features like
+						<ul>
+							<li style="font-size:0.8em;" class="fragment">text-shadow</li>
+							<li style="font-size:0.8em;" class="fragment">word-wrap</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – Text Effects</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment" data-fragment-index="1">Word Wrapping
+						<ul>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">long words expand outside</li>
+							<li style="font-size:0.7em;" class="fragment" data-fragment-index="2">word-wrap property allows to force the text to wrap - even if splitting in the middle of a word</li>
+						</ul>
+					</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;float:left;width:400px;margin-left:50px;" class="fragment">
+&lt;style> 
+p.simpleText 
+{
+width:5em; 
+border:2px solid #000000;
+}
+p.wrapText 
+{
+width:5em;
+border:2px solid #000000;
+word-wrap:break-word;
+}
+&lt;/style>
+&lt;p class="simpleText"> This is a long word: &lt;br>&lt;br>domshom.com&lt;/p>
+&lt;p class="wrapText"> This is a long word: &lt;br>&lt;br>domshom.com&lt;/p>
+</pre>
+		<aside style="width:5em;border:2px solid #000000;font-size:0.7em;height:7em;float:right;margin-right:100px;" class="fragment">This is a long word:<br><br>domshom.com</aside>
+		<aside style="width:5em;border:2px solid #000000;word-wrap:break-word;font-size:0.7em;margin-left:720px;height:7em;margin-top:10em;" class="fragment">This is a long word:<br><br>domshom.com</aside>
+			
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Text effects</span>
+				<img src="images/css3/textEffect1.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Text effects</span>
+				<img src="images/css3/textEffect2.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Text effects</span>
+				<img src="images/css3/textEffect3.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 Text effects</span>
+				<img src="images/css3/textEffect4.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 shadows</span>
+				<img src="images/css3/shadow1.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 shadows</span>
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment">
+#example0{
+	box-shadow:0px 0px 20px 0px #000;
+	-moz-box-shadow:0px 0px 20px 0px #000;
+	-webkit-box-shadow:0px 0px 20px 0px #000;
+}
+</pre>
+				<img style="margin-top:0px;" src="images/css3/shadow2-1.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment">
+#example0{
+	box-shadow:0px 0px 20px 10px #000;
+	-moz-box-shadow:0px 0px 20px 10px #000;
+	-webkit-box-shadow:0px 0px 20px 10px #000;
+}
+</pre>
+				<img style="margin-top:0px;" src="images/css3/shadow2-2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 shadows</span>
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment">
+#example2{
+	box-shadow:20px 0px 20px 10px #000;
+	-moz-box-shadow:20px 0px 20px 10px #000;
+	-webkit-box-shadow:20px 0px 20px 10px #000;
+}
+</pre>
+				<img style="margin-top:0px;" src="images/css3/shadow3-1.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment">
+#example3{
+	box-shadow:20px 20px 20px 10px #000;
+	-moz-box-shadow:20px 20px 20px 10px #000;
+	-webkit-box-shadow:20px 20px 20px 10px #000;
+}
+</pre>
+				<img style="margin-top:0px;" src="images/css3/shadow3-2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 shadows</span>
+				<ul>
+					<li class="fragment">Inner Shadows</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment">
+#example2{
+	box-shadow:inset 0px 0px 20px 0px #000;
+	-moz-box-shadow:inset 0px 0px 20px 0px #000;
+	-webkit-box-shadow:inset 0px 0px 20px 0px #000;
+}
+</pre>
+				<img style="margin-top:-10px;" src="images/css3/shadow4-1.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment">
+#example3{
+	box-shadow:0px 0px 10px 5px #000;
+	-moz-box-shadow:0px 0px 10px 5px #000;
+	-webkit-box-shadow:0px 0px 10px 5px #000;
+}
+</pre>
+				<img style="margin-top:-10px;" src="images/css3/shadow4-2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 shadows</span>
+				<ul>
+					<li class="fragment">Inner Shadows</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment">
+#example2{
+	box-shadow:inset 5px 0px 5px 5px #222;
+	-moz-box-shadow:inset 5px 0px 5px 5px #222;
+	-webkit-box-shadow:inset 5px 0px 5px 5px #222;
+}
+</pre>
+				<img style="margin-top:-10px;" src="images/css3/shadow5-1.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;margin-top:0px;" class="fragment">
+#example3{
+	box-shadow:inset 5px 5px 5px 5px #222;
+	-moz-box-shadow:inset 5px 5px 5px 5px #222;
+	-webkit-box-shadow:inset 5px 5px 5px 5px #222;
+}
+</pre>
+				<img style="margin-top:-10px;" src="images/css3/shadow5-2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – Fonts</span>
+				<ul>
+					<li class="fragment">CSS3 @font-face Rule
+						<ul>
+							<li style="font-size:0.8em;" class="fragment">Before CSS3 instaled fonts had to be used</li>
+							<li style="font-size:0.8em;" class="fragment">Include the font file on web server to be automatically downloaded to the user</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – Background  Properties</span>
+				<p style="font-size:1em;margin:auto;"  class="fragment">Steps to Use the fonts</p>
+				<n style="font-size:0.8em;margin:auto;"  class="fragment">We'll follow these steps to apply the fonts to your webpage.</n>
+				<ul>
+					<li class="fragment">Download Fonts</li>
+					<li class="fragment">Convert them Online</li>
+					<li class="fragment">Use the Stylesheet Code</li>
+					<li class="fragment">Use Anywhere</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – Background  Properties</span>
+				<ul style=font-size:0.75em;>
+					<li class="fragment">Download Fonts</li>
+					<ul  style=font-size:0.7em;>
+						<li class="fragment">There are many website where you can download fonts for free.
+						Here are few website with a huge collection of free as well as paid fonts.</li>
+						<li class="fragment"> <u>dafont.com</u>, <u>urbanfonts.com</u>, <u>1001freefonts.com</u></li>
+						<li class="fragment">Choose the font you like and download it.</li>
+					</ul>
+					<li class="fragment">Convert The Fonts</li>
+					<ul style=font-size:0.7em;>
+						<li class="fragment">The downloaded fonts will work on most of the browsers but won't work on IE.
+						To make the fonts appear on IE we'll have to convert it to a format(eot) that IE understands.</li>
+						<li class="fragment">How to Convert</li>
+						<ul style=font-size:0.68em;>
+							<li class="fragment">There are many software's available on the internet, most of them paid. Here's a website where we can convert the TTF font to EOT font for IE for Free!</li>
+							<li class="fragment">Online TTF To EOT converter (Google)</li>
+						</ul>
+					</ul>
+					<li class="fragment">Upload the font you want to convert on this website and then download the converted font. Notice the font extension before converting was TTF after converting changes to EOT. Keep both these files in the same folder Fonts.</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 fonts</span>
+				<img src="images/css3/font1.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 fonts</span>
+				<img src="images/css3/font2.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 fonts</span>
+				<img src="images/css3/font3.png" alt="">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – 2D Transforms</span>
+				<ul>
+					<li class="fragment">Transform is an effect that change shape, size and position of the element</li>
+					<li class="fragment">CSS3 Transforms</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment">Scale elements</li>
+							<li style="font-size:0.8em;" class="fragment">Turn elements</li>
+							<li style="font-size:0.8em;" class="fragment">Spin elements</li>
+							<li style="font-size:0.8em;" class="fragment">Stretch elements</li>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">CSS3 – 3D Transforms</span>
+				<ul>
+					<li class="fragment">CSS3 Transforms</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment">rotateX()</li>
+							<li style="font-size:0.8em;" class="fragment">rotateY()</li>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul>
+					<li class="fragment">Transforms</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment">CSS3 transform property lets you translate, rotate, scale, or skew any element on the page.</li>
+						</ul>
+					<li class="fragment">Translation</li>
+						<ul>
+							<li style="font-size:0.8em;" class="fragment">Translation functions allow you to move elements left, right, up, or down.</li>
+							<li style="font-size:0.8em;" class="fragment">These functions are similar to the behaviour of position: relative; where you declare top and left.</li>
+							<li style="font-size:0.8em;" class="fragment">When you employ a translation function, you’re moving elements without impacting the flow of the document.</li>
+							<li style="font-size:0.8em;" class="fragment"><b>The translate(x,y) function moves an element by x from the left, and y from the top</b></li>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<p class="fragment">let’s say we want to move the word “dukes” over to the right when the user hovers over it,
+				</p>
+<pre style="padding:10px;border:3px solid black;font-size:0.4em;" class="fragment">
+#ourExample h1:hover span {
+color: #484848;
+-webkit-transform: translateX(40px);
+-moz-transform: translateX(40px);
+-ms-transform: translateX(40px);
+-o-transform:translateX(40px);
+transform: translateX(40px);
+}
+</pre>
+				<img style="float:left;margin-left:20px;margin-top:-10px;height:150px;" src="images/css3/transformation1.png" alt="" class="fragment">
+				<img style="float:right;margin-right:20px;margin-top:-10px;height:150px" src="images/css3/transformation2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Scaling
+					</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">The scale(x,y) function scales an element by the defined factors horizontally and vertically, espectively. If only one value is provided, it will be used for both the x and y scaling.
+						</li>
+				</ul>
+				</ul>
+				<p style="margin-top:-10px" class="fragment">Lets  scale the same example
+				</p>
+<pre style="padding:10px;border:3px solid black;font-size:0.4em;margin-top:-10px;" class="fragment">
+#ourExample h1:hover span {
+color: #484848;
+-webkit-transform: translateX(40px) scale(1.5);
+-moz-transform: translateX(40px) scale(1.5);
+-ms-transform: translateX(40px) scale(1.5);
+-o-transform:translateX(40px) scale(1.5);
+transform: translateX(40px) scale(1.5);
+}
+</pre>
+				<img style="float:left;margin-left:20px;height:150px;margin-top:-10px" src="images/css3/transformation3-1.png" alt="" class="fragment">
+				<img style="float:right;margin-right:20px;height:150px;margin-top:-10px" src="images/css3/transformation3-2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Scaling
+					</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">The scale(x,y) function scales an element by the defined factors horizontally and vertically, espectively. If only one value is provided, it will be used for both the x and y scaling.
+						</li>
+				</ul>
+				</ul>
+				<p style="margin-top:-10px" class="fragment">Lets  scale the same example
+				</p>
+<pre style="padding:10px;border:3px solid black;margin-top:-10px;font-size:0.4em;" class="fragment">
+#ourExample h1:hover span {
+color: #484848;
+-webkit-transform: translateX(40px) scale(1.5);
+-moz-transform: translateX(40px) scale(1.5);
+-ms-transform: translateX(40px) scale(1.5);
+-o-transform:translateX(40px) scale(1.5);
+transform: translateX(40px) scale(1.5);
+}
+</pre>
+				<img style="float:left;margin-left:20px;margin-top:-10px" src="images/css3/transformation3-1.png" alt="" class="fragment">
+				<img style="float:right;margin-right:20px;margin-top:-10px" src="images/css3/transformation3-2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Rotation
+					</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">The rotate() function rotates an element around the point of origin (as with scale,by default this is the element’s center), by a specified angle value. Generally, angles are declared in degrees, with positive degrees moving clockwise and negativemoving counter-clockwise.
+						</li>
+				</ul>
+				</ul>
+				<p style="margin-top:-10px" class="fragment">Lets  scale the same example
+				</p>
+<pre style="padding:10px;border:3px solid black;font-size:0.4em;margin-top:-10px;" class="fragment">
+#ourExample h1:hover span {
+color: #484848;
+-webkit-transform:rotate(10deg) translateX(40px) scale(1.5);
+-moz-transform:rotate(10deg) translateX(40px) scale(1.5);
+-ms-transform:rotate(10deg) translateX(40px) scale(1.5);
+-o-transform:rotate(10deg) translateX(40px) scale(1.5);
+transform:rotate(10deg) translateX(40px) scale(1.5);
+}
+</pre>
+				<img style="float:left;margin-left:20px;margin-top:-10px;" src="images/css3/rotation1.png" alt="" class="fragment">
+				<img style="float:right;margin-right:20px;margin-top:-10px;" src="images/css3/rotation2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.2em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Skew
+					</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">The skew(x,y) function specifies a skew along the X and Y axes. As you’d expect, the x specifies the skew on the X axis, and the y specifies the skew on the Y axis.
+						</li>
+						<li class="fragment">If the second parameter is omitted, the skew will only occur on the X axis:
+						</li>
+				</ul>
+				</ul>
+				<p style="margin-top:-10px;" class="fragment">Lets  scale the same example
+				</p>
+<pre style="padding:10px;border:3px solid black;margin-top:-10px;font-size:0.4em;" class="fragment">
+#ourExample h1:hover span {
+color: #484848;
+-webkit-transform:rotate(10deg) translateX(40px) scale(1.5);
+-moz-transform:rotate(10deg) translateX(40px) scale(1.5);
+-ms-transform:rotate(10deg) translateX(40px) scale(1.5);
+-o-transform:rotate(10deg) translateX(40px) scale(1.5);
+transform:rotate(10deg) translateX(40px) scale(1.5);
+}
+</pre>
+				<img style="margin-top:-10px;height:250px;" src="images/css3/skew.png" alt="" class="fragment">
+			</section>
+			<section>
+			<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment">Transitions:</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Transitions allow the values of CSS properties to change over time, essentially providing simple animations. For example, if a link changes color on hover, you can have it gradually fade from one color to the other, instead of a sudden change</li>
+				</ul>
+				</ul>
+				<ul style="font-size:0.8em;">
+					<li class="fragment">Here are the steps to create a simple transition using only CSS:</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Declare the original state of the element in the default style declaration.</li>
+						<li class="fragment">Declare the final state of your transitioned element; for example, in a hover state.</li>
+						<li class="fragment">Include the transition functions in your default style declaration, using a few different properties: transition-property, transition-duration,transition-timing-function, and transition-delay.</li>
+				</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul>
+					<li class="fragment">Transition-duration
+					</li>
+					<ul>
+						<li class="fragment">The transition-duration property sets how long the transition will take. You can specify this either in seconds (s) or milliseconds (ms). We’d like our animation tobe fairly quick, so we’ll specify 0.2 seconds, or 200 milliseconds:
+						</li>
+				</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+-webkit-transition-duration: 0.2s;
+-moz-transition-duration: 0.2s;
+-o-transition-duration: 0.2s;
+transition-duration: 0.2s;
+</pre>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment">Transition-timing-function
+					</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">The transition-timing-function lets you control the pace of the transition in even more granular detail.Do you want your animation to start off slow and get faster, start off fast and end slowe You can specify one of the key terms ease, linear, ease-in, ease-out, or easein-out. The best way to familiarize yourself with them is to play around and try them all.
+						</li>
+				</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+-webkit-transition-timing-function: ease-out;
+-moz-transition-timing-function: ease-out;
+-o-transition-timing-function: ease-out;
+transition-timing-function: ease-out;
+</pre>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment">Transition-delay
+					</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Finally, by using the transition-delay property, it’s also possible to introduce a delay before the animation begins. Normally, a transition begins immediately, so the default is 0. Include the number of milliseconds (ms) or seconds (s) to delay the transition:
+						</li>
+				</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+-webkit-transition-delay: 250ms;
+-moz-transition-delay: 250ms;
+-o-transition-delay: 250ms;
+transition-delay: 250ms;
+</pre>
+			<img src="images/css3/transition-delay.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Transition-shorthand property
+					</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">With four transition properties and three vendor prefixes, you could wind up with 16 lines of CSS for a single transition. Fortunately, as with other properties, there’s a shorthand available. The transition  property is shorthand for the four transition functions described above. Let’s take another look at our transition so far:
+						</li>
+				</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;width:450px;float:left;height:200px;margin-top:-10px;font-size:0.4em;" class="fragment">
+#as2 h1 span{
+-webkit-transition-property: -webkit-transform, color;
+-moz-transition-property: -moz-transform, color;
+-o-transition-property: -o-transform, color;
+transform-property: transform, color;
+-webkit-transition-duration: 0.2s;
+-moz-transition-duration: 0.2s;
+-o-transition-duration: 0.2s;
+transition-duration: 0.2s;
+-webkit-transition-timing-function: ease-out;
+-moz-transition-timing-function: ease-out;
+-o-transition-timing-function: ease-out;
+transition-timing-function: ease-out;
+}
+</pre>
+<n style="font-size:0.8em;float:right;margin-right:200px;margin-top:-10px;" class="fragment">shorthand</n>
+<pre style="padding:10px;border:3px solid black;width:450px;float:right;margin-top:-10px;font-size:0.4em;height:170px;" class="fragment">
+#ad2 h1 span{
+-webkit-transition: -webkit-transform 0.2s ease-out;
+-moz-transition: -moz-transform 0.2s ease-out;
+-o-transition: -o-transform 0.2s ease-out;
+transition: transorm 0.2s ease-out;
+}
+</pre>
+			<ul style="font-size:0.7em;">
+				<li class="fragment">Note that order of the values is important and must be as follows (though you don’t need to specify all four values):</li>
+				<ul style="font-size:0.6em;">
+					<li class="fragment">transition-property</li>
+					<li class="fragment"> transition-duration</li>
+					<li class="fragment">transition-function</li>
+					<li class="fragment">transition-delay</li>
+				</ul>
+			</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">7. CSS3 Transforms & Transitions</span>
+				<ul style="font-size:0.7em;">
+					<li class="fragment">Multiple transition
+					</li>
+					<ul style="font-size:0.65em;">
+						<li class="fragment">With four transition properties and three vendor prefixes, you could wind up with 16 lines of CSS for a single transition. Fortunately, as with other properties, there’s a shorthand available. The transition property is shorthand for the four transition functions described above. Let’s take another look at our transition so far:
+						</li>
+				</ul>
+				</ul>
+				<p class="fragment" style="font-size:0.7em;">It's possible to specify multiple transitions when using the shorthand trasition property also. In this case, specify all the values for each transition together, and separate each transition with commas:</p>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+transition: color 0.2s ease-out, transform 0.2s ease-out;
+</pre>
+			</section>
+			<section>
+			<span style="font-size:1.6em;" class="center-block">8.CSS3-Animation</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment">Create animations and replace</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment">Animated images</li>
+							<li class="fragment">Flash animations</li>
+							<li class="fragment">JavaScripts</li>
+						</ul>
+					<li class="fragment">Animation is created in @keyframes rule</li>
+					<li class="fragment">Animation lets an element gradually change from one style to another</li>
+					<ul style="font-size:0.7em;">
+							<li class="fragment">As many styles developers want</li>
+							<li class="fragment">As many times developers want</li>
+						</ul>
+					<li class="fragment">"from" and "to” or 0% and 100% (equivalent)</li>
+					<ul style="font-size:0.7em;">
+							<li class="fragment">Describes when change will take place</li>
+							<li class="fragment">0% is the beginning of the animation</li>
+							<li class="fragment">100% is the completion of the animation</li>
+						</ul>
+					<li class="fragment">For best browser support, 0% and the 100% selectors should always be defined</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">8. CSS3 – Animation</span>
+				<ul>
+					<li class="fragment">Specify a CSS style inside the @keyframes rule and the animation will take place
+					</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;font-size:0.45em;" class="fragment">
+div 
+{	width:100px; height:100px;
+	background:blue; 
+	animation:myAni 5s;
+	-webkit-animation:myAni 5s;    /* Safari and Chrome */ 
+}
+@keyframes myAni 
+{	from {background:blue;}
+	to {background:green;}
+}
+@-webkit-keyframes myAni /* Safari and Chrome */ 
+{	from {background:blue;}
+	to {background:green;}
+}
+</pre>
+			
+				<div style="float:left;margin-left:200px;height:100px;width:100px;background:blue;" class="fragment"></div>
+				<n class="fragment">Within 5 seconds</n>
+				<div style="float:right;margin-right:200px;height:100px;width:100px;background:green;" class="fragment"></div>
+			</section>
+			<section>
+			<span style="font-size:1.6em;" class="center-block">8.CSS3-Animation</span>
+			<p class="fragment">A keyframe is a snapshot that defines a starting or end point of any smooth transition. With CSS transitions, we’re essentially limited to defining the first and last keyframes. CSS animations allow us to add any number of keyframes in between, to guide our animation in more complex ways.</p>
+				<ul style="font-size:0.8em;">
+					<li class="fragment">Animation properties:</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment">animation-name</li>
+							<li class="fragment">animation-duration</li>
+							<li class="fragment">animation-timing-function</li>
+							<li class="fragment">animation-iteration-count</li>
+							<li class="fragment">animation-direction</li>
+							<li class="fragment">animation-animation-delay</li>
+							<li class="fragment">animation-fill-mode</li>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">8. CSS3 Animation</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Shorthand
+					</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">The animation property takes as its value a space-separated list of values for the longhand animation name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, and animation-fill-mode properties:
+						</li>
+				</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;width:450px;float:left;" class="fragment">
+.verbose{
+-webkit-animation-name: 'appear';
+-webkit-animation-duration: 300ms;
+-webkit-animation-timing-function: ease-in;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-delay: 5s;
+s-webkit-animation-fill-mode: backwards;
+}
+/* shorthand */
+.concise {
+	-webkit-animation: 'appear' 300ms ease-in 1 alternate 5s backwords;
+}
+</pre>
+<n style="float:right;font-size:0.5em;width:450px;margin-top:50px;" class="fragment">To declare multiple animation on an element, include a grouping for each animation name, with each shorthand grouping separated by a comma. For example:</n>
+<pre style="padding:10px;border:3px solid black;width:450px;float:right;" class="fragment">
+.target {
+	-webkit-animation:
+		'animationOne' 300ms ease-in 0s backwards,
+		'animationTwo' 600ms ease-out 1s forwards;
+}
+</pre>
+				</section>
+				<section>
+			<span style="font-size:1.6em;" class="center-block">8.CSS3-Multiple Columns</span>
+				<ul style="font-size:0.8em;">
+					<li class="fragment">Developers can create multiple columns for laying out text</li>
+					<li class="fragment">Multiple column properties:</li>
+					<ul style="font-size:0.7em;">
+							<li class="fragment">column-count</li>
+							<li class="fragment">column-gap</li>
+							<li class="fragment">column-rule</li>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">9. CSS3 - Multiple Columns</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Column-count
+					</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+.myColumns
+{
+-moz-column-count:2;		/* Firefox */
+-webkit-column-count:2;	/* Safari and Chrome */
+column-count:2;
+}
+&lt;body>
+&lt;div class=“myColumns”> Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends. Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends. Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends.
+&lt;/div>&lt;/body>
+</pre>
+		<div class="fragment" style="height:200px;border:3px solid black;font-size:0.6em;background:white;">
+			<div style="float:left;width:450px;margin-left:20px;margin-top:20px;">Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends. Domshom is a real-time website that connects you to the latest</div>
+			<div style="float:right;width:450px;margin-right:20px;margin-top:20px;">technology. It will keep you updated with best-in-industry trends. Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends.</div>
+		</div>
+			</section>
+				<section>
+				<span style="font-size:1.6em;" class="center-block">9. CSS3 - Multiple Columns</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Column-gap
+					</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+.myColumns
+{
+-moz-column-count:2;		/* Firefox */
+-webkit-column-count:2;	/* Safari and Chrome */
+column-count:2;
+
+-moz-column-gap:30px; /* Firefox */
+-webkit-column-gap:30px; /* Safari and Chrome */
+column-gap:30px;
+}
+</pre>
+		<div class="fragment" style="height:200px;border:3px solid black;font-size:0.6em;background:white;">
+			<div style="float:left;width:450px;margin-left:20px;margin-top:20px;">Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends. Domshom is a real-time website that connects you to the latest</div>
+			<div style="float:right;width:450px;margin-right:20px;margin-top:20px;">technology. It will keep you updated with best-in-industry trends. Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends.</div>
+		</div>
+			</section>
+						<section>
+				<span style="font-size:1.6em;" class="center-block">9. CSS3 - Multiple Columns</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Column-rule
+					</li>
+				</ul>
+<pre style="padding:10px;border:3px solid black;font-size:0.3em;" class="fragment">
+.myColumns
+{
+-moz-column-count:2;			/* Firefox */
+-webkit-column-count:2;		/* Safari and Chrome */
+column-count:2;
+
+-moz-column-gap:30px;		/* Firefox */
+-webkit-column-gap:30px;		/* Safari and Chrome */
+column-gap:30px;
+
+-moz-column-rule:4px outset #411390;	/* Firefox */
+-webkit-column-rule:4px outset #411390;	/* Safari and Chrome */
+column-rule:4px outset #411390;
+}
+</pre>
+		<div class="fragment" style="height:230px;border:3px solid black;font-size:0.6em;background:white;">
+			<div style="float:left;width:420px;margin-left:20px;margin-top:20px;">Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends. Domshom is a real-time website that connects you to the latest</div>
+			<div style="border:3px solid blue;height:170px;width:1px;float:left;margin-top:20px;margin-left:30px;"></div>
+			<div style="float:right;width:420px;margin-right:20px;margin-top:20px;">technology. It will keep you updated with best-in-industry trends. Domshom is a real-time website that connects you to the latest technology. It will keep you updated with best-in-industry trends.</div>
+		</div>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">9. CSS3 - Multiple Columns</span>
+				<p style="font-size:0.5em;" class="fragment">Newspaper-style columns have been close to impossible to accomplish with CSS and HTML without forcing column breaks at fixed positions</p>
+				<p style="font-size:0.5em;" class="fragment">With CSS3 columns, the browser determines when to end one column and begin the next without requiring any extra markup. You retain the flexibility to change the number of columns as well as their width, without having to go back in and alter the page’s markup </p>
+				<ul>
+					<li style="font-size:0.75em;" class="fragment">The column-count-property</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment">The column-count property specifies the number of columns desired, and the maximum number of columns allowed. The default value of auto means that the element has one column.</li>
+							<li class="fragment">Example:</li>
+<pre style="padding:10px;border:3px solid black" class="fragment">
+#primary article .content {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}
+</pre>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">9. CSS3 - Multiple Columns</span>
+				<ul>
+					<li style="font-size:0.75em;" class="fragment">The column-gap-property</li>
+						<ul style="font-size:0.5em;">
+							<li class="fragment">The column-gap property specifies the width of the space between columns:</li>
+							<li class="fragment">Example:</li>
+<pre style="padding:10px;border:3px solid black;font-size:0.5em;" class="fragment">
+#primary article .content {
+	-webkit-column-gap: 10px;
+	-moz-column-gap: 10px;
+	column-gap: 10px;
+}
+</pre>
+						</ul>
+					<li style="font-size:0.7em;" class="fragment">The column-width-property</li>
+						<ul style="font-size:0.4em;">
+							<li class="fragment">The column-width property is like having a min-width for your columns. The browser will include as many columns of at least the given width as it can to fill up the element</li>
+							<li class="fragment">For example, if we have a parent that is 400 pixels wide, a 10-pixel column gap, and the column-width is declared as 150px, the browser can fit two columns:(400px width – 10px column gap) ÷ 150px width  2.6 The browser rounds down to two columns, making columns that are as large as possible in the allotted space; in this case that’s 195px for each column—the total width minus the gap, divided by the number of columns. Even if the column-count were set to 3, there would still only be two columns, as there’s not enough space to include three columns of the specified width. In other words, you can think  Of the column-count property as specifying the maximum column count </li>
+							<li class="fragment">Example:</li>
+<pre style="padding:10px;border:3px solid black;font-size:0.6em;" class="fragment">
+ #primary article .content {
+	-webkit-column-width: 150px;
+	-moz-column-width: 150px;
+	column-width: 150px;
+ }
+</pre>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">9. CSS3 - Multiple Columns</span>
+				<ul>
+					<li style="font-size:0.75em;" class="fragment">The column-rule-property</li>
+						<ul style="font-size:0.5em;">
+							<li class="fragment">Column rules are essentially borders between each column. The column-rule property specifies the color, style, and width of the column rules. The rule will appear in the middle of the column gap</li>
+							<li class="fragment">Example:</li>
+<pre style="padding:10px;border:3px solid black" class="fragment">
+#primary article .content {
+	-webkit-column-rule: 1px solid #ccc;
+	-moz-column-rule: 1px solid #ccc;
+	column-gap: 1px solid #ccc;
+}
+</pre>
+						</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<p style="font-size:0.5em;" class="fragment">Selectors are at the heart of CSS. Without selectors to target elements on the page, the only way to modify the CSS properties of an element would be to use the element’s style attribute and declare the styles inline. This, of course, is ugly, awkward, and unmaintainable. So we use selectors.</p>
+				<ul style="font-size:0.8em;">
+					<li class="fragment">Relational selectors
+						<ul style="font-size:0.75em;">
+							<li class="fragment">All Descendant s(E F)
+								<ul style="font-size:0.7em;">
+									<li class="fragment">You should definitely be familiar with this one. The descendant selector targets any element F that is a descendant (child, grandchild, great grandchild, and so on) of an element E.</li>
+								</ul>
+							</li>
+							<li class="fragment">Direct Child (E > F)
+								<ul style="font-size:0.7em;">
+									<li class="fragment">This selector matches any element F that is a direct child of element E—any further nested elements will be ignored. Continuing the above example, ol > li would only target li elements directly inside the ol, and would omit those nested inside a ul.</li>
+								</ul>
+							</li>
+							<li class="fragment">Adjacent Sibling (E + F)
+								<ul style="font-size:0.6em;">
+									<li class="fragment">This will match any element F that shares the same parent as E, and comes directly after E in the markup. For example, li + li will target all li elements except the first li in a given container.</li>
+								</ul>
+							</li>
+							<li class="fragment">General Sibling (E ~ F)
+								<ul style="font-size:0.7em;">
+									<li class="fragment">This one’s a little trickier. It will match any element F that shares the same parent as any E and comesafter it in the markup. So, h1~h2 will match any h2 that follows an h1, as long as they both share thesame direct parent—that is, as long as the h2 is not nested in any other element.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<aside style="float:left;" class="fragment">Attribute selectors</aside>
+				<p style="font-size:0.5em;float:left;padding-left:0px;" class="fragment">E[attr^=val] (IE8+, WebKit, Opera, Mozilla)<br>Matches any element E whose attribute attr begins with val. In other words, the val matches the begining of the attribute value.<br>[att^=val] – the “begins with” selector
+				</p>
+				<img style="float:right;width:400px;" src="images/css3/selector.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;margin-top:-10px;font-size:0.4em;" class="fragment">
+&lt;div class="example1">
+	&lt;ul>
+		&lt;li>&lt;a href="http://www.google.com">Visit a website&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="https://www.google.com">Visit a secure website&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="mailto:email@email.com">Send an email&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="ftp://www.google.com">Connect to an FTP server&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="magnet:…">Download from a magnet link&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div>
+</pre>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<img style="float:right;width:400px;" src="images/css3/selector.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;margin-top:-10px;font-size:0.35em;" class="fragment">
+&lt;div class="example1">
+	&lt;ul>
+		&lt;li>&lt;a href="http://www.google.com">Visit a website&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="https://www.google.com">Visit a secure website&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="mailto:email@email.com">Send an email&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="ftp://www.google.com">Connect to an FTP server&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="magnet:…">Download from a magnet link&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div>
+</pre>
+<pre style="padding:10px;border:1px solid black;width:480px;float:left;font-size:0.4em;margin-top:-15px;" class="fragment">
+div.example1 ul {
+    list-style-type: none;
+}
+div.example1 ul li a {
+    padding-left: 20px;
+    background-image: url(demo-images/file.png);
+    background-repeat: no-repeat;
+}
+div.examples1 ul li a[href^=”https://”] {
+    background-image: url(demo-images/lock.png);
+}
+</pre>
+<pre style="padding:10px;border:1px solid black;width:480px;float:right;font-size:0.4em;margin-top:-15px;" class="fragment">
+div.example1 a[href^=”mailto:”] {
+    background-image: url(demo-images/mail.png);
+}
+div.example1 a[href^=”ftp://”] {
+    background-image: url(demo-images/folder_ftp.png);
+}
+div.example1 a[href^=”magnet”] {
+    background-image: url(demo-images/magnet.png);
+} 
+</pre >
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<aside style="float:left;" class="fragment">Attribute selectors</aside>
+				<p style="font-size:0.5em;float:left;" class="fragment">E[attr$=val] (IE8+, WebKit, Opera, Mozilla)<br>Matches any element E whose attribute attr ends in val. In other words, the val matches the end of theattribute value.<br>[att$=val] – the “ends with” selector
+				</p>
+				<img style="float:right;width:400px;" src="images/css3/selector2.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;font-size:0.3em;" class="fragment">
+&lt;div class="example2">
+	&lt;ul>
+		&lt;li>&lt;a href="http://www.css3.info/demos/files/1.pdf">A link to a PDF document&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.css3.info/demos/files/1.docx">A link to a Word document&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.css3.info/demos/files/1.xlsx">A link to an Excel document&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.css3.info/demos/files/1.mp3">A link to an MP3 file&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.css3.info">A normal web link&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div>
+</pre>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<img style="float:right;width:350px;" src="images/css3/selector2.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;margin-top:-10px;font-size:0.35em;" class="fragment">
+&lt;div class="example2">
+	&lt;ul>
+		&lt;li>&lt;a href="http://www.css3.info/demos/files/1.pdf">A link to a PDF document&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.css3.info/demos/files/1.docx">A link to a Word document&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.css3.info/demos/files/1.xlsx">A link to an Excel document&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.css3.info/demos/files/1.mp3">A link to an MP3 file&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.css3.info">A normal web link&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div>
+</pre>
+<pre style="padding:10px;border:1px solid black;width:480px;float:left;font-size:0.4em;margin-top:-15px;" class="fragment">
+div.example2 ul {
+    list-style-type: none;
+}
+div.example2 ul li a {
+    padding-left: 20px;
+    background-image: url(demo-images/file.png);
+    background-repeat: no-repeat;
+}
+div.example2 ul li a[href$=”.pdf”] {
+    background-image: url(demo-images/pdf.png);
+}
+</pre>
+<pre style="padding:10px;border:1px solid black;width:480px;float:right;font-size:0.4em;margin-top:-15px;" class="fragment">
+div.example2 ul li a[href$=”.docx”] {
+    background-image: url(demo-images/word.png);
+}
+div.example2 ul li a[href$=”.xlsx”] {
+    background-image: url(demo-images/excel.png);
+}
+div.example2 ul li a[href$=”.mp3″] {
+    background-image: url(demo-images/audio.png);
+}
+</pre >
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<aside style="float:left;" class="fragment">Attribute selectors</aside>
+				<p style="font-size:0.5em;float:left;" class="fragment">E[attr$=val] (IE8+, WebKit, Opera, Mozilla)<br>Matches any element E whose attribute attr matches val anywhere within the attribute. In other words, the string val is matched anywhere in the attribute value.<br>[att*=val] – the “contains” selector
+				</p>
+				<img style="float:right;width:400px;" src="images/css3/selector3.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;font-size:0.3em;" class="fragment">
+&lt;div class="example3">
+	&lt;ul>
+		&lt;li>&lt;a href="http://www.google.com">A link to Google&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.twitter.com/css3">A link to a Twitter profile&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="https://www.facebook.com/css3.info">A link to a Facebook page&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.yahoo.com">A link to Yahoo&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.bing.com">Any other link&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div>
+</pre>
+			</section>
+						<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<img style="float:right;width:300px;" src="images/css3/selector2.png" alt="" class="fragment">
+<pre style="padding:10px;border:3px solid black;margin-top:-10px;font-size:0.35em;" class="fragment">
+&lt;div class="example3">
+	&lt;ul>
+		&lt;li>&lt;a href="http://www.google.com">A link to Google&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.twitter.com/css3">A link to a Twitter profile&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="https://www.facebook.com/css3.info">A link to a Facebook page&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.yahoo.com">A link to Yahoo&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="http://www.bing.com">Any other link&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div>
+</pre>
+<pre style="padding:10px;border:1px solid black;width:480px;float:left;font-size:0.4em;margin-top:-15px;" class="fragment">
+div.example3 ul {
+    list-style-type: none;
+}
+div.example3 ul li a {
+    padding-left: 20px;
+    background-image: url(demo-images/file.png);
+    background-repeat: no-repeat;
+}
+div.example3 ul li a[href*=”google.com”] {
+    background-image: url(demo-images/google.png);
+}
+</pre>
+<pre style="padding:10px;border:1px solid black;width:480px;float:right;font-size:0.4em;margin-top:-15px;" class="fragment">
+div.example3 ul li a[href*=”twitter.com”] {
+    background-image: url(demo-images/twitter.png);
+}
+div.example3 ul li a[href*=”facebook.com”] {
+    background-image: url(demo-images/facebook.png);
+}
+div.example3 ul li a[href*=”yahoo.com”] {
+    background-image: url(demo-images/yahoo.png);
+}
+</pre >
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Pseudo-classes
+						<ul style="font-size:0.7em;">
+							<li class="fragment">:enabled
+								<ul style="font-size:0.65em;">
+									<li class="fragment">A user interface element that’s enabled.</li>
+								</ul>
+							</li>
+							<li class="fragment">:disabled
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Conversely, a user interface element that’s disabled.</li>
+								</ul>
+							</li>
+							<li class="fragment">:checked
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Radio buttons or checkboxes that are selected or ticked.</li>
+								</ul>
+							</li>
+							<li class="fragment">:valid
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Applies to elements that are valid, based on the type or pattern attributes </li>
+								</ul>
+							</li>
+							<li class="fragment">:invalid
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Applies to empty required elements, and elements failing to match the requirements defined by the type or pattern attributes.</li>
+								</ul>
+							</li>
+							<li class="fragment">:in-range
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Applies to elements with range limitations, where the value is within those limitations. This applies, for example, to numberand range input types with min and max attributes</li>
+								</ul>
+							</li>
+							<li class="fragment">:out-of-range
+								<ul style="font-size:0.65em;">
+									<li class="fragment">The opposite of :in-range: elements whose value is outside the limitations of their range.Applies to elements with range limitations, where the value is within those limitations. This applies, for example, to number and range input types with min and max attributes</li>
+								</ul>
+							</li>
+							<li class="fragment">:required
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Applies to form controls that have the required attribute set.</li>
+								</ul>
+							</li>
+							<li class="fragment">:optional
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Applies to all form controls that do not have the required attribute.</li>
+								</ul>
+							</li>
+							<li class="fragment">:read-only
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Applies to elements whose contents are unable to be altered by the user. This is usually most elements other than form fields.</li>
+								</ul>
+							</li>
+							<li class="fragment">:read-write
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Applies to elements whose contents are user-alterable, such as text input fields</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Structural Pseudo-classes
+						<ul style="font-size:0.7em;">
+							<li class="fragment">:root
+								<ul style="font-size:0.65em;">
+									<li class="fragment">The root element, which is always the html element.</li>
+								</ul>
+							</li>
+							<li class="fragment">E F:nth-child(n)
+								<ul style="font-size:0.65em;">
+									<li class="fragment">The element F that is the nth child of its parent E.</li>
+								</ul>
+							</li>
+							<li class="fragment">E F:nth-last-child(n)
+								<ul style="font-size:0.65em;">
+									<li class="fragment">The element F that is the nth child of its parent E, counting backwards from the last one. li:nth-last-child(1) would match the last item in any list—this is the same as li:last-child (see below).</li>
+								</ul>
+							</li>
+							<li class="fragment">E:nth-of-type(n)
+								<ul style="font-size:0.65em;">
+									<li class="fragment">The element that is the nth element of its type in a given parent element. </li>
+								</ul>
+							</li>
+							<li class="fragment">E:nth-last-of-type(n)
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Like nth-of-type(n), except counting backwards from the last element in a parent.</li>
+								</ul>
+							</li>
+							<li class="fragment">E:first-child
+								<ul style="font-size:0.65em;">
+									<li class="fragment">The element E that is the first child E of its parent. This is the same as :nthchild(1).</li>
+								</ul>
+							</li>
+							<li class="fragment">E:last-child
+								<ul style="font-size:0.65em;">
+									<li class="fragment">The element E that is the last child E of its parent, same as :nth-last-child(1).</li>
+								</ul>
+							</li>
+							<li class="fragment">E:first-of-type
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Same as :nth-of-type(1).</li>
+								</ul>
+							</li>
+							<li class="fragment">E:last-of-type
+								<ul style="font-size:0.65em;">
+									<li class="fragment">Same as :nth-last-of-type(1).</li>
+								</ul>
+							</li>
+							<li class="fragment">E:only-child
+								<ul style="font-size:0.65em;">
+									<li class="fragment">An element that’s the only child of its parent.</li>
+								</ul>
+							</li>
+							<li class="fragment">E:only-of-type
+								<ul style="font-size:0.65em;">
+									<li class="fragment">An element that’s the only one of its type inside its parent element.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">10. CSS3 - selectors</span>
+				<ul style="font-size:0.75em;">
+					<li class="fragment">Structural Pseudo-classes
+						<ul style="font-size:0.7em;">
+							<li class="fragment">E:empty
+								<ul style="font-size:0.65em;">
+									<li class="fragment">An element that has no children; this includes text nodes, so &lt;p>hello&lt;/p>  will not be matched. </li>
+								</ul>
+							</li>
+							<li class="fragment">E:lang(en)
+								<ul style="font-size:0.65em;">
+									<li class="fragment">An element in the language denoted by the two-letter abbreviation (en).</li>
+								</ul>
+							</li>
+							<li class="fragment">E:not(exception)
+								<ul style="font-size:0.65em;">
+									<li class="fragment">This is a particularly useful one: it will select elements that don’t match the selector in the parentheses.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">Smooth transitions between two or more colors</li>
+					<li class="fragment">Gradients look better when zoomed</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Generated by the browser</li>
+					</ul>
+					<li class="fragment">CSS3 defines two types of gradients:</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Linear Gradients
+							<ul style="font-size:0.65em;">
+								<li class="fragment">(goes down/up/left/right/diagonally)</li>
+							</ul>
+						</li>
+						<li class="fragment">Radial Gradients
+							<ul style="font-size:0.65em;">
+								<li class="fragment">(defined by their center)</li>
+							</ul>
+						</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Linear Gradients</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Define at least two color stops</li>
+						<ul style="font-size:0.65em;">
+							<li class="fragment">Color stops are the colors you want to render smooth transitions among</li>
+						</ul>
+						<li class="fragment">Set a starting point and a direction (or an angle) along with the gradient effect</li>
+					</ul>
+				</ul>
+				<img style="width:300px;" src="images/css3/gradient1.png" alt="" class="fragment">
+				<img style="width:290px;" src="images/css3/gradient2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Linear Gradients</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Linear Gradients- Top to Bottom(this is default)</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;font-size:0.4em;" class="fragment">
+#grad
+{
+background: -webkit-linear-gradient(red, blue, yellow);	/* For Safari */
+background: -o-linear-gradient(red, blue, yellow);		/* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(red, blue, yellow);	/* For Firefox 3.6 to 15 */
+background: linear-gradient(red, blue, yellow);		/* Standard syntax (must be last) */
+}
+</pre>
+				<img style="width:300px;" src="images/css3/linearGragient1.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Linear Gradients</li>
+					<ul>
+						<li class="fragment">Linear Gradients- Left to Right</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+background: -webkit-linear-gradient(left, red , blue);	/* For Safari */
+background: -o-linear-gradient(right, red, blue);		/* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(right, red, blue);		/* For Firefox 3.6 to 15 */
+background: linear-gradient(to right, red , blue);		/* Standard syntax */
+</pre>
+				<img style="width:300px;" src="images/css3/linearGragient2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Linear Gradients</li>
+					<ul>
+						<li class="fragment">Linear Gradients- Diagonal</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+background: -webkit-linear-gradient(left top, red , blue);	/* For Safari */
+background: -o-linear-gradient(bottom right, red, blue);	/* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, red, blue);	/* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, red , blue);	/* Standard syntax */
+</pre>
+				<img style="width:300px;" src="images/css3/linearGragient3.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Linear Gradients</li>
+					<ul>
+						<li class="fragment">Linear Gradients- Angular</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+background: linear-gradient(130deg, red, blue, green);
+</pre>
+				<img style="width:300px;" src="images/css3/linearGragient4.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Linear Gradients</li>
+					<ul>
+						<li class="fragment">Linear Gradients- Transparency</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+</pre>
+				<img style="width:300px;" src="images/css3/linearGragient5.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Linear Gradients</li>
+					<ul>
+						<li class="fragment">Linear Gradients- Repeating</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+background: repeating-linear-gradient(red, yellow 10%, green 20%);
+</pre>
+				<img style="width:300px;" src="images/css3/linearGragient6.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Radial Gradients</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Defined by center</li>
+						<li class="fragment">Define at least two color stops</li>
+						<li class="fragment">Can also specify the gradient's</li>
+						<ul style="font-size:0.7em;">
+							<li class="fragment">Center</li>
+							<li class="fragment">Shape (circle or ellipse)</li>
+							<ul style="font-size:0.65em;">
+								<li class="fragment">closest-side</li>
+								<li class="fragment">farthest-side</li>
+								<li class="fragment">closest-corner</li>
+								<li class="fragment">farthest-corner</li>
+							</ul>
+						</ul>
+						<li class="fragment"> By default, center is center, shape is ellipse, and size is farthest-corner</li>
+					</ul>
+				</ul>
+				<img style="width:300px;" src="images/css3/radialGradient1.png" alt="" class="fragment">
+				<img style="width:290px;" src="images/css3/radialGradient2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Radial Gradients</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Radial Gradients- Evenly Spaced Color Stops (this is default)</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+#grad{
+background: -webkit-radial-gradient(red, green, blue); /* Safari */
+background: -o-radial-gradient(red, green, blue); /* For Opera 11.1 to 12.0 */
+background: -moz-radial-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
+background: radial-gradient(red, green, blue); /* Standard syntax */
+}
+</pre>
+				<img style="width:300px;" src="images/css3/radialGradient3.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Radial Gradients</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Radial Gradients- Differently Spaced Color Stops</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+background: -webkit-radial-gradient(red 5%, green 15%, blue 60%); /* Safari */
+background: -o-radial-gradient(red 5%, green 15%, blue 60%); /* For Opera 11.1-12.0 */
+background: -moz-radial-gradient(red 5%, green 15%, blue 60%); /* For Firefox 3.6-15 */
+background: radial-gradient(red 5%, green 15%, blue 60%); /* Standard syntax */
+</pre>
+				<img style="width:300px;" src="images/css3/radialGradient4.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Radial Gradients</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Radial Gradients- Set Shape</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.1 to 12.0 */
+background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+</pre>
+				<img style="width:300px;" src="images/css3/radialGradient5.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<ul>
+					<li class="fragment">CSS3 Radial Gradients</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Radial Gradients- Repeating</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;font-size:0.5em;" class="fragment">
+#grad
+{
+height:150px;
+width:200px;
+background: -webkit-repeating-radial-gradient(blue, magenta 10%, white 15%);	/* For Safari */
+background: -o-repeating-radial-gradient(blue, magenta 10%, white 15%);		/* For Opera 11.1 to 12.0 */
+background: -moz-repeating-radial-gradient(blue, magenta 10%, white 15%);		/* For Firefox 3.6 to 15 */
+background: repeating-radial-gradient(blue, magenta 10%, white 15%);		/* Standard syntax
+}
+</pre>
+				<img style="width:270px;" src="images/css3/radialGradient6.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">11. CSS3 - Gradients</span>
+				<p style="font-size:0.5em;" class="fragment">Use CSS 3 to create some nice subtle gradients; or very compelling gradients! CSS 3 Gradients are not the simplest things by any means; there are several values to account for when projecting your gradient and it only worsens when working with radial gradients.</p>
+				<p style="font-size:0.5em;" class="fragment"><b>background</b>:-moz-linear-gradient(pos, #AAA B, #XXX Y);<br>or :-moz-radial-gradient(pos, #AAA B, #XXX Y);<br><br>pos = the position of the first colour, giving direction to the gradient<br>#AAA = primary colour<br>B = where the fade begins (%)<br>#XXX = secondary colour<br>Y = where the fade begins (%)</p>
+				<p style="font-size:0.5em;" class="fragment">The -webkit-gradient() is built slightly differently but works in the same manner, creating a start position and then the colors from() and to();</p>
+				<img style="width:300px;margin-top:0px;" src="images/css3/ExtraGradient1.png" alt="" class="fragment">
+				<img style="width:310px;margin-top:0px;" src="images/css3/ExtraGradient2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">Color</span>
+				<ul>
+					<li class="fragment">RGBA(Red,Green,Blue,Alpha opacity)<br>rgba(100%,0%,0%,0.8) produces 80% red.</li>
+					<li class="fragment">HSLA (Hue, Saturation, Lightness, Alpha opacity)<br>hsla(0,100%, 50%,1.0) produces 100% red.</li>
+					<li class="fragment">opacity<br>Sets the opacity level for an element from 0 to 1.0.</li>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">User Interface</span>
+				<ul>
+					<li class="fragment">Resize</li>
+					<ul style="font-size:0.7em;">
+							<li class="fragment">Resizable elements can be created</li>
+					</ul>
+					<li class="fragment">box-sizing</li>
+					<ul style="font-size:0.7em;">
+							<li class="fragment">Elements can be fitted in a certain way into an area</li>
+					</ul>
+					<li class="fragment">outline-offset</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Offsets an outline</li>
+						<li class="fragment">Draws it beyond the border edge</li>
+						<li class="fragment">Outlines differ from borders in two ways:</li>
+						<ul style="font-size:0.65em;">
+							<li class="fragment">Outlines do not take up space</li>
+							<li class="fragment">Outlines may be non-rectangular</li>
+						</ul>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">User Interface</span>
+				<ul>
+					<li class="fragment">CSS3 Resize</li>
+					<ul>
+						<li class="fragment">Resizable elements can be created</li>
+					</ul>
+				</ul>
+<pre style="padding:10px;border:3px solid black;" class="fragment">
+div
+{
+	border:2px solid;
+ 	width:300px;
+	resize:both;
+	overflow:auto;
+}
+</pre>
+			<p style="font-size:0.5em;" class="fragment">The size of this element can be changed by the user any time he/she wants</p>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">User Interface</span>
+				<ul>
+					<li class="fragment">CSS3 Box Sizing</li>
+					<ul>
+						<li class="fragment">Elements can be fitted in a certain way into an area</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">User Interface</span>
+<pre style="padding:10px;border:3px solid black;width:600px;float:left;font-size:0.4em;" class="fragment">
+&lt;style> 
+.container
+{
+	width:15em;
+	border:1em solid #112288;
+	background-color: #2dadda;
+	opacity:0.8;
+}
+.box
+{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	width:50%;
+	border:10px solid #aedafb;
+	background-color: #aeeccc;
+	float:none;
+}
+&lt;/style>
+
+&lt;div class="container">
+	&lt;center>
+		&lt;div class="box">Domshom 1&lt;/div>
+		&lt;div class="box">Domshom 2&lt;/div>
+		&lt;div class="box">Domshom 3&lt;/div>
+	&lt;/center>
+&lt;/div>
+</pre>
+			<img style="width:300px;margin-top:200px;float:right;" src="images/css3/userInterface.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">User Interface</span>
+				<ul>
+					<li class="fragment">outline-offset</li>
+					<ul style="font-size:0.7em;">
+						<li class="fragment">Offsets an outline</li>
+						<li class="fragment">Draws it beyond the border edge</li>
+						<li class="fragment">Outlines differ from borders in two ways:</li>
+						<ul style="font-size:0.65em;">
+							<li class="fragment">Outlines do not take up space</li>
+							<li class="fragment">Outlines may be non-rectangular</li>
+						</ul>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">User Interface</span>
+<pre style="padding:10px;border:3px solid black;width:600px;float:left;" class="fragment">
+&lt;style> 
+div
+{
+	width:125px;
+	height:20px;
+	margin:50px;
+	padding:20px;
+	border:3px solid blue;
+	outline: 3px solid green;
+	outline-offset:5px;
+}
+&lt;/style>
+&lt;div>Domshom&lt;/div>
+</pre>
+			<img style="width:300px;margin-top:100px;float:right;" src="images/css3/userInterface2.png" alt="" class="fragment">
+			</section>
+			<section>
+				<span style="font-size:1.6em;" class="center-block">Some CSS3 Resources</span>
+				<p style="font-size:0.35em;text-align:left;width:500px;margin:auto;" class="fragment">
+					http://www.stanford.edu/group/ttsclasses/css/<br>
+					http://border-radius.com/<br>
+					http://caniuse.com/<br>
+					http://css-tricks.com/<br>
+					http://css3.bradshawenterprises.com<br>
+					http://css3.info/<br>
+					http://cssplay.co.uk/menu/css3-marquee.html<br>
+					http://davidwalsh.name/dw-content/webkit-styles.php<br>
+					http://dev.w3.org/csswg/<br>
+					http://fontsquirrel.com/<br>
+					http://google.com/webfonts<br>
+					http://hex2rgba.devoth.com/<br>
+					http://hslpicker.com/<br>
+					http://html5rocks.com/<br>
+					http://leemunroe.com<br>
+					http://meyerweb.com/eric/css/<br>
+					http://msdn.microsoft.com/<br>
+					http://quackit.com/css<br>
+					http://quirksmode.org/css/contents.html<br>
+					http://standardista.com<br>
+					http://standardista.com/sxsw<br>
+					http://storiesinflight.com/html5/ruby.html<br>
+					http://stubbornella.org/content/category/general/geek/css/<br>
+					http://thinkvitamin.com/design/stay-on-target/<br>
+					http://uselesscode.org/blog/82/pure-css3-tab-widget<br>
+					http://virtuelvis.com/gallery/css3/target/interface.html<br>
+					http://w3.org/<br>
+					http://w3schools.com<br>
+					http://westciv.com/tools/3Dtransforms<br>
+					http://xanthir.com/blog<br>
+					http://xanthir.com/blog/b4580<br>
+					http://selectivizr.com
+				</p>
+			</section>
+			
+		</div>
+	</div>
+
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.js"></script>
+	<script src="reveal/js/ds-reveal-conf.js"></script>
+
+	<script>
+/*		Reveal.initialize({
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			}, {
+				src: 'plugin/markdown/markdown.js'
+			}],
+			markdown: {
+				smartypants: true
+			},
+
+			// Display controls in the bottom right corner
+			controls: true,
+
+			// Display a presentation progress bar
+			progress: true,
+
+			// Display the page number of the current slide
+			slideNumber: true,
+
+			// Push each slide change to the browser history
+			history: true,
+
+            center: false,
+
+		});
+
+Reveal.configure({ transition: 'none', transitionSpeed: 'fast'});
+*/
+	</script>
+</body>
+
+</html>
